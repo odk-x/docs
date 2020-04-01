@@ -49,8 +49,8 @@ odkx-latex: odkx
 
 odkx-pdf: odkx-latex
 	cd "$(ODKX_BUILDDIR)"/latex && \
-	xetex OpenDataKitX.tex && \
-	xetex OpenDataKitX.tex && \
+	docker run xelatex OpenDataKitX.tex && \
+	docker run xelatex OpenDataKitX.tex && \
 	mkdir -p ../_downloads && \
 	mv OpenDataKitX.pdf ../_downloads/ODK-X-Documentation.pdf
 
