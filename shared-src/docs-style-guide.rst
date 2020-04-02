@@ -883,7 +883,6 @@ ODK and ODK Docs
 
 .. rubric:: Wrong
 
-- Odkx
 - odk-x
 - ODK-X docs
 - ODK-X documentation
