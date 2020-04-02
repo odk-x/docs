@@ -1085,7 +1085,7 @@ Bad sequentially numbered image file names:
 Screenshots from ODK Collect
 """""""""""""""""""""""""""""""
 
-If you have set up :doc:`Android Debug Bridge <collect-adb>`, you can connect your Android device to your computer and take screenshots from the command line.
+If you have set up Android Debug Bridge, you can connect your Android device to your computer and take screenshots from the command line.
 
 - Connect your device via USB
 - Enable Developer Settings
