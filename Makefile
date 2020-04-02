@@ -62,6 +62,9 @@ odkx-spell-check: odkx
 
 odkx-check: odkx-style-check odkx-spell-check
 
+odkx-compress: odkx
+    pngquant "$(ODKX_BUILDDIR)"/_images/*.png --force --ext .png --verbose
+
 check-all: odkx-check
 
 test:

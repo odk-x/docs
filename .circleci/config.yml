@@ -18,8 +18,8 @@ jobs:
       - run:
           name: Install build requirements
           command: |
-            sudo apt-get install pngquant
-            sudo apt-get install python-enchant
+#            sudo apt-get install pngquant
+#            sudo apt-get install python-enchant
             sudo pip install -r requirements.txt
       - run:
           name: Style Guide Check
@@ -37,17 +37,17 @@ jobs:
       - run:
           name: Build LaTex of ODK-X Documentation
           command: make odkx-latex
-      - run:
-          name: Compress images
-          command: pngquant odkx-build/_images/*.png --force --ext .png --verbose
-      - store_artifacts:
-          path: odkx-build
-          destination: odkx-build
-      - persist_to_workspace:
-          root: ~/work
-          paths:
-            - odkx-build/*
-            - odkx-config/*
+#      - run:
+#          name: Compress images
+#          command: pngquant odkx-build/_images/*.png --force --ext .png --verbose
+#      - store_artifacts:
+#          path: odkx-build
+#          destination: odkx-build
+#      - persist_to_workspace:
+#          root: ~/work
+#          paths:
+#            - odkx-build/*
+#            - odkx-config/*
   
 workflows:
   version: 2
