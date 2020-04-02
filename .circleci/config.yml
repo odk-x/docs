@@ -48,34 +48,9 @@ jobs:
           paths:
             - odkx-build/*
             - odkx-config/*
-  build-pdf-odkx:
-    working_directory: ~/work
-    docker:
-      - image: schickling/latex
-    steps:
-      - attach_workspace:
-          at: ~/work
-      - run:
-          name: Build PDF
-          command: |
-              cd odkx-build/latex
-              xelatex OpenDataKitX.tex
-              xelatex OpenDataKitX.tex
-              mkdir -p ../_downloads
-              mv OpenDataKitX.pdf ../_downloads/ODK-X-Documentation.pdf
-      - store_artifacts:
-          path: odkx-build/_downloads/ODK-X-Documentation.pdf
-          destination: ODK-X-Documentation.pdf
-      - persist_to_workspace:
-          root: ~/work
-          paths:
-            - odkx-build/*
   
 workflows:
   version: 2
   build:
     jobs:
       - build-odkx
-      - build-pdf-odkx:
-          requires:
-            - build-odkx
