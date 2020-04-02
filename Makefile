@@ -7,7 +7,6 @@ SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = ODKX
 ODKX_SRCDIR   = odkx-src
 SHARED_SRCDIR = shared-src
-COMPILE1_SRCDIR = tmp1-src
 COMPILE_X_SRCDIR = tmpx-src
 ODKX_BUILDDIR = odkx-build
 
