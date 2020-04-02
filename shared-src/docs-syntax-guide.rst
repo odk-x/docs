@@ -802,11 +802,6 @@ For example:
     - :ref:`cross-referencing`
     - :ref:`anchor text <cross-referencing>`
 
-  - Link to a term:
-
-    - :term:`participant`
-    - :term:`anchor text <participant>`
-
 - Link to this document:
 
   - :doc:`contributing`
@@ -816,11 +811,6 @@ For example:
 
   - :ref:`cross-referencing`
   - :ref:`anchor text <cross-referencing>`
-
-- Link to a term:
-
-  - :term:`participant`
-  - :term:`anchor text <participant>`
 
 .. _interface-writing:
 
