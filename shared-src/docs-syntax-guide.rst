@@ -1311,29 +1311,29 @@ You can also create a reference with styled text:
 
 .. code-block:: rst
   
-  .. |slack| replace:: **ODK Slack**
-  .. slack: https://opendatakit.slack.com
+  .. |forum| replace:: **ODK-X Forum**
+  .. forum: https://forum.odk-x.org
 
 You can use the hyperlink reference by appending a "_" at the end of the vertical bars, for example:
 
 .. code-block:: rst
 
-  You can ask about your problem in |slack|_.
+  You can ask about your problem in |forum|_.
 
-.. |slack| replace:: **ODK Slack**
-.. _slack: https://opendatakit.slack.com  
+.. |forum| replace:: **ODK-X Forum**
+.. _forum: https://forum.odk-x.org  
 
-You can ask about your problem in |slack|_.
+You can ask about your problem in |forum|_.
 
 The ``rst_epilog`` in :file:`conf.py` contains a list of global substitutions that can be used from any file. The list is given below:
 
-- If you want to create a hyperlink reference for ODK Slack, you can use ``|odk-slack|_``.
+- If you want to create a hyperlink reference for ODK Slack, you can use ``|forum|_``.
 
   .. code-block:: rst
 
-    You can use |odk-slack|_ to ask your questions.
+    You can use |forum|_ to ask your questions.
   
-  You can use |odk-slack|_ to ask your questions.
+  You can use |forum|_ to ask your questions.
   
 |
   
