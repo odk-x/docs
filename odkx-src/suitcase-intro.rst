@@ -119,7 +119,7 @@ Combine the individual commands described in the help to perform the actions nee
 
     .. code-block:: console
 
-      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -update -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -username "user" -password "pass" -dataVersion "Version" -tableId "table_id" -path "/home/user/Desktop/example.csv" -updateLogPath "/home/user/Desktop/log.txt"
+      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -update -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -username "user" -password "pass" -path "/home/user/Desktop/example.csv" -updateLogPath "/home/user/Desktop/log.txt"
 
 To script the CLI, write the commands you would like to execute in a scripting language (for example, Bash, Batch, Python, Ruby) and use a scheduler (such as Cron or Windows Task Scheduler) to schedule the tasks. To skip over ODK-X Suitcase's prompts to overwrite, pass :code:`-f` as an argument to ODK-X Suitcase.
 
