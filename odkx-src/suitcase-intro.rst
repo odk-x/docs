@@ -125,12 +125,12 @@ Combine the individual commands described in the help to perform the actions nee
 
     .. code-block:: console
 
-      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -upload -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -uploadOp RESET_APP -username "user" -password "pass" -path "/home/user/Desktop/example.csv"      
+      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -upload -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -uploadOp "RESET_APP" -username "user" -password "pass" -path "/home/user/Desktop/example.csv"      
   - To upload CSV at location "/home/user/Desktop/example.csv" of table *table_id* from app *default* with username *user* and password *pass* and uploadOp as RESET_APP:
 
     .. code-block:: console
 
-      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -upload -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -uploadOp RESET_APP -username "user" -password "pass" -path "/home/user/Desktop/example.csv"
+      $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -upload -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -uploadOp "RESET_APP" -username "user" -password "pass" -path "/home/user/Desktop/example.csv"
 
 
 To script the CLI, write the commands you would like to execute in a scripting language (for example, Bash, Batch, Python, Ruby) and use a scheduler (such as Cron or Windows Task Scheduler) to schedule the tasks. To skip over ODK-X Suitcase's prompts to overwrite, pass :code:`-f` as an argument to ODK-X Suitcase.
