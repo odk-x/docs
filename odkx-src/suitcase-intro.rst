@@ -121,13 +121,13 @@ Combine the individual commands described in the help to perform the actions nee
 
       $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -update -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -username "user" -password "pass" -path "/home/user/Desktop/example.csv" -updateLogPath "/home/user/Desktop/log.txt"
       
-  - To upload CSV at location "/home/user/Desktop/example.csv" of table *table_id* from app *default* as an anonymous user and "-uploadOp" as RESET_APP:
+  - To upload CSV at location "/home/user/Desktop/example.csv" of table *table_id* from app *default* as an anonymous user and upload Option as RESET_APP:
 
     .. code-block:: console
 
       $ java -jar "ODK Suitcase v2.0.3 rev 220.jar" -upload -cloudEndpointUrl "https://your-endpoint-server.com" -appId "default" -dataVersion "Version" -tableId "table_id" -uploadOp "RESET_APP" -username "user" -password "pass" -path "/home/user/Desktop/example.csv"      
 
-  - To upload CSV at location "/home/user/Desktop/example.csv" of table *table_id* from app *default* with username *user* and password *pass* and "-uploadOp" as RESET_APP:
+  - To upload CSV at location "/home/user/Desktop/example.csv" of table *table_id* from app *default* with username *user* and password *pass* and upload Option as RESET_APP:
 
     .. code-block:: console
 
