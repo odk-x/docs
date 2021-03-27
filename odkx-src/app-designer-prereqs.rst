@@ -56,7 +56,7 @@ You must use Version 12 or higher. To avoid directory path problems on Windows, 
 For Windows
 ~~~~~~~~~~~~~~~
 
-When installing on Windows you can use an automated NodeJS installer the uses Chocolately. If you chose not to let the installer use Chocolately to install a bunch of packages after installing NodeJS, you will need to ensure the location of the :file:`npm` folder is added to the *PATH* variable of your system. If it is not, subsequent calls to access grunt will fail. For example: :file:`C:\\Users\\[username]\\AppData\\Roaming\\npm`.
+When installing on Windows you can use an automated NodeJS installer the uses Chocolatey. If you chose not to let the installer use Chocolatey to install a bunch of packages after installing NodeJS, you will need to ensure the location of the :file:`npm` folder is added to the *PATH* variable of your system. If it is not, subsequent calls to access grunt will fail. For example: :file:`C:\\Users\\[username]\\AppData\\Roaming\\npm`.
 For instructions on modifying *PATH*, see the section at the bottom of this page called Add adb to your *PATH* For Windows. Instead of navigating to the location of Android SDK, navigate to the location of the :file:`npm` folder.
 
 .. _app-designer-prereqs-nodejs-unix:
