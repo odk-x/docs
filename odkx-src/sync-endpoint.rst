@@ -159,6 +159,7 @@ Editing the defaults of LDAP directory
     Modify the ldap.env file to configure the environment variables . The default settings are as follows 
     
       .. code-block:: console
+      
        # openldap
        LDAP_ORGANISATION=Open Data Kit            // name of your organisation
        LDAP_DOMAIN=example.org                    // domain of your organisation
