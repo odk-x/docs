@@ -143,9 +143,9 @@ Using LDAP utils
   The ldap-service container has ldap-utils installed. If you'd prefer, you may use that toolset to administer the LDAP directory as well. Use this command to
   access them,
  
- .. code-block:: console
+    .. code-block:: console
   
-    $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=${STACK_NAME}_sync" --format '{{.ID}}') <LDAPTOOL> <ARGS>
+     $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=${STACK_NAME}_sync" --format '{{.ID}}') <LDAPTOOL> <ARGS>
     
 .. _sync-endpoint-advanced:
 
@@ -158,16 +158,16 @@ Editing the defaults of LDAP directory
 """""""""""""""""""""""""""""""""""""""""""""
     Modify the ldap.env file to configure the environment variables . The default settings are as follows 
     
-   .. code-block:: console
-     # openldap
-     LDAP_ORGANISATION=Open Data Kit            // name of your organisation
-     LDAP_DOMAIN=example.org                    // domain of your organisation
-     LDAP_READONLY_USER=true                    // enable the read only user
-     LDAP_READONLY_USER_PASSWORD=readonly       // password for read only user
-     LDAP_ADMIN_PASSWORD=admin                  // default password for admin account 
+      .. code-block:: console
+       # openldap
+       LDAP_ORGANISATION=Open Data Kit            // name of your organisation
+       LDAP_DOMAIN=example.org                    // domain of your organisation
+       LDAP_READONLY_USER=true                    // enable the read only user
+       LDAP_READONLY_USER_PASSWORD=readonly       // password for read only user
+       LDAP_ADMIN_PASSWORD=admin                  // default password for admin account 
 
-     # phpldapadmin
-     PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // ldap-service is the host of OpenLDAP . This is for the phpLDAPadmin
+       # phpldapadmin
+       PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // ldap-service is the host of OpenLDAP . This is for the phpLDAPadmin
    
 .. _sync-endpoint-custom-ldap:
 
