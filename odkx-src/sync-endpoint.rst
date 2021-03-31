@@ -2,6 +2,8 @@
   phpLDAPadmin
   readonly
   letsencrypt
+  OpenLDAP
+  ldif
 
 ODK-X Sync Endpoint
 ===================
@@ -132,3 +134,122 @@ Assigning users to groups
 
     a. Navigate to the :guilabel:`memberUid` section.
     b. Click modify group members to manage members.
+    
+.. _sync-endpoint-ldap-utils:
+
+Using LDAP utils
+"""""""""""""""""""""""""
+
+  The ldap-service container has ldap-utils installed. If you'd prefer, you may use that toolset to administer the LDAP directory as well. Use this command to
+  access them,
+ 
+ .. code-block:: console
+  
+    $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=${STACK_NAME}_sync" --format '{{.ID}}') <LDAPTOOL> <ARGS>
+    
+.. _sync-endpoint-advanced:
+
+Advanced
+--------
+
+.. _sync-endpoint-ldap-defaults:
+
+Editing the defaults of LDAP directory
+"""""""""""""""""""""""""""""""""""""""""""""
+    Modify the ldap.env file to configure the environment variables . The default settings are as follows 
+    
+    .. code-block:: console
+     # openldap
+     LDAP_ORGANISATION=Open Data Kit            // name of your organisation
+     LDAP_DOMAIN=example.org                    // domain of your organisation
+     LDAP_READONLY_USER=true                    // enable the read only user
+     LDAP_READONLY_USER_PASSWORD=readonly       // password for read only user
+     LDAP_ADMIN_PASSWORD=admin                  // default password for admin account 
+
+     # phpldapadmin
+     PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // ldap-service is the host of OpenLDAP . This is for the phpLDAPadmin
+   
+.. _sync-endpoint-custom-ldap:
+
+Using a Different LDAP directory
+""""""""""""""""""""""""""""""""""""""""""""""
+    
+    1. Create a folder in the sync-endpoint-default-setup directory and create a docker file inside it .
+    2. Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory .In the docker file Add the image of the ldap directory to be used and add 
+       the copy command to copy the bootstrap.ldif file to the right location in the container .
+    
+    3. Run the following command to build the docker image :
+    
+     .. code-block:: console
+  
+       $ docker build -t odk/[LDAP_DIRECTORY_NAME] [ Folder conatining the docker file ]
+       
+    4. Replace the ldap-service image from docker-compose.yml with odk/[LDAP_DIRECTORY_NAME].
+    
+    5. Modify config/sync-endpoint/security.properties to fill in the Settings for LDAP server.
+       Set security.server.ldapUrl in security.properties to the new server url . The name of the service in swarm would be same ( ldap-service ) . So just change 
+       the port number . For OpenLDAP port is 389 so url is ldap://ldap-service:389 .
+    
+.. _sync-endpoint-ldap-ui:
+
+Using a Different LDAP UI
+""""""""""""""""""""""""""""""""""""""""""""""
+    
+    If you want to use a UI outside the docker swarm in your local machine Modify the docker-compose.yml file in sync-endpoint-default-setup directory . Add ports 
+    mapping to the ldap service to expose the port 389 of ldap service to any port in your local host . Connect the UI application to this port on localhost.
+    
+    The ldap service of the the docker compose should be like this 
+    
+    .. code-block:: console
+        
+      ldap-service:
+       image: odk/openldap
+       deploy:
+        replicas: 1
+       networks:
+        - ldap-network
+       ports:
+        - "YOUR_LOCAL_HOST_PORT:389"    // 389 is the default port of openLDAP 
+       volumes:
+        - ldap-vol:/var/lib/ldap
+        - ldap-slapd.d-vol:/etc/ldap/slapd.d
+       env_file:
+        - ldap.env 
+    
+    
+    For running the UI application in the docker swarm create a folder in the sync-endpoint-default-setup directory and create a docker file inside it .
+    Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory . Add the image of the UI application to be used and the copy command to copy 
+    the bootstrap.ldif file to the right location in the container .
+    
+    To build the docker image run the command in the sync-endpoint-default-setup-directory with tag odk/[YOUR_UI_APPLICATION_NAME] :
+    
+     .. code-block:: console
+  
+       $ docker build -t odk/[YOUR_UI_APPLICATION_NAME] [ Folder conatining the docker file ]
+       
+    Edit the docke-compose.yml file . Replace the image of phpldapadmin service with odk/[YOUR_UI_APPLICATION_NAME] . 
+    
+    
+.. _sync-endpoint-dhis2:    
+
+Managing Identity through DHIS2
+"""""""""""""""""""""""""""""""""
+    Modify config/sync-endpoint/security.properties to fill in the Settings for DHIS2 Authentication section
+    Set security.server.authenticationMethod in security.properties to dhis2
+    [OPTIONAL] Remove OpenLDAP and phpLDAPadmin from docker-compose.yml .
+
+    After restarting your Sync Endpoint server, you will be able to login to Sync Endpoint using the same credentials you use
+    for your DHIS2 server. DHIS2 organization units and groups, with membership preserved, will be converted to Sync Endpoint
+    groups and accesible through the Sync Endpoint REST API.\
+    
+.. _sync-endpoint-warnings:
+
+Warnings
+--------
+ - The database and the LDAP directory set up here are meant only for testing and evaluation. When running in production you should configure a production ready 
+   database and a production ready LDAP directory. Using the pre-configured database and directory in production can result in poor performance and degraded 
+   availabiltiy.
+ - You should refer to Docker Swarm documentation on running a production ready Swarm.
+ - We recommend that you host Sync Endpoint on a commercial cloud provider (e.g. Google Cloud Platform, Amazon AWS, Microsoft Azure, etc.) If you want to host 
+   Sync Endpoint on premise, you should consult your System Administrator for appropriate hardware.
+ - Always make regular backups and test your backups to prevent potential data loss.
