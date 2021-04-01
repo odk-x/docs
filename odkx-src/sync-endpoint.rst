@@ -146,6 +146,8 @@ Using LDAP utils
     .. code-block:: console
   
      $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=${STACK_NAME}_sync" --format '{{.ID}}') <LDAPTOOL> <ARGS>
+     
+    The docker exec takes a container name and a command . The command is executed in the sepcified container . 
     
 .. _sync-endpoint-advanced:
 
@@ -178,8 +180,9 @@ Using a Different LDAP directory
 """"""""""""""""""""""""""""""""""""""""""""""
     
     1. Create a folder in the sync-endpoint-default-setup directory and create a docker file inside it .
+    
     2. Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory .In the docker file Add the image of the ldap directory to be used and add 
-       the copy command to copy the bootstrap.ldif file to the right location in the container .
+       the "COPY" command to copy the bootstrap.ldif file to the right path in the container .
     
     3. Run the following command to build the docker image :
     
@@ -191,7 +194,7 @@ Using a Different LDAP directory
     
     5. Modify config/sync-endpoint/security.properties to fill in the Settings for LDAP server.
        Set security.server.ldapUrl in security.properties to the new server url . The name of the service in swarm would be same ( ldap-service ) . So just change 
-       the port number . For OpenLDAP port is 389 so url is ldap://ldap-service:389 .
+       the port number .
     
 .. _sync-endpoint-ldap-ui:
 
@@ -199,9 +202,9 @@ Using a Different LDAP UI
 """"""""""""""""""""""""""""""""""""""""""""""
     
     If you want to use a UI outside the docker swarm in your local machine Modify the docker-compose.yml file in sync-endpoint-default-setup directory . Add ports 
-    mapping to the ldap service to expose the port 389 of ldap service to any port in your local host . Connect the UI application to this port on localhost.
+    mapping to the ldap service to expose the port 389 of ldap service to a port in your local host . Connect the UI application to this port on localhost.
     
-    The ldap service of the the docker compose should be like this 
+    The ldap service of the the docker compose should be like this after adding port mapping .
     
     .. code-block:: console
         
@@ -221,8 +224,8 @@ Using a Different LDAP UI
     
     
     For running the UI application in the docker swarm create a folder in the sync-endpoint-default-setup directory and create a docker file inside it .
-    Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory . Add the image of the UI application to be used and the copy command to copy 
-    the bootstrap.ldif file to the right location in the container .
+    Copy the templates folder from the phpLDAPadmin directory to the new directory . In the docker file ,add the image of the UI application to be used and the 
+    "COPY" command to copy the templates folder to the right path inside the container .
     
     To build the docker image run the command in the sync-endpoint-default-setup-directory with tag odk/[YOUR_UI_APPLICATION_NAME] :
     
