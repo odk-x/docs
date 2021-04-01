@@ -264,7 +264,7 @@ Warnings
 --------
  - The database and the LDAP directory set up here are meant only for testing and evaluation. When running in production you should configure a production ready 
    database and a production ready LDAP directory. Using the pre-configured database and directory in production can result in poor performance and degraded 
-   availabilitiy.
+   availability.
  - You should refer to Docker Swarm documentation on running a production ready Swarm.
  - We recommend that you host Sync Endpoint on a commercial cloud provider (e.g. Google Cloud Platform, Amazon AWS, Microsoft Azure, etc.) If you want to host 
    Sync Endpoint on premise, you should consult your System Administrator for appropriate hardware.
