@@ -168,7 +168,9 @@ Editing the defaults of LDAP directory
        LDAP_ADMIN_PASSWORD=admin                  // default password for admin account 
 
        # phpldapadmin
-       PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // ldap-service is the host of OpenLDAP . This is for the phpLDAPadmin
+       PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // This is for the phpLDAPadmin . In docker swarm this is the name of the service running LDAP . This can be eddited
+                                                 in the docker-compose.yml file
+                                                 
    
 .. _sync-endpoint-custom-ldap:
 
