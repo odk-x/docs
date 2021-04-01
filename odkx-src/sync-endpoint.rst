@@ -4,6 +4,15 @@
   letsencrypt
   OpenLDAP
   ldif
+  utils
+  ldap
+  env
+  yml
+  ldapUrl
+  localhost
+  UI
+  authenticationMethod
+  dhis
 
 ODK-X Sync Endpoint
 ===================
@@ -70,7 +79,7 @@ If you'd prefer to use the :program:`OpenLDAP` command line utilities, they're i
   - Linux/macOS:
 
   .. code-block:: console
-
+ 
     $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=syncldap_ldap-service" --format '{{.ID}}') LDAPTOOL ARGS
 
   - Windows:
@@ -140,14 +149,14 @@ Assigning users to groups
 Using LDAP utils
 """""""""""""""""""""""""
 
-  The ldap-service container has ldap-utils installed. If you'd prefer, you may use that toolset to administer the LDAP directory as well. Use this command to
+  The ldap-service container has ldap-utils installed. If you'd prefer, you may use that tool set to administer the LDAP directory as well. Use this command to
   access them,
  
     .. code-block:: console
   
      $ docker exec $(docker ps -f "label=com.docker.swarm.service.name=${STACK_NAME}_sync" --format '{{.ID}}') <LDAPTOOL> <ARGS>
      
-    The docker exec takes a container name and a command . The command is executed in the sepcified container . 
+    The docker exec takes a container name and a command . The command is executed in the specified container . 
     
 .. _sync-endpoint-advanced:
 
@@ -234,7 +243,7 @@ Using a Different LDAP UI
   
        $ docker build -t odk/[YOUR_UI_APPLICATION_NAME] [ Folder conatining the docker file ]
        
-    Edit the docke-compose.yml file . Replace the image of phpldapadmin service with odk/[YOUR_UI_APPLICATION_NAME] . 
+    Edit the docker-compose.yml file . Replace the image of phpLDAPadmin service with odk/[YOUR_UI_APPLICATION_NAME] . 
     
     
 .. _sync-endpoint-dhis2:    
@@ -247,7 +256,7 @@ Managing Identity through DHIS2
 
     After restarting your Sync Endpoint server, you will be able to login to Sync Endpoint using the same credentials you use
     for your DHIS2 server. DHIS2 organization units and groups, with membership preserved, will be converted to Sync Endpoint
-    groups and accesible through the Sync Endpoint REST API.\
+    groups and accessible through the Sync Endpoint REST API.\
     
 .. _sync-endpoint-warnings:
 
@@ -255,7 +264,7 @@ Warnings
 --------
  - The database and the LDAP directory set up here are meant only for testing and evaluation. When running in production you should configure a production ready 
    database and a production ready LDAP directory. Using the pre-configured database and directory in production can result in poor performance and degraded 
-   availabiltiy.
+   availabilitiy.
  - You should refer to Docker Swarm documentation on running a production ready Swarm.
  - We recommend that you host Sync Endpoint on a commercial cloud provider (e.g. Google Cloud Platform, Amazon AWS, Microsoft Azure, etc.) If you want to host 
    Sync Endpoint on premise, you should consult your System Administrator for appropriate hardware.
