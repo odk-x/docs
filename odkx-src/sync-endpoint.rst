@@ -202,7 +202,8 @@ Using a Different LDAP UI
 """"""""""""""""""""""""""""""""""""""""""""""
     
     If you want to use a UI outside the docker swarm in your local machine Modify the docker-compose.yml file in sync-endpoint-default-setup directory . Add ports 
-    mapping to the ldap service to expose the port 389 of ldap service to a port in your local host . Connect the UI application to this port on localhost.
+    mapping to the ldap service to expose the port 389 of ldap service to a port in your local host . If you wish to access 
+    the ldap protocol over TLS/SSL expose the port 636. Connect the UI application to this port on localhost.
     
     The ldap service of the the docker compose should be like this after adding port mapping .
     
