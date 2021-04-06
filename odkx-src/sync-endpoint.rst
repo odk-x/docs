@@ -153,7 +153,7 @@ Advanced
 
 Editing the defaults of LDAP Directory
 """""""""""""""""""""""""""""""""""""""""""""
-    Modify the :file:`ldap.env` file to configure the environment variables. The :file:`ldap.env` file is located in the sync-endpoint-default-setup diretory.
+    Modify the :file:`ldap.env` file to configure the environment variables. The :file:`ldap.env` file is located in the sync-endpoint-default-setup directory.
 
     The default settings are as follows 
 
