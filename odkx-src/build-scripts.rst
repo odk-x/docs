@@ -161,6 +161,10 @@ The Build variant corresponding to the source branches:
 
 Steps to change build variants in Android studio:
 
+1. To change the build variant Android Studio uses, select **Build** > **Select Build Variant** in the menu bar.
+2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE deploys to your connected device and is visible in the editor.
+
+
 
 .. _build-scripts-internal:
 
