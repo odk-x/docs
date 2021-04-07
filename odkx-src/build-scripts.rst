@@ -148,6 +148,18 @@ To run the UI tests:
 
       ./gradlew clean testSnapshotBasicDebug connectedSnapshotBasicDebugAndroidTest
 
+Build Variants
+~~~~~~~~~~~~~~~~~~
+
+you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant.
+
+The Build variant corresponding to the source branches:
+
+1. **development**:  **snapshotBasicRelease** is one of the build variant corresponds to development branch in Android studio. All the required changes and forks are done from this branch in which the new development, upgrades and features should be contributed and tested.
+2. **demo**:  **demoBasicRelease** here is the build variant that corresponds do demo branch in Android studio. This is basically the preview release of an application before launching the official release. Which can bu used by project maintainers for testing out the application if it is not creating any errors.
+3. **master**:  **masterBasicRlease** is the official and stable release of an application, that is to be used globally.
+
+Steps to change build variants in Android studio:
 
 
 .. _build-scripts-internal:
