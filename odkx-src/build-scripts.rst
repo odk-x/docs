@@ -151,7 +151,7 @@ To run the UI tests:
 Build Variants
 ~~~~~~~~~~~~~~~~~~
 
-you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. For more information refer to [build variants](https://developer.android.com/studio/build/build-variants)
+you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. For more information refer to https://developer.android.com/studio/build/build-variants
 
 The Build variant corresponding to the source branches:
 
