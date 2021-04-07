@@ -159,6 +159,8 @@ The Build variant corresponding to the source branches:
 2. **demo**:  **demoBasicRelease** here is the build variant that corresponds do demo branch in Android studio. This is basically the preview release of an application before launching the official release. Which can bu used by project maintainers for testing out the application if it is not creating any errors.
 3. **master**:  **masterBasicRlease** is the official and stable release of an application, that is to be used globally.
 
+On changing any build variant that will run in the gradle command line as it runs for other vanriants, you are just aware of which version is presenting of that application. That has different functionalities in every version as all those are made for different purpose.
+
 Steps to change build variants in Android studio:
 
 1. To change the build variant Android Studio uses, select **Build** > **Select Build Variant** in the menu bar.
