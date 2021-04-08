@@ -1,6 +1,8 @@
 .. spelling::
   phpLDAPadmin
   readonly
+  ldapUrl
+  ldap
 
 .. _sync-endpoint-manual-setup:
 
@@ -155,15 +157,15 @@ Custom LDAP directory
        compose.yml`.
        
   3. Create a new directory in the sync-endpoint-default-setup directory and create a Docker file inside it.
-  4. Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory. In the Docker file Add the image of the LDAP Directory to be used and add 
-     the "COPY" command to copy the bootstrap.ldif file to the right path in the container.
+  4. Copy the :file:`bootstrap.ldif` file from the OpenLDAP directory to the new directory. In the Docker file Add the image of the LDAP Directory to be used 
+     and add the "COPY" command to copy the :file:`bootstrap.ldif` file to the right path in the container.
   5. Run the following command to build the Docker image :
     
     .. code-block:: console
 
       $ docker build -t odk/[LDAP_DIRECTORY_NAME] [ Folder conatining the Docker file ]
 
-  6. Replace the ldap-service image from docker-compose.yml with odk/[LDAP_DIRECTORY_NAME].
+  6. Replace the ldap-service image from :file:`docker-compose.yml` with odk/[LDAP_DIRECTORY_NAME].
   7. In the sync-endpoint-default-setup directory navigate to config/sync-endpoint. Modify the :file:`security.properties` file to fill in the Settings for LDAP 
      server. Set security.server.ldapUrl in security.properties to the new server url. The name of the service in Swarm would be same ( ldap-service ). So just 
      change the port number. After this following settings need to be configured in the same file for the LDAP server:
