@@ -176,45 +176,6 @@ Editing the defaults of LDAP Directory
     For LDAP environment variables the corresponding options in the security.properties also need to be modified . The security.properties file is
     located at config/sync-endpoint in the sync-endpoint-default-setup directory.
 
-
-.. _sync-endpoint-custom-ldap:
-
-Using a Different LDAP Directory
-""""""""""""""""""""""""""""""""""""""""""""""
-
-    1. Create a new directory in the sync-endpoint-default-setup directory and create a Docker file inside it .
-
-    2. Copy the bootstrap.ldif file from the OpenLDAP directory to the new directory .In the Docker file Add the image of the LDAP Directory to be used and add 
-       the "COPY" command to copy the bootstrap.ldif file to the right path in the container .
-
-    3. Run the following command to build the Docker image :
-
-     .. code-block:: console
-
-       $ docker build -t odk/[LDAP_DIRECTORY_NAME] [ Folder conatining the Docker file ]
-
-    4. Replace the ldap-service image from docker-compose.yml with odk/[LDAP_DIRECTORY_NAME].
-
-    5. In the sync-endpoint-default-setup directory navigate to config/sync-endpoint. Modify the :file:`security.properties` file to fill in the Settings for LDAP 
-       server.Set security.server.ldapUrl in security.properties to the new server url . The name of the service in Swarm would be same ( ldap-service ) . So just 
-       change the port number. After this following settings need to be configured in the same file for the LDAP server :
-
-       - :guilabel:`security.server.ldapBaseDn`
-       - :guilabel:`security.server.ldapPooled`
-       - :guilabel:`security.server.userSearchBase`
-       - :guilabel:`security.server.groupSearchBase`
-       - :guilabel:`security.server.groupRoleAttribute`
-       - :guilabel:`security.server.userFullnameAttribute`
-       - :guilabel:`security.server.usernameAttribute`
-       - :guilabel:`security.server.userDnPattern`
-       - :guilabel:`security.server.memberOfGroupSearchFilter`
-       - :guilabel:`security.server.serverGroupSearchFilter`
-
-.. note::
-
-  The LDAP Directory here is configured to run inside the Docker Swarm. If you are running the LDAP Directory outside the Docker Swarm and it is accessible 
-  for the containers inside the Docker Swarm , you can directly follow step 5 to configure it .
-
 .. _sync-endpoint-ldap-ui:
 
 Using a Different LDAP UI
