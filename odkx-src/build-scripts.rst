@@ -151,7 +151,11 @@ To run the UI tests:
 Build Variants
 ~~~~~~~~~~~~~~~~~~
 
+
 ODK-X has a modular framework design with inter-dependencies between various ODK-X tools. To manage accepting code contributions, bug fixes, and other enhancements that might effect other tools in a unforeseen way ODK-X uses a 3 staged release workflow that involves 3 branches.
+
+you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. For more information refer to https://developer.android.com/studio/build/build-variants
+
 
 -development: the branch where new development, upgrades, and features are contributed and tested
 -demo: This branch is the last stable version of development. This provides a staging area used for testing before moving to an official release. This is where preview releases are staged.
