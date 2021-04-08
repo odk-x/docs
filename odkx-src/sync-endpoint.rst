@@ -167,13 +167,13 @@ Editing the defaults of LDAP Directory
       LDAP_ADMIN_PASSWORD=admin                  // default password for admin account
 
       # phpldapadmin
-      PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // This is for the phpLDAPadmin . In Docker Swarm this is the hostname of the service running LDAP . This can be 
+      PHPLDAPADMIN_LDAP_HOSTS=ldap-service   // This is for the phpLDAPadmin. In Docker Swarm this is the hostname of the service running LDAP. This can be 
                                                 eddited in the docker-compose.yml file
 
 
   .. note::
 
-    For LDAP environment variables the corresponding options in the security.properties also need to be modified . The security.properties file is
+    For LDAP environment variables the corresponding options in the security.properties also need to be modified. The security.properties file is
     located at config/sync-endpoint in the sync-endpoint-default-setup directory.
 
 .. _sync-endpoint-ldap-ui:
@@ -181,11 +181,11 @@ Editing the defaults of LDAP Directory
 Using a Different LDAP UI
 """"""""""""""""""""""""""""""""""""""""""""""
 
-    If you want to use a UI outside the Docker Swarm in your local machine Modify the docker-compose.yml file in sync-endpoint-default-setup directory . Add ports 
-    mapping to the ldap service to expose the port 389 of ldap service to a port in your local host . If you wish to access 
+    If you want to use a UI outside the Docker Swarm in your local machine Modify the docker-compose.yml file in sync-endpoint-default-setup directory. Add ports 
+    mapping to the ldap service to expose the port 389 of ldap service to a port in your local host. If you wish to access 
     the ldap protocol over TLS/SSL expose the port 636. Connect the UI application to this port on localhost.
 
-    The ldap service of the the Docker compose should be like this after adding port mapping .
+    The ldap service of the the Docker compose should be like this after adding port mapping.
 
     .. code-block:: console
 
@@ -206,17 +206,17 @@ Using a Different LDAP UI
     .. Warning:: The LDAP service running at any port will not only be accessible from the localhost but will also be exposed over the Docker ingress overlay 
                  network (which is exposed to the Internet in most cases).
 
-    For running the UI application in the Docker Swarm create a folder in the sync-endpoint-default-setup directory and create a Docker file inside it .
-    Copy the templates folder from the phpLDAPadmin directory to the new directory . In the Docker file ,add the image of the UI application to be used and the 
-    "COPY" command to copy the templates folder to the right path inside the container .
+    For running the UI application in the Docker Swarm create a folder in the sync-endpoint-default-setup directory and create a Docker file inside it.
+    Copy the templates folder from the phpLDAPadmin directory to the new directory. In the Docker file ,add the image of the UI application to be used and the 
+    "COPY" command to copy the templates folder to the right path inside the container.
 
-    To build the Docker image run the command in the sync-endpoint-default-setup-directory with tag odk/[YOUR_UI_APPLICATION_NAME] :
+    To build the Docker image run the command in the sync-endpoint-default-setup-directory with tag odk/[YOUR_UI_APPLICATION_NAME]:
 
      .. code-block:: console
 
        $ docker build -t odk/[YOUR_UI_APPLICATION_NAME] [ Folder conatining the Docker file ]
 
-    Edit the docker-compose.yml file . Replace the image of phpLDAPadmin service with odk/[YOUR_UI_APPLICATION_NAME] . 
+    Edit the docker-compose.yml file. Replace the image of phpLDAPadmin service with odk/[YOUR_UI_APPLICATION_NAME]. 
 
 .. _sync-endpoint-dhis2:    
 
