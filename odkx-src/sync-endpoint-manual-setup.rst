@@ -153,8 +153,7 @@ Custom LDAP directory
 
       $ docker config create org.opendatakit.sync.ldapcert PATH_TO_CERT
 
-    b. Uncomment the relevant lines in the *configs* section in :file:`docker-compose.yml` and the *configs* section under the *sync* section in :file:`docker-
-       compose.yml`.
+    b. Uncomment the relevant lines in the *configs* section in :file:`docker-compose.yml` and the *configs* section under the *sync* section in :file:`docker-compose.yml`.
        
   3. Create a new directory in the sync-endpoint-default-setup directory and create a Docker file inside it.
   4. Copy the :file:`bootstrap.ldif` file from the OpenLDAP directory to the new directory. In the Docker file Add the image of the LDAP Directory to be used 
