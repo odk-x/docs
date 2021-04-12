@@ -170,7 +170,7 @@ Each build variant represents a different version of your app that You can confi
   2. **demo**:  **demoBasicRelease** here is the build variant that corresponds to demo branch . This is the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
   3. **master**:  **masterBasicRelease** is the official and stable release of an application, this is the latest release of ODK-X application.
 
-Gradle creates a build variant for every possible combination of the product flavors and build types that you configure. As different code bases is used for each flavour variant.
+Gradle creates a build variant for every possible combination of the product flavor and build types that you configure. As different code bases is used for each flavor variant.
 
 Steps to change build variants in Android studio:
 
