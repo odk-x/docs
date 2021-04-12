@@ -154,14 +154,11 @@ Build Variants
 
 ODK-X has a modular framework design with inter-dependencies between various ODK-X tools. To manage accepting code contributions, bug fixes, and other enhancements that might affect other tools in an unforeseen way ODK-X uses a 3 staged release workflow that involves 3 branches.
 
-you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. For more information refer to https://developer.android.com/studio/build/build-variants
+- development: the branch where new development, upgrades, and features are contributed and tested
+- demo: This branch is the last stable version of development. This provides a staging area used for testing before moving to an official release. This is where preview releases are staged.
+- master: The current stable release.
 
-
--development: the branch where new development, upgrades, and features are contributed and tested
--demo: This branch is the last stable version of development. This provides a staging area used for testing before moving to an official release. This is where preview releases are staged.
--master: The current stable release.
-
-Since the branches are a different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling.
+Since the branches are at different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling.
 
 Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. https://developer.android.com/studio/build/build-variants
 
@@ -170,7 +167,7 @@ Each build variant represents a different version of your app that You can confi
   The Build variant corresponding to the source branches:
 
   1. **development**:  **snapshotBasicRelease** is one of the build variant corresponds to development branch. All the required changes and forks are done from this branch in which the new development, upgrades and features should be contributed and tested.
-  2. **demo**:  **demoBasicRelease** here is the build variant that corresponds do demo branch . This is basically the preview release of an application before launching the official release. Which can bu used by project maintainers for testing out the application if it is not creating any errors.
+  2. **demo**:  **demoBasicRelease** here is the build variant that corresponds to demo branch . This is basically the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
   3. **master**:  **masterBasicRlease** is the official and stable release of an application, this is the latest release of ODK-X application.
 
   On changing any build variant that will run in the gradle command line as it runs for other variants, you are just aware of which version is presenting of that application. That has different functionalities in every version as all those are made for different purpose.
@@ -181,7 +178,7 @@ Steps to change build variants in Android studio:
 2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE deploys to your connected device and is visible in the editor.
 
 .. image:: /img/survey-using/build-variants.*
-    :alt: Survey Form List
+    :alt: build-variants
     :class: device-screen-vertical
 
 .. _build-scripts-internal:
