@@ -152,7 +152,7 @@ Build Variants
 ~~~~~~~~~~~~~~~~~~
 
 
-ODK-X has a modular framework design with inter-dependencies between various ODK-X tools. To manage accepting code contributions, bug fixes, and other enhancements that might effect other tools in a unforeseen way ODK-X uses a 3 staged release workflow that involves 3 branches.
+ODK-X has a modular framework design with inter-dependencies between various ODK-X tools. To manage accepting code contributions, bug fixes, and other enhancements that might affect other tools in an unforeseen way ODK-X uses a 3 staged release workflow that involves 3 branches.
 
 you can configure build variants to create different versions of your app from a single project, and how to properly manage your dependencies and signing configurations. Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. For more information refer to https://developer.android.com/studio/build/build-variants
 
