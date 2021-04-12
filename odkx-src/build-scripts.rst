@@ -168,7 +168,7 @@ Each build variant represents a different version of your app that You can confi
 
   1. **development**:  **snapshotBasicRelease** is one of the build variant corresponds to development branch. All the required changes and forks are done from this branch in which the new development, upgrades and features should be contributed and tested.
   2. **demo**:  **demoBasicRelease** here is the build variant that corresponds to demo branch . This is basically the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
-  3. **master**:  **masterBasicRlease** is the official and stable release of an application, this is the latest release of ODK-X application.
+  3. **master**:  **masterBasicRelease** is the official and stable release of an application, this is the latest release of ODK-X application.
 
   On changing any build variant that will run in the gradle command line as it runs for other variants, you are just aware of which version is presenting of that application. That has different functionalities in every version as all those are made for different purpose.
 
