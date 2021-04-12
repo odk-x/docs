@@ -344,8 +344,7 @@ in the file :file:`style-test.py`.
 Excluding Spelling checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To exclude a word from spelling check,
-specify the word under the title spelling.
+To exclude a word from spelling check,specify the word under the title spelling on the top of the document.
 Example:
 
   .. code-block:: console
