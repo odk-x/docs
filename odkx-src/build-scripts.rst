@@ -170,7 +170,7 @@ Each build variant represents a different version of your app that You can confi
   2. **demo**:  **demoBasicRelease** here is the build variant that corresponds to demo branch . This is basically the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
   3. **master**:  **masterBasicRelease** is the official and stable release of an application, this is the latest release of ODK-X application.
 
-  On changing any build variant that will run in the gradle command line as it runs for other variants, you are just aware of which version is presenting of that application. That has different functionalities in every version as all those are made for different purpose.
+Gradle creates a build variant for every possible combination of the product flavors and build types that you configure. As different code bases is used for each flavour variant.
 
 Steps to change build variants in Android studio:
 
@@ -178,7 +178,7 @@ Steps to change build variants in Android studio:
 2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE deploys to your connected device and is visible in the editor.
 
 .. image:: /img/survey-using/build-variants.*
-    :alt: build-variants
+    :alt: "Change build variant"
     :class: device-screen-vertical
 
 .. _build-scripts-internal:
