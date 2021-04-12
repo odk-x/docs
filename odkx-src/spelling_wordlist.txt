@@ -91,6 +91,7 @@ esthetics
 ethiopian
 extensibility
 fallback
+flavor
 fiducial
 firebase
 Firebase
