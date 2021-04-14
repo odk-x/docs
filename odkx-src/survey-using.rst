@@ -98,6 +98,27 @@ Completing the *Household Member Survey* subform returns us to the same screen w
     :class: device-screen-vertical
 
 
+.. _survey-ordering-form-instances:
+
+Ordering Forms list
+---------------------------
+
+ All the forms listed on the homescreen can be ordered in two ways eithr by **TableID** or **Name**.Press the Action Button (:guilabel:`⋮`) and select :menuselection:`Sort by`.
+
+ The screen will show two options as :menuselection:`TableID` and :menuselection:`Name` as described below:
+
+ - Order by **TableID** : The forms list will get ordered according to the TableID.
+
+   .. image:: /img/survey-using/TableID.*
+    :alt: "Order by TableID"
+    :class: device-screen-vertical
+
+ - Order by **Name** : The forms list will get ordered according to the Name.
+ 
+   .. image:: /img/survey-using/Name.*
+    :alt: "Order by Name"
+    :class: device-screen-vertical
+
 .. _survey-saving-instance:
 
 Saving a Form Instance
