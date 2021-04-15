@@ -166,9 +166,9 @@ Each build variant represents a different version of your app that You can confi
 
   The Build variant corresponding to the source branches:
 
-  1. **development**:  **snapshotBasicRelease** is one of the build variant corresponds to development branch. All the required changes and forks are done from this branch in which the new development, upgrades, and features should be contributed and tested.
-  2. **demo**:  **demoBasicRelease** here is the build variant that corresponds to demo branch . This is the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
-  3. **master**:  **masterBasicRelease** is the official and stable release of an application, this is the latest release of ODK-X application.
+  1. **development**:  **snapshotBasicRelease** is the build variant corresponds to a release build of the development branch. **snapshotBasicDebug** is the build variant that corresponds to a debug build of the development branch. This branch is where the new development, upgrades, and features are contributed and tested.
+  2. **demo**:  **demoBasicRelease** is the build variant that corresponds to release build of the demo branch. **demoBasicDebug** is the build variant that corresponds to a debug build of the demo branch. This is the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
+  3. **master**:  **masterBasicRelease** is the build variant that corresponds to a release build of the master branch. **masterBasicDebug** is the build variant that corresponds to a debug build of the master branch.It is the official and stable release of an application, this is the latest release of ODK-X application.
 
 Gradle creates a build variant for every possible combination of the product flavor and build types that you configure. As different code bases is used for each flavor variant.
 
