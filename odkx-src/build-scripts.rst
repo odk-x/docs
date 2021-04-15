@@ -158,9 +158,7 @@ ODK-X has a modular framework design with inter-dependencies between various ODK
 - demo: This branch is the last stable version of development. This provides a staging area used for testing before moving to an official release. This is where preview releases are staged.
 - master: The current stable release.
 
-Since the branches are at different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling.
-
-Each build variant represents a different version of your app that You can configure a dependency for a specific build variant. https://developer.android.com/studio/build/build-variants
+Since the branches are at different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling.Each build variant represents a different version of your app that you can build.
 
 .. note::
 
