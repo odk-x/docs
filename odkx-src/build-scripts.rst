@@ -164,18 +164,18 @@ Each build variant represents a different version of your app that You can confi
 
 .. note::
 
-  The Build variant corresponding to the source branches:
+  The build variant corresponding to the source branches:
 
-  1. **development**:  **snapshotBasicRelease** is the build variant corresponds to a release build of the development branch. **snapshotBasicDebug** is the build variant that corresponds to a debug build of the development branch. This branch is where the new development, upgrades, and features are contributed and tested.
-  2. **demo**:  **demoBasicRelease** is the build variant that corresponds to release build of the demo branch. **demoBasicDebug** is the build variant that corresponds to a debug build of the demo branch. This is the preview release of an application before launching the official release. Which can be used by project maintainers for testing out the application if it is not creating any errors.
-  3. **master**:  **masterBasicRelease** is the build variant that corresponds to a release build of the master branch. **masterBasicDebug** is the build variant that corresponds to a debug build of the master branch.It is the official and stable release of an application, this is the latest release of ODK-X application.
+  1. **development**:  **snapshotBasicRelease** is the build variant that corresponds to a release build of the development branch. **snapshotBasicDebug** is the build variant that corresponds to a debug build of the development branch. This branch is where the new development, upgrades, and features are contributed and tested.
+  2. **demo**:  **demoBasicRelease** is the build variant that corresponds to a release build of the demo branch. **demoBasicDebug** is the build variant that corresponds to a debug build of the demo branch. This is the preview release of an application before launching the official release. This branch can be used by project maintainers for testing out the application if it is not creating any errors.
+  3. **master**:  **masterBasicRelease** is the build variant that corresponds to a release build of the master branch. **masterBasicDebug** is the build variant that corresponds to a debug build of the master branch. It is the official and stable release of an application, this is the latest release of ODK-X application.
 
 Gradle creates a build variant for every possible combination of the product flavor and build types that you configure. As different code bases is used for each flavor variant.
 
 Steps to change build variants in Android studio:
 
 1. To change the build variant Android Studio uses, select **Build** > **Select Build Variant** in the menu bar.
-2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE deploys to your connected device and is visible in the editor.
+2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE(android studio) deploys to your connected device and is visible in the editor.
 
 .. image:: /img/survey-using/build-variants.*
     :alt: "Change build variant"
@@ -186,7 +186,7 @@ Steps to change build variants in Android studio:
 Internal Build Files
 ------------------------
 
-This section covers the files that are stored inside each of the Android projects. These paths follow the same pattern for each Android project, the project name differs. For clarity, the root level of the project will be referred to as :file:`root` and the app/lib level of the project will be referred to as :file:`app`. So, for example, the path :file:`services/services_app/build.gradle` becomes :file:`project/app/build.gradle`.
+This section covers the files that are stored inside each of the Android projects. These paths follow the same pattern for each Android project, just the project name differs. For clarity, the root level of the project will be referred to as :file:`root` and the app/lib level of the project will be referred to as :file:`app`. So, for example, the path :file:`services/services_app/build.gradle` becomes :file:`project/app/build.gradle`.
 
 .. _build-scripts-internal-settings:
 
