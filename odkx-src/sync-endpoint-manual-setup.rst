@@ -52,8 +52,12 @@ Setup instructions:
 
   .. code-block:: console
 
-    $ git clone https://github.com/odk-x/sync-endpoint
-   
+    $ git clone -b master --single-branch --depth=1 https://github.com/odk-x/sync-endpoint
+
+    .. note::
+
+      The above command performs a shallow clone of the sync-endpoint github repository. To perform a full clone remove :guilabel:`--single-branch --depth=1` from the command.
+
   4. Navigate into the sync-endpoint directory. Most likely
 
   .. code-block:: console
