@@ -158,7 +158,7 @@ ODK-X has a modular framework design with inter-dependencies between various ODK
 - demo: This branch is the last stable version of development. This provides a staging area used for testing before moving to an official release. This is where preview releases are staged.
 - master: The current stable release.
 
-Since the branches are at different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling.Each build variant represents a different version of your app that you can build.
+Since the branches are at different stages of development the dependency libraries are at different stages of development. To make sure you are building against the correct dependencies you need to either checkout a local copy of the dependencies using the same branch name in the same directory OR you can adjust the build variant to match the dependencies causing Gradle and Android Studio to fetch the correct dependencies when compiling. Each build variant represents a different version of your app that you can build.
 
 .. note::
 
@@ -170,10 +170,10 @@ Since the branches are at different stages of development the dependency librari
 
 Gradle creates a build variant for every possible combination of the product flavor and build types that you configure. As different code bases is used for each flavor variant.
 
-Steps to change build variants in Android studio:
+Steps to change build variants in Android Studio:
 
 1. To change the build variant Android Studio uses, select **Build** > **Select Build Variant** in the menu bar.
-2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the IDE(android studio) deploys to your connected device and is visible in the editor.
+2. The Build Variants panel has two columns: **Module** and **Active Build Variant**. The **Active Build Variant** value for the module determines which build variant the Android Studio deploys to your connected device and is visible in the editor.
 
 .. image:: /img/survey-using/build-variants.*
     :alt: "Change build variant"
