@@ -50,7 +50,7 @@ Setup instructions:
   
   3. Checkout the sync-endpoint code by running:
 
-  .. code-block:: console
+   .. code-block:: console
 
     $ git clone -b master --single-branch --depth=1 https://github.com/odk-x/sync-endpoint
 
