@@ -56,7 +56,7 @@ Setup instructions:
 
   .. note::
 
-     The above command performs a shallow clone of the sync-endpoint Github git repository. To perform a full clone remove :guilabel:`--single-branch --depth=1` from the command.
+     The above command performs a shallow clone of the sync-endpoint GitHub git repository. To perform a full clone remove :guilabel:`--single-branch --depth=1` from the command.
 
   4. Navigate into the sync-endpoint directory. Most likely
 
