@@ -280,3 +280,89 @@ Enabling or Disabling Anonymous User Access
     .. code-block:: console
 
       $ docker stack deploy -c /root/sync-endpoint-default-setup/docker-compose.yml syncldap
+    
+Add SSL Certificate In An Existing domain
+-------------------------------------------
+
+Certbot can obtain and install HTTPS/TLS/SSL certificates.  By default,
+it will attempt to use a webserver both for obtaining and installing the
+certificate.
+Installing an SSL Certificate on NGINX ensures a safe connection between your web server and browser. It encrypts the data transmitted over the internet so that it is only visible to the intended recipient.
+
+**Prerequisites:**
+   obtain the ssl certificate from certbot in a HTTPS domain or nginx server. To import the certificate the certbot functionality need to be disabled.
+
+   - A server certificate issued by a Certificate Authority for your domain
+   - Intermediate certificates
+   - Your private key
+   - NGINX installed on your system
+
+**Step 1: Combine All Certificates into a Single File**
+   You should have your SSL certificate in the form of a .zip file. Once you download and extract the file, you will see it consists of a server certificate, a root certificate, and an intermediate certificate. combine all three files into one. 
+
+   You can also do this via command-line. The command to merge the certificates into one file will depend on whether you have separate intermediate files or if these files are inside a single .ca-bundle file.
+
+   - If all three certificates are listed separately, use the command:
+    
+    .. code-block::
+
+      cat your_domain.crt intermediate.crt root.crt >> ssl-bundle.crt
+
+   - If the intermediate certificates are in one bundle, run:
+
+    .. code-block::
+     
+      cat your_domain.crt your_domain.ca-bundle >> ssl-bundle.crt
+
+**Step 2: Edit NGINX Configuration File**
+   configure the NGINX server block (AKA virtual host file) for your server. If you don’t know the location of the file, run the command:
+
+   .. code-block::
+
+     sudo find nginx.conf
+
+  Open the file to make the necessary modifications. The easiest way to set up the configuration is to copy the original server module, paste it below, and edit the content. 
+
+    - Start by specifying the server should listen to port 443: `listen 443;`
+    - Make sure the server block includes the line: `ssl on;`
+    - Define the path of the SSL certificate: `ssl_certificate /etc/ssl/ssl-bundle.crt;`
+    - Specify the directory where the SSL Certificate Key is located: `/path/to/your_private.key;`
+  
+  The configuration file should look similar to the one below:
+
+   .. code-block::   
+
+     server {
+     listen 443;
+     ssl on;
+     ssl_certificate /etc/ssl/ssl-bundle.crt;
+     ssl_certificate_key /path/to/your_private.key;
+     root /path/to/webroot;
+     server_name your_domain.com;
+     }
+     access_log /var/log/nginx/nginx.vhost.access.log;
+     error_log /var/log/nginx/nginx.vhost.error.log;
+     location / {
+     root /var/www/;
+     root  /home/www/public_html/your.domain.com/public/;
+     index index.html;
+     }
+     }
+  
+  Save and exit the file.
+
+**Step 3: Restart NGINX Server**
+   For your configuration changes to take place, you need to restart your NGINX server. To do so, run the command:
+
+   .. code-block::
+
+     sudo systemctl restart nginx
+
+**Step 4: Verify SSL Certificate**
+   The best way to check you have successfully installed the SSL certificate on NGINX is to connect to your server via browser.
+   Open a browser of your choice and navigate to your domain using the https protocol:
+
+   .. code-block::
+
+     https://your.domain.com
+   
