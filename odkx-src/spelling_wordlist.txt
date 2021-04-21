@@ -40,6 +40,7 @@ bluetooth
 Bluetooth
 boolean
 camelCase
+certbot
 cd
 checkbox
 checkboxes
