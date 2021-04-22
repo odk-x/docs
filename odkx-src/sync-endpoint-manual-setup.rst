@@ -281,16 +281,14 @@ Enabling or Disabling Anonymous User Access
 
       $ docker stack deploy -c /root/sync-endpoint-default-setup/docker-compose.yml syncldap
     
-Add SSL Certificate In An Existing domain
+Add SSL Certificate in an Existing Domain
 -------------------------------------------
 
-Certbot can obtain and install HTTPS/TLS/SSL certificates.  By default,
-it will attempt to use a webserver both for obtaining and installing the
-certificate.
+Certbot can obtain and install HTTPS/TLS/SSL certificates.  By default, it will attempt to use a webserver both for obtaining and installing the certificate.
 Installing an SSL Certificate on NGINX ensures a safe connection between your web server and browser. It encrypts the data transmitted over the internet so that it is only visible to the intended recipient.
 
 **Prerequisites:**
-   obtain the ssl certificate from certbot in a HTTPS domain or nginx server. To import the certificate the certbot functionality need to be disabled.
+   obtain the SSL certificate from certbot in a HTTPS domain or NGINX server. To import the certificate the certbot functionality need to be disabled.
 
    - A server certificate issued by a Certificate Authority for your domain
    - Intermediate certificates
@@ -298,7 +296,7 @@ Installing an SSL Certificate on NGINX ensures a safe connection between your we
    - NGINX installed on your system
 
 **Step 1: Combine All Certificates into a Single File**
-   You should have your SSL certificate in the form of a .zip file. Once you download and extract the file, you will see it consists of a server certificate, a root certificate, and an intermediate certificate. combine all three files into one. 
+   You should have your SSL certificate in the form of a .zip file. Once you download and extract the file, you will see it consists of a server certificate, a root certificate, and an intermediate certificate. Combine all three files into one. 
 
    You can also do this via command-line. The command to merge the certificates into one file will depend on whether you have separate intermediate files or if these files are inside a single .ca-bundle file.
 
@@ -315,7 +313,7 @@ Installing an SSL Certificate on NGINX ensures a safe connection between your we
       cat your_domain.crt your_domain.ca-bundle >> ssl-bundle.crt
 
 **Step 2: Edit NGINX Configuration File**
-   configure the NGINX server block (AKA virtual host file) for your server. If you don’t know the location of the file, run the command:
+   Configure the NGINX server block (AKA virtual host file) for your server. If you don’t know the location of the file, run the command:
 
    .. code-block::
 
@@ -360,7 +358,7 @@ Installing an SSL Certificate on NGINX ensures a safe connection between your we
 
 **Step 4: Verify SSL Certificate**
    The best way to check you have successfully installed the SSL certificate on NGINX is to connect to your server via browser.
-   Open a browser of your choice and navigate to your domain using the https protocol:
+   Open a browser of your choice and navigate to your domain using the HTTPS protocol:
 
    .. code-block::
 
