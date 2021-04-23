@@ -139,7 +139,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
 
    It is better to ask a question in the "wrong" venue
    than to not ask the question at all.
-   Many of the same people are present in both the places,
+   Many of the same people are present in both places,
    and we will help you wherever you happen to show up.
 
 .. _docs-local-setup:
