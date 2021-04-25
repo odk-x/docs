@@ -29,7 +29,7 @@ We also recommend installing both ODK-X Survey and ODK-X Tables. Having both is 
 Installing Services
 --------------------------------
 
-  1. From your device's :guilabel:`Settings`, choose :menuselection:`Apps & notifications`. (On older versions of Android, this setting maybe in :menuselection:`Applications` or :menuselection:`Security` depending upon your android version.)
+  1. From your device's :guilabel:`Settings`, choose :menuselection:`Apps & notifications`. (On older versions of Android, this setting maybe in :menuselection:`Applications` or :menuselection:`Security` depending upon your Android version.)
 
     - Go to :guilabel:`Special app access` in :guilabel:`Advanced` and choose :guilabel:`Install unknown apps`
     - From the list of applications, select a browser of your choice and check :guilabel:`Allow from this source`.
