@@ -178,7 +178,7 @@ To install the Android SDK:
 
       $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3"
 
-    If you are using Mac, you may need to prefix "sdkmanager" with "./" like below:
+    If you are using a Mac, you may need to prefix "sdkmanager" with "./" like below:
     
     .. code-block:: console
 
