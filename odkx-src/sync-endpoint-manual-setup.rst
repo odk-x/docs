@@ -96,7 +96,7 @@ Setup instructions:
 
   10. Enter your hostname in the :code:`security.server.hostname` field (if such field doesn't exists, create one at the bottom of file) in the :file:`security.properties` file (under the directory :file:`config/sync-endpoint`). You can also choose to enable :ref:`Anonymous access<sync-anonymous>` on your ODK-X Sync Endpoint by configuring the same :file:`security.properties` file.
 
-  11. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such field doesn't exists, create it at the bottom of file). Then add or edit the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
+  11. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such a field doesn't exists, create it at the bottom of file). Then add or edit the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
 
     .. note::
 
@@ -125,7 +125,7 @@ Setup instructions:
 
        $ docker stack deploy -c docker-compose.yml -c docker-compose-https.yml syncldap
     
-    If there is a failure during docker stack deploy process, try :ref:`take the docker stack down <sync-endpoint-stopping>` first and bring it back up again with the previous same :code:`docker stack deploy` command.
+    If there is a failure during the docker stack deploy process, try :ref:`take the docker stack down <sync-endpoint-stopping>` first and bring it back up again with the previous same :code:`docker stack deploy` command.
 
   14. The server takes about 30s to start, then it will be running at http://127.0.0.1.
   15. See the :ref:`LDAP section <sync-endpoint-ldap>` for instructions on configuring users and groups.
