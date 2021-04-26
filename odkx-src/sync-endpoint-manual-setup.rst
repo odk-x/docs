@@ -96,7 +96,7 @@ Setup instructions:
 
   10. Enter your hostname in the :code:`security.server.hostname` field (if such field doesn't exists, create one at the bottom of file) in the :file:`security.properties` file (under the directory :file:`config/sync-endpoint`). You can also choose to enable :ref:`Anonymous access<sync-anonymous>` on your ODK-X Sync Endpoint by configuring the same :file:`security.properties` file.
 
-  11. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such fields doesn't exists, create them at the bottom of file). Then add the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
+  11. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such field doesn't exists, create it at the bottom of file). Then add or edit the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
 
     .. note::
 
@@ -124,9 +124,41 @@ Setup instructions:
     .. code-block:: console
 
        $ docker stack deploy -c docker-compose.yml -c docker-compose-https.yml syncldap
+    
+    If there is a failure during docker stack deploy process, try :ref:`take the docker stack down <sync-endpoint-stopping>` first and bring it back up again with the previous same :code:`docker stack deploy` command.
 
   14. The server takes about 30s to start, then it will be running at http://127.0.0.1.
   15. See the :ref:`LDAP section <sync-endpoint-ldap>` for instructions on configuring users and groups.
+  16. See the :ref:`Stop the ODK-X Sync Endpoint section <sync-endpoint-stopping>` to stop the service.
+  
+.. _sync-endpoint-stopping:
+
+Stopping ODK-X Sync Endpoint
+----------------------------
+
+  1. Run:
+
+  .. code-block:: console
+
+    $ docker stack rm syncldap
+
+  2. OPTIONAL: If you want to remove the volumes as well,
+
+    .. Warning:: Removing volumes will remove any provisioned TLS keys
+                 if https is enabled. These keys can only be
+                 provisioned at a rate of 50 valid keys/domain/week.
+
+    - Linux/macOS:
+
+    .. code-block:: console
+
+      $ docker volume rm $(docker volume ls -f "label=com.docker.stack.namespace=syncldap" -q)
+
+    - Windows:
+
+    .. code-block:: console
+
+      $ docker volume rm (docker volume ls -f "label=com.docker.stack.namespace=syncldap" -q)
 
 .. _sync-endpoint-setup-database:
 
@@ -203,35 +235,6 @@ Custom LDAP directory
     $ docker stack deploy -c docker-compose.yml syncldap
 
   9. The server takes about 30s to start, then it will be running at http://127.0.0.1.
-
-.. _sync-endpoint-stopping:
-
-Stopping ODK-X Sync Endpoint
-----------------------------
-
-  1. Run:
-
-  .. code-block:: console
-
-    $ docker stack rm syncldap
-
-  2. OPTIONAL: If you want to remove the volumes as well,
-
-    .. Warning:: Removing volumes will remove any provisioned TLS keys
-                 if https is enabled. These keys can only be
-                 provisioned at a rate of 50 valid keys/domain/week.
-
-    - Linux/macOS:
-
-    .. code-block:: console
-
-      $ docker volume rm $(docker volume ls -f "label=com.docker.stack.namespace=syncldap" -q)
-
-    - Windows:
-
-    .. code-block:: console
-
-      $ docker volume rm (docker volume ls -f "label=com.docker.stack.namespace=syncldap" -q)
 
 .. _sync-anonymous:
 
