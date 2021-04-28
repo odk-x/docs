@@ -162,7 +162,7 @@ To install the Android SDK:
 
     Also, if you are using Terminal or Powershell to run commands, you could need 
     to prefix the commands with a :code:`./` depending on if :code:`.` is added to your PATH variable. For example, consider the command :code:`sdkmanager --list`. On Windows,
-    you might have to do :code:`./sdkmanager.bat --list`, and on a Mac :code:`./sdkmanager ---list`. You can try the commands first without the :code:`./`, and if they fail, try the commands with it.
+    you might have to do :code:`./sdkmanager.bat --list`, and on a Mac :code:`./sdkmanager --list`. You can try the commands first without the :code:`./`, and if they fail, try the commands with it.
    
   
   8. Run :program:`sdkmanager.bat --list`, this shows a list of all packages with the versions that are available be installed.
