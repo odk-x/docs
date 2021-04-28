@@ -160,7 +160,7 @@ To install the Android SDK:
     .. code-block:: console
 
       $ /Android/cmdline-tools/latest/bin>
-      $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list
+      $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list test
 
   9. Select the latest versions of the following packages by typing :guilabel:`sdkmanager` followed by the package path wrapped in quotes and separated by a space:
 
