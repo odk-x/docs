@@ -151,6 +151,20 @@ To install the Android SDK:
   5. After the download completes, create a folder called :file:`Android` and extract the contents of the zipped folder to the :file:`\\Android` folder you created.
   6. Navigate to the :file:`cmdline-tools` folder. It should contain a :file:`\\bin` folder and a :file:`\\lib` folder and two other files :file:`NOTICE.txt` and :file:`sources.properties`.
   7. In the :file:`cmdline-tools` folder, create a new folder called :file:`latest` and move the contents of :file:`cmdline-tools` into the :file:`latest` folder. At this point, the :file:`cmdline-tools` has just one folder :file:`latest` which should contain the :file:`\\bin` and :file:`\\lib` folder and two other files :file:`NOTICE.txt` and :file:`sources.properties`.
+  
+  .. note::
+
+    Important for steps 8 and 9: On Windows, the bin directory mentioned 
+    above will contain a file named :file:`sdkmanager.bat`, but on Unix (Mac, Linux), it will 
+    contain a file named :file:`sdkmanager`. Steps 8 and 9 involve commands using 
+    sdkmanager. If you are on Windows, these commands should start with 
+    :code:`sdkmanager.bat`, and on Unix, they should start with :code:`sdkmanager`  
+
+    Also, if you are using Terminal or Powershell to run commands, you could need 
+    to prefix the commands with a :code:`./` depending on if :code:`.` is added to your PATH variable. For example, consider the command :code:`sdkmanager --list`. On Windows,
+    you might have to do :code:`./sdkmanager.bat --list`, and on a Mac :code:`./sdkmanager ---list`. You can try the commands first without the :code:`./`, and if they fail, try the commands with it.
+   
+  
   8. Run :program:`sdkmanager.bat --list`, this shows a list of all packages with the versions that are available be installed.
     
     - On Windows open a :program:`PowerShell` or :program:`cmd` window, whichever one you decide to go with (open the Start menu, type :program:`cmd` or :program:`PowerShell` in the search box, select and open it). Get to the :file:`\\bin` directory
@@ -160,7 +174,7 @@ To install the Android SDK:
     .. code-block:: console
 
       $ /Android/cmdline-tools/latest/bin>
-      $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list test
+      $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list
 
   9. Select the latest versions of the following packages by typing :guilabel:`sdkmanager` followed by the package path wrapped in quotes and separated by a space:
 
