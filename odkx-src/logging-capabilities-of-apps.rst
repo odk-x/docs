@@ -10,7 +10,7 @@ The ODK-X log files are stored in the directory :file:`/sdcard/opendatakit/defau
 Android Logging
 ----------------------
 
-The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the logcat command. You can use logcat from an Android Debug Bridge shell to view the log messages. You can also see it Android Studio.
+The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `logcat` command. You can use `logcat` from an Android Debug Bridge shell to view the log messages. You can also see it Android Studio.
 The command in a shell environment is:
 
 .. code-block:: console
