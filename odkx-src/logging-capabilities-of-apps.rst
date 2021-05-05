@@ -1,6 +1,6 @@
 Logging Capabilities of Apps
 =================================
-There are three types of logging that exists.
+There are three types of logging that exist.
 
 ODK-X Logging System
 ----------------------
@@ -10,7 +10,7 @@ The ODK-X log files are stored in the directory :file:`/sdcard/opendatakit/defau
 Android Logging
 ----------------------
 
-The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `logcat` command. You can use `logcat` from an Android Debug Bridge shell to view the log messages. You can also see it Android Studio.
+The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `logcat` command. You can use `logcat` from an Android Debug Bridge shell to view the log messages. You can also see it Android Studio (in missing).
 The command in a shell environment is:
 
 .. code-block:: console
@@ -28,11 +28,11 @@ To fetch logs of a container, you can run the command
 
   $ docker logs [OPTIONS] CONTAINER
 
-For instance, you would like to fetch logs of ODK-X docs. The command would be
+For instance, you would like to fetch logs of ODK-X sync-endpoint. The command would be
 
 .. code-block:: console
 
-  $ docker logs odkx-docs
+  $ docker logs odkx-sync-endpoint
 
 In case you're not sure about the container names you can view which containers are active in docker by the following command:
 
@@ -44,6 +44,6 @@ You can also redirect the logs into an output file for easy access via
 
 .. code-block:: console
 
-  $ docker logs odkx-docs >output.txt
+  $ docker logs odkx-sync-endpoint >output.txt
 
 For more information, check the following: `https://docs.docker.com/engine/reference/commandline/logs/ <https://docs.docker.com/engine/reference/commandline/logs/>`_
