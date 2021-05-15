@@ -54,64 +54,69 @@ Setup instructions:
 
   .. code-block:: console
 
-    $ git clone https://github.com/odk-x/sync-endpoint
-   
-  3. Navigate into the sync-endpoint directory. Most likely
+    $ git clone -b master --single-branch --depth=1 https://github.com/odk-x/sync-endpoint
+
+  .. note::
+
+     The above command performs a shallow clone of the sync-endpoint GitHub git repository. To perform a full clone remove :guilabel:`--single-branch --depth=1` from the command.
+
+  4. Navigate into the sync-endpoint directory. Most likely
 
   .. code-block:: console
 
     $ cd sync-endpoint
 	
-  4. Build sync endpoint by running the following: (NOTE: you will need Apache Maven installed >= 3.3.3)
+  5. Build sync endpoint by running the following: (NOTE: you will need Apache Maven installed >= 3.3.3)
   
   .. code-block:: console
 
     $ mvn clean install
 	
-  5. Navigate back to the parent "sync-endpoint-default-setup" directory. 
+  6. Navigate back to the parent "sync-endpoint-default-setup" directory. 
   
-  6. In the "sync-endpoint-default-setup" directory run:
+  7. In the "sync-endpoint-default-setup" directory run:
 
   .. code-block:: console
 
     $ docker build --pull -t odk/sync-web-ui https://github.com/odk-x/sync-endpoint-web-ui.git
 
-  7. In the "sync-endpoint-default-setup" cloned repository run:
+  8. In the "sync-endpoint-default-setup" cloned repository run:
 
   .. code-block:: console
 
     $ docker build --pull -t odk/db-bootstrap db-bootstrap
 
-  8. In the "sync-endpoint-default-setup" cloned repository run:
+  9. In the "sync-endpoint-default-setup" cloned repository run:
 
   .. code-block:: console
 
     $ docker build --pull -t odk/openldap openldap
 
-  9. In the "sync-endpoint-default-setup" cloned repository run:
+  10. In the "sync-endpoint-default-setup" cloned repository run:
 
   .. code-block:: console
 
     $ docker build --pull -t odk/phpldapadmin phpldapadmin
 
-  10. Enter your hostname in the :code:`security.server.hostname` field (if such field doesn't exists, create one at the bottom of file) in the :file:`security.properties` file (under the directory :file:`config/sync-endpoint`). You can also choose to enable :ref:`Anonymous access<sync-anonymous>` on your ODK-X Sync Endpoint by configuring the same :file:`security.properties` file.
+  11. Enter your hostname in the :code:`security.server.hostname` field (if such field doesn't exists, create one at the bottom of file) in the :file:`security.properties` file (under the directory :file:`config/sync-endpoint`). You can also choose to enable :ref:`Anonymous access<sync-anonymous>` on your ODK-X Sync Endpoint by configuring the same :file:`security.properties` file.
 
-  11. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such a field doesn't exists, create it at the bottom of file). Then add or edit the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
+  12. If you're not using the standard ports (80 for *HTTP* and 443 for *HTTPS*) enter the ports you're using in the :code:`security.server.port` and :code:`security.server.securePort` fields in the :file:`security.properties` (if such a field doesn't exists, create it at the bottom of file). Then add or edit the **ports** section under the **sync** section in :file:`docker-compose.yml` to be :code:`YOUR_PORT:8080`. 
 
     .. note::
 
       It is important that the right side of the colon stays as 8080 or whatever port you are using (8080 is the default). This is the port that the web server is looking for.
       Any other services running on port:8080 need to be stopped as it will prevent the server from running, for example: Apache2
+      
       Reminder that only one process can own a port at a time so if another process on the computer is using port 8080 there will be a conflict and sync-endpoint may not function correctly.
 
-  12. If you're using your own *LDAP* directory or database, continue with the instructions:
+  13. If you're using your own *LDAP* directory or database, continue with the instructions:
 
     - :ref:`Custom database instructions <sync-endpoint-setup-database>`
     - :ref:`Custom LDAP instructions <sync-endpoint-setup-ldap>`
 
   .. _sync-endpoint-deploy:
 
-  13. In the "sync-endpoint-default-setup" cloned repository run:
+  14. In the "sync-endpoint-default-setup" cloned repository run:
 
     - For HTTP:
 	
@@ -127,9 +132,10 @@ Setup instructions:
     
     If there is a failure during the docker stack deploy process, try :ref:`take the docker stack down <sync-endpoint-stopping>` first and bring it back up again with the previous same :code:`docker stack deploy` command.
 
-  14. The server takes about 30s to start, then it will be running at http://127.0.0.1.
-  15. See the :ref:`LDAP section <sync-endpoint-ldap>` for instructions on configuring users and groups.
-  16. See the :ref:`Stop the ODK-X Sync Endpoint section <sync-endpoint-stopping>` to stop the service.
+
+  15. The server takes about 30s to start, then it will be running at http://127.0.0.1.
+  16. See the :ref:`LDAP section <sync-endpoint-ldap>` for instructions on configuring users and groups.
+  17. See the :ref:`Stop the ODK-X Sync Endpoint section <sync-endpoint-stopping>` to stop the service.
   
 .. _sync-endpoint-stopping:
 

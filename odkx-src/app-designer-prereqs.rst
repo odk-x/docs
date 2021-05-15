@@ -43,7 +43,7 @@ You must install the following software on your computer in order to use Applica
 
 Java
 --------
-Make sure Java 8 or higher is installed on the computer you plan to use. If it is not, `download and install it <https://java.com/en/download/>`_. If you are using MacOSX, it may require special care and attention. See `MacOSX Java install <https://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html>`_ and `MacOSX Java FAQ <https://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-install-faq.html>`_.
+Make sure Java 8 or higher is installed on the computer you plan to use. If it is not, `download and install it <https://java.com/en/download/>`_. If you are using MacOSX, it may require special care and attention. See `MacOSX Java install <https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html>`_ and `MacOSX Java FAQ <https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_install_faq.html>`_.
 
 .. _app-designer-prereqs-nodejs:
 
@@ -56,8 +56,13 @@ You must use Version 12 or higher. To avoid directory path problems on Windows, 
 For Windows
 ~~~~~~~~~~~~~~~
 
-When installing on Windows you can use an automated :program:`NodeJS` installer the uses :program:`Chocolatey`. If you chose not to let the installer use :program:`Chocolatey` to install a bunch of packages after installing :program:`NodeJS`, you will need to ensure the location of the :file:`npm` folder is added to the *PATH* variable of your system. If it is not, subsequent calls to access grunt will fail. For example: :file:`C:\\Users\\[username]\\AppData\\Roaming\\npm`.
-For instructions on modifying *PATH*, see the section at the bottom of this page called Add adb to your *PATH* For Windows. Instead of navigating to the location of Android SDK, navigate to the location of the :file:`npm` folder.
+When installing on Windows you can use an automated :program:`NodeJS` installer that uses :program:`Chocolatey`. If you chose not to let the installer use :program:`Chocolatey` to install a bunch of packages after installing :program:`NodeJS`, you will need to ensure the location of the :file:`npm` folder is added to the *PATH* variable of your system. If it is not, subsequent calls to access grunt will fail. For example: :file:`C:\\Users\\[username]\\AppData\\Roaming\\npm`.
+For instructions on modifying *PATH*, see the section at the bottom of this page called Add adb to your *PATH* For Windows. Instead of navigating to the location of Android SDK, navigate to the location of the :file:`npm` folder. You can check if :file:`npm` has been installed properly by executing the following command in :program:`cmd` or :program:`PowerShell`. 
+
+.. code-block:: console
+
+  $ npm --version
+  
 
 .. _app-designer-prereqs-nodejs-unix:
 
@@ -143,7 +148,7 @@ To install the Android SDK:
 
   .. note::
 
-    You can alternatively install the full Android Studio if you so wish, in which case you should follow `Google's <https://developer.android.com/studio/intro/update#sdk-manager>`_ instructions. Open the :program:`SDK Manager` from Android Studio, click :program:`Tools > SDK Manager` or click :program:`SDK Manager` in the toolbar. 
+    There no longer exists graphical tool for package management when using only the command line tools. You should install the full Android Studio, in which case you should follow `Google's <https://developer.android.com/studio/intro/update#sdk-manager>`_ instructions. Open the :program:`SDK Manager` from Android Studio, click :program:`Tools > SDK Manager` or click :program:`SDK Manager` in the toolbar. 
 
 
   3. Within that section, download the appropriate zipped file(s) based on your operating system.
@@ -151,6 +156,20 @@ To install the Android SDK:
   5. After the download completes, create a folder called :file:`Android` and extract the contents of the zipped folder to the :file:`\\Android` folder you created.
   6. Navigate to the :file:`cmdline-tools` folder. It should contain a :file:`\\bin` folder and a :file:`\\lib` folder and two other files :file:`NOTICE.txt` and :file:`sources.properties`.
   7. In the :file:`cmdline-tools` folder, create a new folder called :file:`latest` and move the contents of :file:`cmdline-tools` into the :file:`latest` folder. At this point, the :file:`cmdline-tools` has just one folder :file:`latest` which should contain the :file:`\\bin` and :file:`\\lib` folder and two other files :file:`NOTICE.txt` and :file:`sources.properties`.
+  
+  .. note::
+
+    Important for steps 8 and 9: On Windows, the bin directory mentioned 
+    above will contain a file named :file:`sdkmanager.bat`, but on Unix (Mac, Linux), it will 
+    contain a file named :file:`sdkmanager`. Steps 8 and 9 involve commands using 
+    sdkmanager. If you are on Windows, these commands should start with 
+    :code:`sdkmanager.bat`, and on Unix, they should start with :code:`sdkmanager`  
+
+    Also, if you are using Terminal or Powershell to run commands, you could need 
+    to prefix the commands with a :code:`./` depending on if :code:`.` is added to your PATH variable. For example, consider the command :code:`sdkmanager --list`. On Windows,
+    you might have to do :code:`./sdkmanager.bat --list`, and on a Mac :code:`./sdkmanager --list`. You can try the commands first without the :code:`./`, and if they fail, try the commands with it.
+   
+  
   8. Run :program:`sdkmanager.bat --list`, this shows a list of all packages with the versions that are available be installed.
     
     - On Windows open a :program:`PowerShell` or :program:`cmd` window, whichever one you decide to go with (open the Start menu, type :program:`cmd` or :program:`PowerShell` in the search box, select and open it). Get to the :file:`\\bin` directory
@@ -161,6 +180,7 @@ To install the Android SDK:
 
       $ /Android/cmdline-tools/latest/bin>
       $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list
+   
 
   9. Select the latest versions of the following packages by typing :guilabel:`sdkmanager` followed by the package path wrapped in quotes and separated by a space:
 
@@ -170,7 +190,8 @@ To install the Android SDK:
     .. code-block:: console
 
       $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3"
-
+    
+    
     If there are extra packages you wish to install, you may add them by passing the package path wrapped in quotes, separated with a space. 
   
     .. code-block:: console
@@ -178,6 +199,7 @@ To install the Android SDK:
       $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3" "extra-package-path"
   
   10. Accept the license agreement(s) by entering :guilabel:`y` to the :guilabel:`Accept? (y/N):` prompt.
+   
 
 Among many other things, this will install the Android Debug Bridge software on your computer. This tool enables the scripted pushing of files and APKs down to your Android device. See `adb (Android Debug Bridge) <https://developer.android.com/studio/command-line/adb.html>`_ for a listing of its capabilities.
 
