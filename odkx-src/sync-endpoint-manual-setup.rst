@@ -177,20 +177,20 @@ Custom database
   
 	- :code:`jdbc.driverClassName=`
 	
-	  - org.postgresql.Driver (PostgreSQL)
-	  - com.mysql.jdbc.Driver (MySQL)
-	  - com.microsoft.sqlserver.jdbc.SQLServerDriver (Microsoft SQL Server)
+	  - :code:`org.postgresql.Driver (PostgreSQL)`
+	  - :code:`com.mysql.jdbc.Driver (MySQL)`
+	  - :code:`com.microsoft.sqlserver.jdbc.SQLServerDriver (Microsoft SQL Server)`
 	  
-	- :code:`jdbc.resourceName=` jdbc/YOUR_DATASOURCE
+	- :code:`jdbc.resourceName=jdbc/YOUR_DATASOURCE`
 	- :code:`jdbc.url=`
 	
-	  - jdbc:postgresql://YOUR_SERVER/YOUR_DATABASE?param1=value1&param2=value2&... (PostgreSQL)
-	  - jdbc:mysql://YOUR_SERVER/YOUR_DATABASE?param1=value1&param2=value2&... (MySQL)
-	  - jdbc:sqlserver://YOUR_SERVER;database=YOUR_DATABASE;param1=value1;param2=value2;... (Microsoft SQL Server)
+	  - :code:`jdbc:postgresql://YOUR_SERVER/YOUR_DATABASE?param1=value1&param2=value2&... (PostgreSQL)`
+	  - :code:`jdbc:mysql://YOUR_SERVER/YOUR_DATABASE?param1=value1&param2=value2&... (MySQL)`
+	  - :code:`jdbc:sqlserver://YOUR_SERVER;database=YOUR_DATABASE;param1=value1;param2=value2;... (Microsoft SQL Server)`
 	
-	- :code:`jdbc.username=` YOUR_USERNAME 
-	- :code:`jdbc.password=` YOUR_PASSWORD
-	- :code:`jdbc.schema=` YOUR_SCHEMA
+	- :code:`jdbc.username=YOUR_USERNAME` 
+	- :code:`jdbc.password=YOUR_PASSWORD`
+	- :code:`jdbc.schema=YOUR_SCHEMA`
 	
   4. Modify :file:`sync.env` to match your database
   5. In the cloned repository,
