@@ -1,7 +1,7 @@
 ODK-X Scan
-============
+===============
 
-.. _scan-intro:
+.. _odkx-scan-intro:
 
 .. warning::
 
@@ -17,7 +17,7 @@ ODK-X Scan
 .. image:: /img/scan-intro/scan-process.*
   :alt: The ODK-X Scan Process
 
-.. _scan-intro-learn-more:
+.. _odkx-scan-intro-learn-more:
 
 Learn more about ODK-X Scan
 ----------------------------

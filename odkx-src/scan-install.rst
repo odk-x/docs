@@ -1,7 +1,7 @@
 Installing ODK-X Scan
 =======================
 
-.. _scan-prereqs:
+.. _odkx-scan-prereqs:
 
 Prerequisites
 -------------------
@@ -16,7 +16,7 @@ As well as the following third party apps:
 
   - `OI File Manager <https://github.com/openintents/filemanager/releases>`_
 
-.. _scan-install:
+.. _odkx-scan-install:
 
 Installing Scan
 -----------------------

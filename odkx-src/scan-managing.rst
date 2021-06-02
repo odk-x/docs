@@ -1,11 +1,11 @@
 Managing ODK-X Scan
 ======================
 
-.. _scan-managing:
+.. _odkx-scan-managing:
 
 .. contents:: :local:
 
-.. _scan-architect-prereqs:
+.. _odkx-scan-architect-prereqs:
 
 Prerequisites
 ---------------------
@@ -24,7 +24,7 @@ As well as the third party apps:
 
 If you have not installed Scan already, follow our guide for :doc:`scan-install`
 
-.. _scan-transferring-template:
+.. _odkx-scan-transferring-template:
 
 Transferring a Form Template to the App
 ------------------------------------------
