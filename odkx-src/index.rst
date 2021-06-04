@@ -200,10 +200,6 @@ The :doc:`tables-sample-app` walks you through the process of using a basic tabl
   :caption: Currently Not Supported
 
   scan-intro
-  scan-install
-  scan-using
-  scan-managing
-  scan-data
 
 .. toctree::
   :maxdepth: 2
