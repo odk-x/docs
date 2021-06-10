@@ -1,3 +1,9 @@
+.. spelling::
+    
+  Tecno
+  Infinix
+
+
 Troubleshooting
 =====================
 
