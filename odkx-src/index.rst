@@ -151,7 +151,6 @@ The :doc:`tables-sample-app` walks you through the process of using a basic tabl
   xlsx-converter-intro
   tables-web-pages
   injected-interfaces
-  scan-form-designer-intro
 
 .. toctree::
   :maxdepth: 2
@@ -200,6 +199,7 @@ The :doc:`tables-sample-app` walks you through the process of using a basic tabl
   :caption: Currently Not Supported
 
   scan-intro
+  scan-form-designer-intro
 
 .. toctree::
   :maxdepth: 2
