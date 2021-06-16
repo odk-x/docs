@@ -1,5 +1,5 @@
 .. spelling::
-    
+
   Tecno
   Infinix
 
@@ -7,7 +7,7 @@
 Troubleshooting
 =====================
 
-In this guide, we cover the likely problems you *might* encounter installing and configuring the ODK-X Basic Tools. The ODK-X Basic Tools are ODK-X Services, ODK-X Tables and ODK-X Survey. 
+In this guide, we cover the likely problems you *might* encounter installing and configuring the ODK-X basic tools. The ODK-X basic tools are ODK-X Services, ODK-X Tables and ODK-X Survey. 
 
 Do ensure that you have followed all the instructions for installation stated in the :doc:`basics-install` page.
 
@@ -19,11 +19,11 @@ Devices
 This section covers issues that are specific to the Android device you are working with and how to solve these problems.
 
 .. note::
-  The ODK-X Basic Tool require an Android device with a version 4.4 or higher operating system. 
+  The ODK-X basic tools require an Android device with a version 4.4 or higher operating system. 
     
-Certain **Tecno** and **Infinix** devices run specific system settings which prevents applications from running in the background to conserve battery life and prevent the device from lagging, especially on low memory devices.
+Certain **Tecno** and **Infinix** devices run specific system settings which prevent applications from running in the background to conserve battery life. For the ODK-X applications to work, they need to be able to run in the device background. 
 
-You will typically run into issues as a result of these devices system setting.
+You will typically run into issues as a result of these devices' system setting. Users with these devices will notice that the Survey and Tables applications do not start and the screens are stuck on a configuring loop.
 
 To solve for this, you have to enable :guilabel:`Auto-start` for the ODK-X applications on your device.
 
