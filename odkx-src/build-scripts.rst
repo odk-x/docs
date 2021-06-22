@@ -67,6 +67,14 @@ If you are on :program:`Windows` use :file:`gradlew.bat` instead.
 
   If you are building with Android Studio, you will need to select the correct build variant. This is important when you don't have androidlibrary or androidcommon in your :ref:`build-scripts-directory-structure`. These are discussed more in the :ref:`next section <build-scripts-flavors>`.
 
+.. warning::
+
+  The Android tools have a release signature key unique to the ODK-X applications, communication between the applications are secured by this key and can happen when the application keys match. This ensures that the information between the applications cannot be intercepted by another application. 
+  
+  When you compile the Android tools locally, it gets assigned a new key called a default debug key. Your compiled application will only be able to communicate with another locally compiled application because their default debug keys are the same.
+  
+  It is important to know this because your locally compiled application cannot communicate with ODK-X Services unless ODK-X Services is locally compiled.
+
 .. _build-scripts-flavors:
 
 Flavors
