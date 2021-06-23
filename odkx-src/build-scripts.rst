@@ -69,11 +69,12 @@ If you are on :program:`Windows` use :file:`gradlew.bat` instead.
 
 .. warning::
 
-  The Android tools have a release signature key unique to the ODK-X applications, communication between the applications are secured by this key and can happen when the application keys match. This ensures that the information between the applications cannot be intercepted by another application. 
+  The Android tools have a release signature key unique to the ODK-X applications. Communication between the applications is secured by this key and can only happen when the application keys match. This ensures that the information passing between the applications cannot be intercepted by another application.
+  You can find more information on Android app signing `here <https://developer.android.com/studio/publish/app-signing>`_.
   
-  When you compile the Android tools locally, it gets assigned a new key called a default debug key. Your compiled application will only be able to communicate with another locally compiled application because their default debug keys are the same.
+  When you compile the Android tools locally, they get assigned a new key called a default debug key. Your compiled application will only be able to communicate with another locally compiled application because their default debug keys are the same.
   
-  It is important to know this because your locally compiled application cannot communicate with ODK-X Services unless ODK-X Services is locally compiled.
+  It is important to know this because your locally compiled application cannot communicate with other ODK-X Android apps unless the apps are locally compiled.
 
 .. _build-scripts-flavors:
 
