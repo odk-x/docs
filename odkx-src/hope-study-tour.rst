@@ -12,7 +12,7 @@ Hope Study Guided Tour
 
 This document guides you through each of the modules of the :doc:`hope-study-intro`, named Hope Study. They are presented in a logical order, so this guide can be read from top to bottom to mimic the flow of the application's use in the field. You can also skip to the module that most interests you. Each section provides both a brief description of the purpose and function of the module, as well as an overview of how that functionality is implemented.
 
-You can view a visual walkthrough of the Hope Study modules `here <https://youtu.be/KRUlRyAQQ1c>`_ on our YouTube channel.
+You can view a visual walk through of the Hope Study modules `here <https://youtu.be/KRUlRyAQQ1c>`_ on our YouTube channel.
 
 .. note::
 
