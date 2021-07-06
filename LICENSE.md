@@ -1,1 +1,1 @@
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+This work is [Licensed under the Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
