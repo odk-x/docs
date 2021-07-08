@@ -21,7 +21,7 @@ This will walk you through the steps of building a Data Management Application f
 ODK-X Data Management Applications
 ---------------------------------------
 
-The ODK-X Android tools (:doc:`survey-using`, :doc:`tables`, :doc:`services`, :doc:`scan-intro`, `ODK-X Sensors Framework <https://github.com/odk-x/sensorsframework>`_, and various ODK-X Sensor implementations) are Android Application Packages (APKs) that are designed to work together to create a coherent tailored application experience for an end-user.
+The ODK-X Android tools (:doc:`survey-using`, :doc:`tables`, :doc:`services`) are Android Application Packages (APKs) that are designed to work together to create a coherent tailored application experience for an end-user.
 
 .. note::
 
