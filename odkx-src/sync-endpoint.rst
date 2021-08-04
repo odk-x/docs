@@ -1,4 +1,5 @@
 .. spelling::
+  microservice
   phpLDAPadmin
   readonly
   letsencrypt
@@ -69,7 +70,7 @@ To direct the incoming web request, the Sync-Endpoint uses nginx to route the we
    An architecture diagram of the six main microservices running in a Docker swarm. The six main microservices are: nginx, Sync-Endpoint REST Interface, Sync-Endpoint Web UI, PostgreSQL, phpLDAPadmin, and OpenLDAP.
 
 The REST protocol microservice runs an Apache Tomcat webserver. By default, the Sync-Endpoint uses a PostgreSQL server running as a microservice; however, the endpoint is designed to integrate with other databases (e.g., MySQL).
-The Sync-Endpoint Web UI is the microservice that provides the user interface for the sync-endpoint server. Sync- Endpoint is also a Java web application running inside an Apache Tomcat webserver.
+The Sync-Endpoint Web UI is the microservice that provides the user interface for the sync-endpoint server. Sync-Endpoint is also a Java web application running inside an Apache Tomcat webserver.
 
 The Sync Endpoint REST server does not store user information in its own database; instead, it integrates with an LDAP directory (it can also integrate with other user management protocols such as Active Directory). 
 The OpenLDAP microservice is used to authenticate users and obtain user roles. To give the system administrator a graphical interface to add/change/remove users and groups, the endpoint leverages the phpLDAPadmin web interface running as a microservice that presents a web user interface of the data in OpenLDAP. 
