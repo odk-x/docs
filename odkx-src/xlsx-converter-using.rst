@@ -149,14 +149,14 @@ Now, instead of typing their age, the user simply selects whether they are older
 Using Skip Logic
 -------------------------------------
 
-Skip Logic (*Conditional Branching*) is an amazing feature in :doc:`survey-using` that changes the next prompt or screen the user sees based on their current response. This enables the form creator give users a unique and personalized experience depending on their answers throughout the entire survey. 
+Skip logic (*Conditional Branching*) is an amazing feature in :doc:`survey-using` that changes the next prompt or screen the user sees based on their current response. This enables the form creator to give users a unique and personalized experience depending on their answers throughout the entire survey. 
 
-Skip Logic is implemented using if, else and end if tags. It uses the **clause** and **condition** columns in the survey worksheet, the if, else and end if tags are placed in the clause column and the conditional expressions are housed in the condition column.
+Skip logic is implemented using if, else, else if and end if tags. It uses the **clause** and **condition** columns in the survey worksheet, the if, else and end if tags are placed in the clause column and the conditional expressions are housed in the condition column.
 
 Below is the survey worksheet of an example survey that implements skip logic. ODK-X has built-in `JavaScipt Operators <https://docs.odk-x.org/xlsx-converter-reference/#javascript-operators>`_ which are useful for creating complex conditional expressions.
 
-.. csv-table:: Using Skip Logic Example Survey Worksheet
-  :header: "clause", "Condition", "type", "values_list ", "name", "display.prompt.text"
+.. csv-table:: Using Skip logic Example Survey Worksheet
+  :header: "clause", "condition", "type", "values_list ", "name", "display.prompt.text"
 
   ,,"select_one", "order_list", "menu", "What would you like to get?"
   "if", "selected(data('menu'), 'doughnut') || selected(data('menu'), 'bread roll') || selected(data('menu'), 'cinnamon roll')",
@@ -177,10 +177,15 @@ Below is the survey worksheet of an example survey that implements skip logic. O
   "end if",
   ,,"note", "<h3>Order Summary for <u>{{data.name}}</u></h3>"
 
-In the example worksheet above, the respondent can pick through a number of pastries available and select one option. The next set of questions that follow are fully dependent on the choice the user makes. For example, if the user picked Cakes; they are asked for a flavor and size they would like where as if the user picked Doughnuts; they are asked what size of box they would like.
+In the example worksheet above, the respondent can pick through a number of pastries available and select one option. The next set of questions that follow are fully dependent on the choice the user makes. For example, if the user picked Cakes; they are asked for a flavor and size they would like whereas if the user picked Doughnuts; they are asked what size of box they would like.
 
 .. note::
   An important thing to remember when using the clause column is the opening **if** tag and the closing **end if** tags. The general rule is that all **if** tags must have a corresponding closing **end if** tag.
+
+.. note::
+  Do know that if you are using required along with Skip logic, it is important that both the required and if conditionals align. 
+  
+  The **required** column takes a conditional expression. If the condition resolves to true, the user will not be able to navigate to the next survey screen until the prompt is answered. If the prompt is left blank, its default value is false.
 
 .. _xlsx-using-custom-section:
 
