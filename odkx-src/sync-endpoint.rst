@@ -38,23 +38,6 @@ in a cloud-based virtual machine, or on your own infrastructure.
 Overview
 --------------
 
-.. _sync-endpoint-sync-protocol:
-
-ODK-X Synchronization Protocol
-"""""""""""""""""""""""""""""""""
-
-ODK-X’s synchronization protocol is based on a REST architecture that keeps the data on multiple devices synchronized to a master copy stored on the ODK-X Sync-Endpoint. All synchronization operations are idempotent, thereby simplifying the API because clients do not have to worry about losing data, as requests can be safely repeated in environments where network timeouts occur.
-
-To minimize data updates that conflict, data updates are processed as row-based changes to keep changes small. For example, when performing a cold chain inventory, if updates were at a coarse granularity, such as table-based or file-based, a conflict might be detected for two workers updating refrigerators while working at different sites. 
-By keeping conflict detection at the row-level, multiple users can make updates to shared data tables, and the system will detect that there is not a conflict as long as the same row is not updated by different users between their synchronizations. 
-
-Cell-based conflicts would be an even smaller unit of data that would further reduce conflicts; however, in a single row, the cell values are often interrelated. We felt that too much context could be lost by treating the cells separately, thus leading to reconciliation errors. 
-
-A conflict is defined as two users with different updates to the same row. ODK-X uses table locks on the server to ensure only a single change to a data row can occur at any time. When the :dfn:`runner-up` client finally obtains the lock and attempts to alter the same row, the update will be rejected as a conflict. Once a conflict is detected, the user manually determines which version of data is correct between their pending changes on the local client and the updated data row on the server. 
-The rationale for having the user who caused the conflict also resolve the conflict is that the user was recently working with data and is likely to have the necessary information and context on how best to resolve the conflict.
-
-You can learn more here: :doc:`odk-2-sync-protocol`
-
 .. _sync-endpoint-server-tech:
 
 ODK-X Sync Endpoint Server Technologies
@@ -75,6 +58,22 @@ The Sync-Endpoint Web UI is the microservice that provides the user interface fo
 The Sync Endpoint REST server does not store user information in its own database; instead, it integrates with an LDAP directory (it can also integrate with other user management protocols such as Active Directory). 
 The OpenLDAP microservice is used to authenticate users and obtain user roles. To give the system administrator a graphical interface to add/change/remove users and groups, the endpoint leverages the phpLDAPadmin web interface running as a microservice that presents a web user interface of the data in OpenLDAP. 
 
+.. _sync-endpoint-sync-protocol:
+
+ODK-X Synchronization Protocol
+"""""""""""""""""""""""""""""""""
+
+ODK-X’s synchronization protocol is based on a REST architecture that keeps the data on multiple devices synchronized to a master copy stored on the ODK-X Sync-Endpoint. Clients do not have to worry about losing data, as API requests can be safely repeated in environments where network timeouts occur.
+
+To minimize data updates that conflict, data updates are processed as row-based changes to keep changes small. For example, when performing a cold chain inventory, if updates were at a coarse granularity, such as table-based or file-based, a conflict might be detected for two workers updating refrigerators while working at different sites. 
+By keeping conflict detection at the row-level, multiple users can make updates to shared data tables, and the system will detect that there is not a conflict as long as the same row is not updated by different users between their synchronizations. 
+
+Cell-based conflicts would be an even smaller unit of data that would further reduce conflicts; however, in a single row, the cell values are often interrelated. We felt that too much context could be lost by treating the cells separately, thus leading to reconciliation errors. 
+
+A conflict is defined as two users with different updates to the same row. ODK-X uses table locks on the server to ensure only a single change to a data row can occur at any time. When the :dfn:`runner-up` client finally obtains the lock and attempts to alter the same row, the update will be rejected as a conflict. Once a conflict is detected, the user manually determines which version of data is correct between their pending changes on the local client and the updated data row on the server. 
+The rationale for having the user who caused the conflict also resolve the conflict is that the user was recently working with data and is likely to have the necessary information and context on how best to resolve the conflict.
+
+You can learn more here: :doc:`odk-2-sync-protocol`
 
 .. _sync-endpoint-auth:
 
