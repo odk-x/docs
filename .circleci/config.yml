@@ -3,7 +3,7 @@ jobs:
   build-odkx:
     working_directory: ~/work
     docker:
-      - image: cimg/python:latest
+      - image: cimg/python:3.9.6
     steps:
       - checkout
       - run:
