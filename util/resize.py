@@ -1,6 +1,6 @@
 import os
 import sys
-from PILLOW import Image
+from Pillow import Image
 
 build_path = sys.argv[1]
 
