@@ -183,7 +183,7 @@ In the example worksheet above, the respondent can pick through a number of past
   An important thing to remember when using the clause column is the opening **if** tag and the closing **end if** tags. The general rule is that all **if** tags must have a corresponding closing **end if** tag.
 
 .. note::
-  Do know that if you are using required along with Skip logic, it is important that both the required and if conditionals align. 
+  Do know that if you are using required along with skip logic, it is important that both the required and if conditionals align. 
   
   The **required** column takes a conditional expression. If the condition resolves to true, the user will not be able to navigate to the next survey screen until the prompt is answered. If the prompt is left blank, its default value is false.
 
