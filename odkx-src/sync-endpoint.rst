@@ -68,8 +68,6 @@ ODK-X’s synchronization protocol is based on a REST architecture that keeps th
 To minimize data updates that conflict, data updates are processed as row-based changes to keep changes small. For example, when performing a cold chain inventory, if updates were at a coarse granularity, such as table-based or file-based, a conflict might be detected for two workers updating refrigerators while working at different sites. 
 By keeping conflict detection at the row-level, multiple users can make updates to shared data tables, and the system will detect that there is not a conflict as long as the same row is not updated by different users between their synchronizations. 
 
-Cell-based conflicts would be an even smaller unit of data that would further reduce conflicts; however, in a single row, the cell values are often interrelated. We felt that too much context could be lost by treating the cells separately, thus leading to reconciliation errors. 
-
 A conflict is defined as two users with different updates to the same row. ODK-X uses table locks on the server to ensure only a single change to a data row can occur at any time. When the :dfn:`runner-up` client finally obtains the lock and attempts to alter the same row, the update will be rejected as a conflict. Once a conflict is detected, the user manually determines which version of data is correct between their pending changes on the local client and the updated data row on the server. 
 The rationale for having the user who caused the conflict also resolve the conflict is that the user was recently working with data and is likely to have the necessary information and context on how best to resolve the conflict.
 
