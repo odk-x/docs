@@ -85,7 +85,7 @@ Setting up a Droplet
   .. image:: /img/setup-digital-ocean/do-authentication.png
    :width: 600
 
-5. After the authetication is set up, you can choose to name the droplet; then scroll down and click the :guilabel:`Create Droplet` button. This might take a few minutes to set up.
+5. After the authentication is set up, you can choose to name the droplet; then scroll down and click the :guilabel:`Create Droplet` button. This might take a few minutes to set up.
 
 .. _sync-endpoint-setup-digital-ocean-dns:
 
