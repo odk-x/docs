@@ -78,7 +78,7 @@ Setting up a Droplet
   .. image:: /img/setup-digital-ocean/do-userdata2.png
     :width: 600
 
-4. The next step is :guilabel:`Authentication`. The are two authentication types to select from; **SSH Keys** and **Password**. We highly recommend that use an SSH key for authentication. Copy and paste your SSH key username, and the key itself. 
+4. The next step is :guilabel:`Authentication`. There are two authentication types to select from; **SSH Keys** and **Password**. We highly recommend that you use an SSH key for authentication. Copy and paste your SSH key username, and the key itself. 
 
  Use the `following resource <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/>`_ to learn more about creating an SSH key.
 
