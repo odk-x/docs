@@ -2,6 +2,7 @@
 
   src
   Homebrew
+  odk-xenv
 
 Docs Contributor Technical Guide
 =================================
