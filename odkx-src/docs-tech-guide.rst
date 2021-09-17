@@ -294,7 +294,7 @@ on any computer.
 
       To make things more clear,
       the docs will additionally prefix the prompt with a
-      :term:`path` (showing what directory you are in)
+      ``path`` (showing what directory you are in)
       whenever that is important.
 
       .. tabs::
