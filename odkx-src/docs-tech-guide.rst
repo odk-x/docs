@@ -250,6 +250,69 @@ on any computer.
 
          You will also need to be familiar with
          the relevant package manager for your system.
+		 
+.. admonition:: Understanding terminal commands
+      :name: understanding-terminal
+
+      When you open the Terminal or PowerShell,
+      you will see a bunch of symbols that include
+      your username and computer name.
+      This is called the :term:`prompt`.
+      You type commands after the prompt,
+      and hit :kbd:`RETURN` or :kbd:`ENTER` to run that command.
+
+      Everybody's prompt looks different,
+      so we can't make our documentation match what you see.
+      Instead, we use the ``$`` symbol to represent the Bash prompt
+      and the ``>`` symbol to represent the PowerShell prompt.
+      The text that follows the ``$`` or ``>`` symbol
+      is the command you need to type or copy.
+
+      Below the command, there is sometimes output from the command.
+
+      .. tabs::
+
+         .. group-tab:: bash
+
+            .. code-block::
+
+               $ command is here - type this
+               Output is here. Don't type this.
+
+         .. group-tab:: PowerShell
+
+            .. code-block::
+
+               > command is here - type this
+               Output is here. Don't type this.
+
+      Not all commands have output,
+      and we don't always include the output in our documentation
+      unless it is relevant.
+      It it is a good idea to glance at your own terminals output
+      for unexpected errors.
+
+      To make things more clear,
+      the docs will additionally prefix the prompt with a
+      :term:`path` (showing what directory you are in)
+      whenever that is important.
+
+      .. tabs::
+
+         .. group-tab:: bash
+
+            .. code-block::
+
+               /odk-x/docs/ $ command is here - type this
+               Output is here. Don't type this.
+
+         .. group-tab:: PowerShell
+
+            .. code-block::
+
+               /odk-x/docs/ > command is here - type this
+               Output is here. Don't type this.		 
+		 
 
 #. Install git.
 
