@@ -257,7 +257,7 @@ on any computer.
       When you open the Terminal or PowerShell,
       you will see a bunch of symbols that include
       your username and computer name.
-      This is called the :term:`prompt`.
+      This is called the ``prompt``.
       You type commands after the prompt,
       and hit :kbd:`RETURN` or :kbd:`ENTER` to run that command.
 
