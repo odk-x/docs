@@ -733,3 +733,14 @@ removeFirstQueuedAction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removes the first queued action.
+
+.. _injected-interfaces-examples:
+
+Example WebKit Tables implementations
+----------------------------------------------------------
+
+This section shows various example webkit implementation with tables.
+
+Barcode Scanner
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+This section will describe a sample app to scan barcodes with odk-x tables
