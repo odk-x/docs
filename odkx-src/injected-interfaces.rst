@@ -739,6 +739,6 @@ Removes the first queued action.
 Example WebKit Tables implementations
 ----------------------------------------------------------
 
-This section will walk you through the steps of building custom ODK-X Tables
-uses the ``odkCommon.doAction`` to lunch  a barcode scanner.
+This section will walk you through the steps of implementing a barcode scanner in a custom ODK-X Table
+using the ``odkCommon.doAction`` to launch an intent.
 
