@@ -860,7 +860,7 @@ on any computer.
    - `VS Code <https://code.visualstudio.com/>`_
    - `Notepad++ <https://notepad-plus-plus.org/>`_ (Windows only)
 
-   Most of these have plugins that will make writing reStructuredText easier
+   Most of these have plugins that will make writing `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ easier
    by color-coding the markup.
 
 This completes the setup of your local working environment.
