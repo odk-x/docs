@@ -51,6 +51,11 @@ Assigning users to groups
   3. This list is all the groups under *ou=default_prefix*.
   4. Click on the group that you want to assign users to.
   5. A few groups are created when the LDAP server is brought up, refer to :doc:`data-permission-filters` for descriptions of these groups.
+
+  .. note::
+    
+     A user needs to be assigned one of the roles in addition to any other group of your choosing. These roles are available as groups 500, 501, 502 503.
+  
   6. If the :guilabel:`memberUid` section is not present:
 
       a. Choose :guilabel:`Add new attribute`.
