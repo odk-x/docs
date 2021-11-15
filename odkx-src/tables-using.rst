@@ -87,14 +87,14 @@ The *Table Manager* allows you to modify table settings, delete tables, and impo
 Viewing Data
 --------------------
 
-Tables supports viewing collected data in a variety of formats. Survey allows you to review individual form instances, but Tables lets you view full data tables as well as create your own customized visualizations. This is a significant departure from the form-based model of data collection, and allows you to manage data directly on the device.
+Tables support viewing collected data in a variety of formats. Survey allows you to review individual form instances, but Tables lets you view full data tables as well as create your own customized visualizations. This is a significant departure from the form-based model of data collection, and allows you to manage data directly on the device.
 
 .. _tables-using-view-types:
 
 View Types
 ~~~~~~~~~~~~~~~~~
 
-Tables offers a number of view options for presenting data. The person at your organization who built this ODK-X Tables application will have already configured these options, so you may not always have a choice in how you view your data. These view types are:
+Tables offer a number of view options for presenting data. The person at your organization who built this ODK-X Tables application will have already configured these options, so you may not always have a choice in how you view your data. These view types are:
 
   - :ref:`Spreadsheet View <tables-using-view-data-spreadsheet>`
   - :ref:`List View <tables-using-view-data-list>`
@@ -303,7 +303,7 @@ This will bring up a menu that lets you select your desired alternate view type.
 Creating and Editing Data
 ---------------------------------
 
-Tables supports creating new rows and editing existing records and provides a variety of methods to do so. These can be integrated into your Data Management Application's workflow or accessed directly.
+Tables support creating new rows and editing existing records and provide a variety of methods to do so. These can be integrated into your Data Management Application's workflow or accessed directly.
 
 .. _tables-using-edit-survey:
 
@@ -361,7 +361,7 @@ Spreadsheet View
 Editing Directly in Tables: Custom Views
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tables supports direct creation and updates to data in the database through JavaScript API calls. These will be completely customized to your organization's Data Management Application and you may need to contact that person to find out how to use your particular design.
+Tables support direct creation and updates to data in the database through JavaScript API calls. These will be completely customized to your organization's Data Management Application and you may need to contact that person to find out how to use your particular design.
 
 For more information on how to edit data with these custom views, see :ref:`tables-managing-custom-web-view`.
 
