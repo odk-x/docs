@@ -141,7 +141,7 @@ If you'd prefer to use the :program:`OpenLDAP` command line utilities, they're i
 
 The following guides assume that you're using :program:`phpLDAPadmin`. In order to perform the following operation, please go to `https://127.0.0.1:40000` in your browser.
 
-Recommended :doc:`Creating a Sample User <sync-endpoint-setup-create-user>` tutorial with images.
+Recommended :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` tutorial with images.
 
 
 .. _sync-endpoint-advanced:
