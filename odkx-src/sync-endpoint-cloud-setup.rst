@@ -580,7 +580,7 @@ Launching the ODK-X Server
 .. _sync-endpoint-setup-take-stack-down-and-bring-back-up:
 
 Take the Stack/Swarm Down and Bringing it Back Up
-----------------------------------------------
+----------------------------------------------------
 
 .. note::
     If you are unable to log in, you may need to take the docker stack down and bring it back up again. That can be done with the following commands below:
