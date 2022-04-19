@@ -577,20 +577,16 @@ Launching the ODK-X Server
   .. image:: /img/setup-azure/azure11.png
    :width: 600
 
-.._sync-endpoint-setup-take-stack-down:
-
-Take the Stack/Swarm Down
-----------------------------------------------
+.. note::
+    If you are unable to log in, you may need to take the docker stack down and bring it back up again. That can be done with the following commands below:
 
 .. code-block:: console
 
     $ docker stack rm syncldap
 
-Bring the stack/swarm up with HTTPS support execute this command in the sync-endpoint-default-setup folder:
-
 .. code-block:: console
 
-    $ docker stack deploy -c docker-compose.yml -c docker-compose-https.yml syncldap
+    $ docker stack deploy -c /root/sync-endpoint-default-setup/docker-compose.yml syncldap
 
 .. _sync-anonymous-cloud:
 
