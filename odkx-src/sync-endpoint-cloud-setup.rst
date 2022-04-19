@@ -579,7 +579,7 @@ Launching the ODK-X Server
 
 .. _sync-endpoint-setup-take-stack-down-and-bring-back-up:
 
-Take the Stack/Swarm Down and Bringing it Back Up
+Take the Stack/Swarm Down and Bring it Back Up
 ----------------------------------------------------
 
 .. note::
