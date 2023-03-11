@@ -26,7 +26,7 @@ A two-way synchronization protocol allows you to create data management applicat
 
  - Pre-filled forms for faster data collection
 
- - Data can be synced to all devices from the server
+ - Data can be synced to all devices from the server either automatically or manually triggered by the user.
 
 Offline data collection
 """""""""""""""""""""""
