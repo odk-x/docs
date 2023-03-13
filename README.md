@@ -29,6 +29,12 @@ The Docker environment is recommended because of the fewer setup steps required 
 ### Prerequisites
  * Install Docker
    * Windows and Mac users should follow the instructions in [the get started guide](https://www.docker.com/get-started)
+        * An important requirement, is to make sure you have turned on HardWare Virtualization in the BIOS-level hardware virtualization, this is necessary for Docker to run VMs and Containers. For more information, see [Virtualization](https://docs.docker.com/desktop/troubleshoot/topics/#virtualization).
+          
+          If you are unsure if Virtualization is enabled, you can easy check in the Windows Task Manager, 
+          ![Virtualization Image](C:/Users/Lewis/Desktop/virtualization-enabled.png)
+          
+        * Turning on Virtualization is vendor specific and you may have to find the right procedures for your computer
    * Linux users should follow the instructions for their specific distribution: [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/), [Debian](https://docs.docker.com/install/linux/docker-ce/debian/), [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/), [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [Binaries](https://docs.docker.com/install/linux/docker-ce/binaries/)
 
    More info at the [Docker CE docs page](https://docs.docker.com/install/)
@@ -62,9 +68,13 @@ docker build -t odkx-docs .
 
 It can take a long time to build the Docker image, but you only need to do this once.
 
+Take note of the full-stop `.` at the end of the build command. the command is `docker build -t odkx-docs .` and not `docker build -t odkx-docs`.
+The `.` specifies that the `PATH` is `.` (your current directory) so all the files in the local directory get and sent to the Docker daemon, and `-t` just specifies a tag, in out case `odkx-docs`
+
+
 **Windows users**
  * All commands should be run in an elevated PowerShell window. Right-click on PowerShell and select the "Run as administrator" option. NOTE: when running as an administrator PowerShell will default to the Windows directory. You will need to use the "cd" (Change Directory) command to navigate to a directory that you want the ODK-X documentation files to be located.
- * Ensure Docker is running by checking your system tray. If Docker is not running, launch "Docker for Windows" app and wait until a notification confirms that Docker is running.
+   * Ensure Docker is running by checking your system tray. If Docker is not running, launch "Docker for Windows" app and wait until a notification confirms that Docker is running. Once the build is done, you should now see the `odkx-docs` under `images` in Docker Desktop
 
 ### Building and serving the docs locally
 
