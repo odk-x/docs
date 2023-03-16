@@ -54,7 +54,7 @@ Cleaning App Designer
 
 Your freshly installed copy of Application Designer comes with lots of example forms, tables, and configuration. This is useful for learning the tools and as references when building our application, the files can be found in :file:`app/config/tables` directory. 
 
-After building your own application, you may choose to delete all the examples forms and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
+After building your own application, you may choose to delete all the examples forms, and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
 
 To delete all the example forms and configurations, open the terminal and type *grunt empty*, this removes all the files and creates an empty app-designer folder to work with.  
 
@@ -67,14 +67,14 @@ To delete all the example forms and configurations, open the terminal and type *
 `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_: Designing a Form
 ---------------------------------------------------------------------------
 
-When creating a new form, the appropriate directory structure must be created. Once this directory structure is in place, an :file:`.xlsx` form can be created. From this :file:`.xlsx` form, a :file:`formDef.json` file will be generated using the XLSX Converter. This :file:`formDef.json`, in the appropriate directory, is what the system will use to create the Survey form.
+When creating a new form, the appropriate directory structure must be created. Once this directory structure is in place, a :file:`.xlsx` form can be created. From this :file:`.xlsx` form, a :file:`formDef.json` file will be generated using the XLSX Converter. This :file:`formDef.json`, in the appropriate directory, is what the system will use to create the Survey form.
 
 .. _build-app-creating-directory:
 
 Creating the Directory Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-New forms must be placed under the :file:`app/config/tables/` directory as described in the :ref:`app-designer-dirs-app-config-tables` section. Given a form with the name *formId*, it will have a *tableId* of the same name unless you explicitly specify otherwise. The directory structure that should be created is :file:`app/config/tables/tableId/forms/formId` (where, under many circumstances, the value for *tableId* will be the same as the value for *formId*). 
+New forms must be placed under the :file:`app/config/tables/` directory as described in :ref:`app-designer-dirs-app-config-tables` section. Given a form with the name *formId*, it will have a *tableId* of the same name unless you explicitly specify otherwise. The directory structure that should be created is :file:`app/config/tables/tableId/forms/formId` (where, under many circumstances, the value for *tableId* will be the same as the value for *formId*). 
 
 .. note::
 
@@ -95,7 +95,7 @@ This creates the required directory structure for an individual table, including
 Navigate into the forms directory (:file:`app/config/tables/census/forms/` in our example), and create a directory with the form ID as its name. For our example, create a :file:`app/config/tables/census/forms/census` directory. Within that directory, `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ expects to find the :file:`formDef.json` that defines the form.
 
 .. tip::
-  We recommend placing the :file:`.xlsx` file used to generate that :file:`formDef.json` in this folder as well. Survey will not use this file, but it is a useful reference and provides an easy to remember storage location in case the form needs to be updated in the future.
+  We recommend placing the :file:`.xlsx` file used to generate that :file:`formDef.json` in this folder as well. Survey will not use this file, but it is a useful reference and provides an easy-to-remember storage location in case the form needs to be updated in the future.
 
 Any custom screen, prompt templates, or other media related to the form should be also placed in this directory (or in a sub-directory).
 
@@ -140,7 +140,7 @@ With the proper directory structure in place, you can now create your form. The 
   4. Create a *survey* worksheet. This sheet defines the questions and flow of your form. Create the following headers:
 
     - :th:`type`: the prompt type.
-    - :th:`values_list`: the name of the list of choices for a multiple choice question.
+    - :th:`values_list`: the name of the list of choices for a multiple-choice question.
     - :th:`name`: the variable name.
     - :th:`display.prompt.text`: the question the user will see in Survey
 
@@ -183,14 +183,14 @@ With the proper directory structure in place, you can now create your form. The 
         - n
         - No
 
-With this :file:`.xlsx` file you've created a simple Survey form that will ask the user to type in their name and respond whether they are 18 years old or not. This form will be titled *Census* and it will write to a table in the database with table ID *census*.
+With this :file:`.xlsx` file, you've created a simple Survey form that will ask the user to type in their name and respond whether they are 18 years old or not. This form will be titled *Census* and it will write to a table in the database with table ID *census*.
 
 .. _build-app-creating-framework:
 
 Creating :file:`framework.xlsx`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :file:`framework.xlsx` file is central to the structure of the Application Designer. It defines which forms exist. It has no persisted data. In this case, it only presents a list of forms and allows you to open them.
+The :file:`framework.xlsx` file is central to the structure of the Application Designer. It defines which forms exist. It has no persistent data. In this case, it only presents a list of forms and allows you to open them.
 
   1. Navigate to the following existing directories: :file:`config/assets/framework/forms/framework/`. Inside that folder, there is a :file:`framework` and :file:`framework.clean` folder, as well as other folders that are not as important for this process.
 
@@ -245,7 +245,7 @@ The :file:`framework.xlsx` file is central to the structure of the Application D
         - census
         - Census Form
 
-  10. In the *survey* work sheet, check that these headers: :th:`branch_label`, :th:`url`, :th:`clause`, :th:`condition`, :th:`type`, :th:`values_list`, :th:`display.prompt.text` are present.
+  10. In the *survey* worksheet, check that these headers: :th:`branch_label`, :th:`url`, :th:`clause`, :th:`condition`, :th:`type`, :th:`values_list`, :th:`display.prompt.text` are present.
 
   11. Update the following rows as shown below. This worksheet tells the software what to do if you're previewing in :program:`Chrome`.
 
@@ -338,7 +338,7 @@ To add another new form to an existing :file:`framework.xlsx` file, take the fol
 
   These steps are not part of the running example. They are provided here for reference.
 
-Assuming you have created a :file:`testForm.xlsx`, the appropriate directory structures for :file:`testForm.xlsx`, and then properly generated and saved the :file:`formDef.json`, the following lines would need to be added into the :file:`framework.xlsx` *survey* worksheet.
+Assuming you have created a :file:`testForm.xlsx`, the appropriate directory structures for :file:`testForm.xlsx`, and then properly generated and saved the :file:`formDef.json`, the following lines would need to be added to the :file:`framework.xlsx` *survey* worksheet.
 
 .. csv-table:: Example Framework Survey Worksheet
   :header: "branch_label", "url", "clause", "condition", "type", "values_list", "display.text", "display.hint"
@@ -362,13 +362,13 @@ The changes to the *choices* sheet add the *testForm* form as one of the choices
 Generating :file:`formDef.json`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have a saved your :file:`.xlsx` file, you can use the XLSX Converter to create a :file:`formDef.json`. Make sure your Application Designer is running (see :doc:`app-designer-launching`) and navigate to the :guilabel:`XLSX Converter` tab. Drag the :file:`.xlsx` form or select it with the :guilabel:`Choose File` button and use the :guilabel:`Save to File System` button to save the form definition file back to the file system.
+Once you have saved your :file:`.xlsx` file, you can use the XLSX Converter to create a :file:`formDef.json`. Make sure your Application Designer is running (see :doc:`app-designer-launching`) and navigate to the :guilabel:`XLSX Converter` tab. Drag the :file:`.xlsx` form or select it with the :guilabel:`Choose File` button and use the :guilabel:`Save to File System` button to save the form definition file back to the file system.
 
 For the ongoing example, convert the :file:`app/config/assets/framework/forms/framework/framework.xlsx` using the instructions above. Then repeat this process with :file:`app/config/tables/census/forms/census/census.xlsx`
 
 .. warning::
 
-  The :guilabel:`Save to File System` button uses the *form_id* and *table_id* within the :file:`.xlsx` file to identify where to write the :file:`formDef.json` file. If you have copied the :file:`.xlsx` file from some other location, and forgot to edit it, it may update back to that older location! If the *form_id* is equal to the *table_id*, two additional files are written that define the table's user data fields and that define the key-value properties for the table.
+  The :guilabel:`Save to File System` button uses the *form_id* and *table_id* within the :file:`.xlsx` file to identify where to write the :file:`formDef.json` file. If you have copied the :file:`.xlsx` file from some other location and forgot to edit it, it may update back to that older location! If the *form_id* is equal to the *table_id*, two additional files are written that define the table's user data fields and that define the key-value properties for the table.
 
 Once you have made these changes and used XLSX Converter on the :file:`framework.xlsx` file to update the :file:`app/config/assets/framework/forms/framework/formDef.json` file, you should see your new form show up in the :guilabel:`Preview` tab of the Application Designer. Clicking on that should open your form.
 
@@ -393,7 +393,7 @@ The XLSX Converter should report most problems with your survey.
 
 If the form is not being rendered correctly but your survey generates a :file:`formDef.json` without an error, first try purging the database (dropping all the existing data tables) using the :guilabel:`Purge Database` button on the :guilabel:`Preview` tab. You will typically need to purge the database whenever you add or remove fields from your form or change their data type.
 
-If that does not resolve the issue, try stopping the :program:`grunt` command (on Windows, :kbd:`Control-C` should produce a prompt asking to confirm whether to stop or not. On Mac, :kbd:`Control-C` kill the process with no prompt.), and re-running it. :program:`Grunt` can sometimes get overwhelmed with changes and stop working. After restarting, test your form.
+If that does not resolve the issue, try stopping the :program:`grunt` command (on Windows, :kbd:`Control-C` should produce a prompt asking to confirm whether to stop or not. On Mac, :kbd:`Control-C` kills the process with no prompt.), and re-running it. :program:`Grunt` can sometimes get overwhelmed with changes and stop working. After restarting, test your form.
 
 If there are other problems, the contents of the JavaScript Console will be helpful to the ODK-X core team for debugging. Open the JavaScript Console by clicking the icon with the three bars in the top right, select :guilabel:`More Tools`, select :guilabel:`Developer Tools`, and then select the :guilabel:`Console` tab. Select all of the debugging output, then copy it, save it to a file, and post it to the |forum|_ or create a ticket on the `Github Issue Tracker <https://github.com/odk-x/odk-x/issues>`_.
 
@@ -466,7 +466,7 @@ In the default Application Designer, navigate to  :file:`app/config/tables/SkipL
     <script defer src="../../../../system/js/odkData.js"></script>
     <script defer src="../../../../system/tables/js/odkTables.js"></script>
 
-In the first line you are making the :program:`Bootstrap` styles available to your code. :program:`Bootstrap` is a free and open-source CSS framework directed at responsive web development. In the next three lines you are adding the *odkCommon*, *odkTables*, and *odkData* objects if they are not already provided by the browser environment. When running on the device, the ODK-X Tables APK will provide these, and the contents of these files will be ignored. When running in Application Designer on your computer, these files provide the approximate functionality of the APK, allowing you to create and debug your scripts. However, at the moment, these implementations make use of RequireJS, which the ODK-X Tables HTML files do not use (RequireJS is extensively used by ODK-X Survey). This causes these to break in Application Designer **Previews**.
+In the first line, you are making the :program:`Bootstrap` styles available to your code. :program:`Bootstrap` is a free and open-source CSS framework directed at responsive web development. In the next three lines, you are adding the *odkCommon*, *odkTables*, and *odkData* objects if they are not already provided by the browser environment. When running on the device, the ODK-X Tables APK will provide these, and the contents of these files will be ignored. When running in Application Designer on your computer, these files provide the approximate functionality of the APK, allowing you to create and debug your scripts. However, at the moment, these implementations make use of RequireJS, which the ODK-X Tables HTML files do not use (RequireJS is extensively used by ODK-X Survey). This causes these to break in Application Designer **Previews**.
 
 More detail is provided in :doc:`tables-web-pages`.
 
@@ -475,9 +475,9 @@ More detail is provided in :doc:`tables-web-pages`.
 Creating Web Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To write your own file, first decide on the *tableId* for your table and create the directory structure as shown in :ref:`build-app-creating-directory`. If you completed the example in :ref:`build-app-designing-a-form` you have already done this for the *census* survey form.
+To write your own file, first, decide on the *tableId* for your table and create the directory structure as shown in :ref:`build-app-creating-directory`. If you completed the example in :ref:`build-app-designing-a-form` you have already done this for the *census* survey form.
 
-For this section we would be looking at the example List and Detail view of the `Skip Logic <https://github.com/odk-x/app-designer/tree/basic-tables-example/app/config/tables/SkipLogic>`_ survey form.
+For this section, we would be looking at the example List and Detail view of the `Skip Logic <https://github.com/odk-x/app-designer/tree/basic-tables-example/app/config/tables/SkipLogic>`_ survey form.
 
 .. note::
 
@@ -746,7 +746,7 @@ After that, you can deploy your app to your device. Open Survey and fill in a fe
 Debugging Tables Web Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device, and debug from there. For this, you will need to set up remote debugging with instructions found here 
+You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device and debug from there. For this, you will need to set up remote debugging with instructions found here 
 `Remote debug Android devices <https://developers.google.com/web/tools/chrome-devtools/remote-debugging/>`_ and perform the following steps.
   
   #. Open up the ODK-X Tables app on your phone. 
@@ -769,7 +769,7 @@ You can use the :program:`Chrome` browser on your computer to inspect for device
   The edit-debug cycle is awkward because you must make the HTML or JavaScript change on your computer then push the change to your device, and reload the page (for example, by rotating the screen). When you do rotate the screen, however, it is rendered in a new web page, necessitating connecting to that new page to resume debugging (the prior page sits idle and will eventually be destroyed. If you don't see any activity, it is likely because you are pointing at the wrong web page. Return to inspect devices, and select the newest page).
 .. note::
   If your default view is a spreadsheet view, ODK-X Table WebView will not show up in the :program:`Chrome` inspect tool.
-  You will need to change the default view type to **LIST** using instructions found here :ref:`tables-using-view-data-change-views`.
+  You will need to change the default view type to **LIST** using the instructions found in :ref:`tables-using-view-data-change-views`.
 
 As with `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_, you can use the JavaScript Console to look for and fix errors in your HTML/JavaScript. If you are having trouble please check on the |forum|_. Keep in mind that the debug objects only emit a subset of the data in your ODK-X Tables database.
 
@@ -781,7 +781,7 @@ Pushing and Pulling Files
 .. note::
   You must have USB debugging enabled on your device in order to perform this step. See `these instructions <https://www.phonearena.com/news/How-to-enable-USB-debugging-on-Android_id53909>`_ for help.
 
-There are several times during app development where you will need to push and pull files to and from your device.
+There are several times during app development when you will need to push and pull files to and from your device.
 
  - The :command:`push` command is used to push the entire app directory to the device.
  - The :command:`pull` command is used to pull the database or exported CSVs from the device to the desktop computer.
@@ -799,7 +799,7 @@ These commands can be run anywhere within the :file:`Application Designer` direc
 
 The pull commands will place the pulled content in the :file:`app/output/` directory.
 
-The database is a :program:`SQLite` database and can be viewed using :program:`SQLite Browser`. This tool can also be used to view the content of the database used by :program:`Chrome` on your computer (the location of that file is OS dependent).
+The database is an :program:`SQLite` database and can be viewed using :program:`SQLite Browser`. This tool can also be used to view the content of the database used by :program:`Chrome` on your computer (the location of that file is OS-dependent).
 
 If you pull the CSV files, they will be under the :file:`output/csv/` directory. You can then copy them to the :file:`config/assets/csv/` directory and set up the :file:`tables.init` file to read them in order to provision test data for your development effort. If you need any of this data in production, you will want to sync to a server, then export the CSV files and copy them to the :file:`config/assets/csv/` directory so that they have all of their metadata field values populated.
 
@@ -816,7 +816,7 @@ Useful Grunt Commands
 
 :guilabel:`grunt adbpull-logs` : Pull any logs stored in the device for debugging purposes.
 
-:guilabel:`grunt adbpull-csv` : Pull any exported csv files from the device.
+:guilabel:`grunt adbpull-csv` : Pull any exported CSV files from the device.
 
 :guilabel:`grunt adbpush` : Perform all the Android Debug Bridge push tasks.
 
@@ -826,23 +826,23 @@ Useful Grunt Commands
 
 :guilabel:`grunt empty` : Remove unnecessary files to make an empty app-designer directory to work with.
 
-:guilabel:`grunt killall` : Force stops survey, tables and services on the connected device.
+:guilabel:`grunt killall` : Force stops survey, tables, and services on the connected device.
 
 :guilabel:`grunt setup` : Launches the login and sync screen on the connected device.
 
 :guilabel:`grunt uninstall` : Uninstall ODK-X tools from the connected device.
 
-:guilabel:`grunt xlsx-convert-all` : Takes all `.xlsx` files and converts them into a `formDef.json file`. Can be used instead of `XLSX` converter on the app designer.
+:guilabel:`grunt xlsx-convert-all` : Takes all `.xlsx` files and converts them into a `formDef.json file`. Can be used instead of the `XLSX` converter on the app designer.
 
 Troubleshooting
 ~~~~~~~~~~~~~~~~~~~~
 
-There are several issues that may occur while trying to push your survey onto your device. Below are some common issues and tip and tricks to help:
+There are several issues that may occur while trying to push your survey onto your device. Below are some common issues and tips and tricks to help:
 
 - Try checking :command:`adb -version`. If the version does not show, make sure that `Android SDK <https://docs.odk-x.org/app-designer-prereqs/?highlight=android%20debug#android-sdk>`_ is appropriately installed on your computer because this is what installs the :program:`Android Debug Bridge (adb)` software.
-- Check that your computer sees your device. Enter :command:`adb devices` in command line. Should show a *device detected*.
-- Check device to see if it has a message about authorizing the computer. If so, authorize the device.
-- Check device settings to ensure USB debugging is enabled and device is linked as a media device (not camera or other settings)
+- Check that your computer sees your device. Enter :command:`adb devices` in the command line. Should show a *device detected*.
+- Check the device to see if it has a message about authorizing the computer. If so, authorize the device.
+- Check the device settings to ensure USB debugging is enabled and that the device is linked as a media device (not camera or other settings)
 - Make sure your app-designer only has the necessary working files. Any random files or older versions of your survey saved within app-designer will cause the push to fail.
 - Do not have any :program:`Excel` forms open on your computer. If you do, this will cause errors with $filename or ~$filename in the file path when pushing.
 - Check that your computer sees your device. In your command window type the command adb devices. It should show a device detected.
@@ -852,7 +852,7 @@ There are several issues that may occur while trying to push your survey onto yo
 Deploying an Application
 ----------------------------
 
-This step requires that you first set up a :doc:`cloud-endpoints-intro`.
+This step requires that you first set up :doc:`cloud-endpoints-intro`.
 
   1. Push your application to a clean device (guide: :ref:`build-app-pushing`).
 
@@ -860,14 +860,14 @@ This step requires that you first set up a :doc:`cloud-endpoints-intro`.
 
   3. Reset the App Server (guide: :ref:`services-using-reset-app-server`).
 
-The application is now deployed to your server. Other devices can synchronize with that server to download the application and start collected data.
+The application is now deployed to your server. Other devices can synchronize with that server to download the application and start collecting data.
 
 .. _build-app-deploying-updating:
 
 Updating an Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To update any app level or table level files, or to modify the database schema (like adding a new field to your form that adds a database column), you will need to reset the app server. Make the changes on your PC as normal, push them to the device, and reset the app server.
+To update any app-level or table-level files, or to modify the database schema (like adding a new field to your form that adds a database column), you will need to reset the app server. Make the changes on your PC as normal, push them to the device, and reset the app server.
 
     .. warning::
 
@@ -875,16 +875,16 @@ To update any app level or table level files, or to modify the database schema (
 
 :th:`To update versions`: 
 
-You need to download the new `app designer <https://github.com/odk-x/app-designer/releases/latest>`_  , and delete the unneeded default files using
+You need to download the new `app designer <https://github.com/odk-x/app-designer/releases/latest>`_ and delete the unneeded default files using
 
 .. code-block:: console
 
   $ grunt empty
 
-Then copy over your entire :file:`config/assets` from your previous version to the new one. If you have customized anything in :th:`framework` you'll need to copy that too into the :file:`config/assets` of the new version, but in case ODK-X has also updated it, you'll need to manually merge both the copies. Finally, re-convert everything using 
+Then copy over your entire :file:`config/assets` from your previous version to the new one. If you have customized anything in :th:`framework` you'll need to copy that too into the :file:`config/assets` of the new version, but in case ODK-X has also updated it, you'll need to manually merge both copies. Finally, re-convert everything using 
 
 .. code-block:: console
 
   $ grunt xlsx-convert-all 
 
-and your app designer should be set. You will also need to update software on Android devices and server to the same version as well.
+and your app designer should be set. You will also need to update the software on Android devices and the server to the same version as well.
