@@ -23,7 +23,7 @@ Before installing any of the ODK-X tools, you will need the following third-part
 Required
 ~~~~~~~~~~~~~~~
 
-There are no other ODK-X Android tools that are prerequisites to installing :doc:`services-using`. However, ODK-X Services is a prerequisite for all the other ODK-X Android tools.
+No other ODK-X Android tools are prerequisites to installing :doc:`services-using`. However, ODK-X Services is a prerequisite for all the other ODK-X Android tools.
 
 Recommended
 ~~~~~~~~~~~~~~~
