@@ -47,18 +47,21 @@ The Docker environment is recommended because of the fewer setup steps required 
 
 [Fork](https://github.com/odk-x/docs/fork) the odk-x/docs repository, so that a copy of odk-x/docs gets created in your github account.
 
-### Cloning the repo
+### Cloning the repo for contribution
 
-Clone the docs repo into a directory you want the ODK-X docs repository to be located on your local machine. For example, navigate to the directory you want the repository to be located using the "cd" (Change Directory) command on the command line:
+Clone the docs repo into a directory you want the ODK-X docs files to be located. Below are the steps required to clone the docs repo:
+1. Visit this link https://github.com/odk-x/docs on your browser to locate the docs repo
+2. Find and click the "fork" button to create a personal fork of the project on Github
+3. Navigate to the directory you want the files to be located using the "cd" (Change Directory) command on a command-line interface on your local machine:
 ```
 cd <DIRECTORY>
 ```
-
-Then use git to get a copy of the ODK-X docs repository on your local machine.
-
+4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo:  
+ 
 ```
-git clone <forked_repo_link>
+git clone <LINK-TO-YOUR-FORKED-REPO>
 ```
+
 
 It can take a long time (>10 minutes) to clone the repo due to the large number of images in the docs. If you get an error such as `Smudge error` or `GitHub's rate limit reached`, run `git checkout -f HEAD` until you get the message `Checking out files: 100% done`.
 
