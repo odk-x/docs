@@ -49,7 +49,7 @@ The Docker environment is recommended because of the fewer setup steps required 
 
 ### Cloning the repo
 
-Firstly, change to the directory(if there's one) you want to clone the ODK-X docs repository on your local machine.
+Clone the docs repo into a directory you want the ODK-X docs repository to be located on your local machine. For example, navigate to the directory you want the repository to be located using the "cd" (Change Directory) command on the command line:
 ```
 cd <DIRECTORY>
 ```
