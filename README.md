@@ -43,6 +43,10 @@ The Docker environment is recommended because of the fewer setup steps required 
  * Install [git](https://git-scm.com/downloads)
  * Install [Git-LFS](https://git-lfs.github.com/)
 
+### Forking the repo 
+
+[Fork](https://github.com/odk-x/docs/fork) the odk-x/docs repository, so that a copy of odk-x/docs gets created in your github account.
+
 ### Cloning the repo for contribution
 
 Clone the docs repo into a directory you want the ODK-X docs files to be located. Below are the steps required to clone the docs repo:
@@ -52,7 +56,7 @@ Clone the docs repo into a directory you want the ODK-X docs files to be located
 ```
 cd <DIRECTORY>
 ```
-4. Get a copy of the ODK-X documentation files by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo:  
+4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo:  
  
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
@@ -61,7 +65,10 @@ git clone <LINK-TO-YOUR-FORKED-REPO>
 
 It can take a long time (>10 minutes) to clone the repo due to the large number of images in the docs. If you get an error such as `Smudge error` or `GitHub's rate limit reached`, run `git checkout -f HEAD` until you get the message `Checking out files: 100% done`.
 
-After the git clone finishes, use the cd command to change directory to where the cloned files are located. Likely `cd docs`
+After the git clone finishes, use the below command to change the directory to the ODK-X docs directory
+```
+cd docs
+```
 
 ### Building the Docker image
 
@@ -73,7 +80,7 @@ docker build -t odkx-docs .
 
 It can take a long time to build the Docker image, but you only need to do this once.
 
-Take note of the full-stop `.` at the end of the build command. The `.` specifies that the `PATH` is `.` (your current directory) so all the files in the local directory get sent to the Docker daemon, and `-t` just specifies a tag, in our case `odkx-docs`
+Take note of the full-stop `.` at the end of the build command. The `.` specifies the build context, which is the path to the directory containing the Dockerfile and any other files needed to build the image and `-t odkx-docs` specifies the name and optionally a tag for the image that is getting build (odkx-docs in our case).
 
 
 **Windows users**
