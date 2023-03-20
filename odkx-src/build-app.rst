@@ -54,7 +54,7 @@ Cleaning App Designer
 
 Your freshly installed copy of Application Designer comes with lots of example forms, tables, and configuration. This is useful for learning the tools and as references when building our application, the files can be found in :file:`app/config/tables` directory. 
 
-After building your own application, you may choose to delete all the examples forms, and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
+After building your own application, you may choose to delete all the examples forms and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
 
 To delete all the example forms and configurations, open the terminal and type *grunt empty*, this removes all the files and creates an empty app-designer folder to work with.  
 
@@ -74,7 +74,7 @@ When creating a new form, the appropriate directory structure must be created. O
 Creating the Directory Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-New forms must be placed under the :file:`app/config/tables/` directory as described in :ref:`app-designer-dirs-app-config-tables` section. Given a form with the name *formId*, it will have a *tableId* of the same name unless you explicitly specify otherwise. The directory structure that should be created is :file:`app/config/tables/tableId/forms/formId` (where, under many circumstances, the value for *tableId* will be the same as the value for *formId*). 
+New forms must be placed under the :file:`app/config/tables/` directory as described in the :ref:`app-designer-dirs-app-config-tables` section. Given a form with the name *formId*, it will have a *tableId* of the same name unless you explicitly specify otherwise. The directory structure that should be created is :file:`app/config/tables/tableId/forms/formId` (where, under many circumstances, the value for *tableId* will be the same as the value for *formId*). 
 
 .. note::
 
@@ -799,7 +799,7 @@ These commands can be run anywhere within the :file:`Application Designer` direc
 
 The pull commands will place the pulled content in the :file:`app/output/` directory.
 
-The database is an :program:`SQLite` database and can be viewed using :program:`SQLite Browser`. This tool can also be used to view the content of the database used by :program:`Chrome` on your computer (the location of that file is OS-dependent).
+The database is a :program:`SQLite` database and can be viewed using :program:`SQLite Browser`. This tool can also be used to view the content of the database used by :program:`Chrome` on your computer (the location of that file is OS-dependent).
 
 If you pull the CSV files, they will be under the :file:`output/csv/` directory. You can then copy them to the :file:`config/assets/csv/` directory and set up the :file:`tables.init` file to read them in order to provision test data for your development effort. If you need any of this data in production, you will want to sync to a server, then export the CSV files and copy them to the :file:`config/assets/csv/` directory so that they have all of their metadata field values populated.
 
