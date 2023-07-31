@@ -1,6 +1,6 @@
 .. spelling::
-
   src
+  github
   Homebrew
   odk-xenv
 
