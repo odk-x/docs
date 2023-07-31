@@ -16,6 +16,7 @@ importlib-metadata==3.10.0
 Jinja2==2.11.3
 livereload==2.6.3
 MarkupSafe==1.1.1
+myst-parser==0.17.2
 packaging==20.9
 pathtools==0.1.2
 Pillow==9.3.0
