@@ -1,12 +1,11 @@
 .. spelling::
   ldap
-  phpLDAPadmin
+  phpLDAPAdmin
   readonly
   dns
   letsencrypt
   subdomain
-
-
+  
 .. _sync-endpoint-setup-create-user:
 
 Users and Groups
@@ -14,7 +13,12 @@ Users and Groups
 
 .. _sync-endpoint-ldap-users:  
 
-A user needs to be assigned to a group within ODK-X Sync Endpoint to set their permissions and roles for ODK-X apps. More information about groups and roles is available in :ref:`Data Permission Filters<data-permission-filters>` section.
+A user needs to be assigned to a group within ODK-X Sync Endpoint to set their permissions and roles for ODK-X apps. 
+More information about groups and roles is available in :ref:`Data Permission Filters<data-permission-filters>` section.
+
+The instructions below assumes you have access to the phpLDAPAdmin web administration interface. Note that this is not enabled by default, 
+so you may want to enable it by following the instructions in the :doc:`sync-endpoint-pla-webaccess` documentation.
+
 
 
 Creating users
@@ -23,7 +27,7 @@ Creating users
   1. Click: :guilabel:`login` on the left and login as *admin*.
       | Start by logging into the ldap-service. Copy the login below.
       |  - login DN: :guilabel:`cn=admin,dc=example,dc=org`
-      |  - password: :guilabel:`admin`
+      |  - password: :guilabel:`admin` (or the password you chose in the setup wizard)
 
     .. image:: /img/setup-create-user/setup-user1.png
       :width: 600
