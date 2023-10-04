@@ -247,7 +247,7 @@ We are open to new issues and pull requests.
 
 You can also...
 
- - [Discuss the documentation from a user perspective in our forum](https://forum.odk-x.org/c/development/documentation).
+ - [Discuss the documentation from a user perspective in our forum](https://forum.odk-x.org/).
  - [File an issue](https://github.com/odk-x/tool-suite-X/issues) for any needed improvements.
  - [Watch](https://github.com/odk-x/docs/subscription) and star this repo, to keep up with what we're doing.
 
