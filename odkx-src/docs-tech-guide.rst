@@ -9,7 +9,7 @@ Docs Contributor Technical Guide
 
 This document explains how to set up your computer
 and work locally as an ODK-X Docs contributor.
-Local set up includes installing some software,
+Local setup includes installing some software,
 and working locally involves:
 
 - writing documentation text or code in a code editor
