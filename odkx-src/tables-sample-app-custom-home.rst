@@ -9,7 +9,7 @@ Open the Tables app. If you have successfully installed the sample application, 
     :alt: Tables Sample Application Home
     :class: device-screen-vertical
 
-ODK-X Tables allows your organization to customize the home screen of your Data Management Application. By default Tables will only show a list of the data tables defined on the device (called the *Table Manager*). But with a custom home screen your organization can implement their own complex workflow and look-and-feel with HTML, CSS, and JavaScript. An example of this is what is displayed after downloading the sample application.
+:doc:`tables` allows your organization to customize the home screen of your Data Management Application. By default Tables will only show a list of the data tables defined on the device (called the `Table Manager <https://docs.odk-x.org/tables-managing/#table-manager>`_). But with a custom home screen your organization can implement their own complex workflow and look-and-feel with HTML, CSS, and JavaScript. An example of this is what is displayed after downloading the sample application.
 
 .. note::
 
