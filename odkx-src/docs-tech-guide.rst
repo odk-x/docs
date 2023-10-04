@@ -9,7 +9,7 @@ Docs Contributor Technical Guide
 
 This document explains how to set up your computer
 and work locally as an ODK-X Docs contributor.
-Local set up includes installing some software,
+Local setup includes installing some software,
 and working locally involves:
 
 - writing documentation text or code in a code editor
@@ -67,7 +67,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
    .. _get-gh-account:
 
    `GitHub`_ is a popular code storage and collaboration platform.
-   You will need a GitHub account to contribute to ODK-X documentation,
+   You will need a GitHub account to contribute to ODK-X documentation
    or any other ODK-X projects.
 
    - `ODK-X on GitHub`_
@@ -83,7 +83,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
 
    The `ODK-X Forum`_ is the main place for
    support questions and conversations that affect the whole ODK-X community
-   (users and other stake holders, as well as contributors).
+   (users and other stakeholders, as well as contributors).
 
    If you have a question about how to use any ODK-X software,
    or want to get connected with the larger ODK-X community,
@@ -91,7 +91,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
 
    .. tip::
 
-      The forum has a search feature, and a long history of archived support posts.
+      The forum has a search feature and a long history of archived support posts.
       When writing new documentation about an existing feature,
       old forum posts are an excellent source for figuring out what people need to know:
       If someone has asked a question about it,
