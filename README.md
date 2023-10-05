@@ -59,7 +59,7 @@ cd <DIRECTORY>
 ```
 
 4. Copy the forked ODK-X docs repository URL by clicking on the green "Code" button on Github and navigate to the command-line interface
-Clone the forked repository using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to the forked repository  
+Clone the forked repository using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repository  
  
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
