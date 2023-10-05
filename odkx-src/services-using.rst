@@ -268,13 +268,13 @@ The tables specific settings modify the behavior of the ODK-X Tables tool. These
       :alt: Tables Settings
       :class: device-screen-vertical
 
-  - :menuselection:`Use Custom Home Screen` selects whether to display the :file:`index.html` file of your Data Management Application or the list of tables when ODK-X Tables is launched.
+  - :menuselection:`Use Custom Home Screen` selects whether to display the :file:`index.html` file of your Data Management Application or the list of tables when :doc:`tables` is launched.
 
 .. _services-using-troubleshooting:
 
 Troubleshooting
 -------------------------
 
-  - If you are not seeing your forms in `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ or your data tables in ODK-X Tables, try :ref:`services-managing-reset-config`
-  - If you are seeing a list of data tables instead of your Data Management Application home screen when you launch ODK-X Tables, enable the :guilabel:`Use custom home screen` option in :ref:`services-user-tables-settings`.
+  - If you are not seeing your forms in `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ or your data tables in :doc:`tables`, try :ref:`services-managing-reset-config`
+  - If you are seeing a list of data tables instead of your Data Management Application home screen when you launch :doc:`tables`, enable the :guilabel:`Use custom home screen` option in :ref:`services-user-tables-settings`.
   - If you are having trouble syncing, check your :ref:`services-managing-server-config`.
