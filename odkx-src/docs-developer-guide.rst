@@ -35,7 +35,7 @@ ODK Docs uses:
 .. _restructuredtext: http://docutils.sourceforge.net/rst.html
 .. _jinja: http://jinja.pocoo.org/
 .. _sphinx_rtd_theme: https://github.com/rtfd/sphinx_rtd_theme
-.. _proselint: http://proselint.com/
+.. _proselint: https://github.com/amperser/proselint/
 .. _git: https://git-scm.com/
 .. _github: https://github.com/odk-x/docs
 .. _circleci: https://circleci.com/
