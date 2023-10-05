@@ -26,7 +26,7 @@ ODK-X Sync Endpoint
 It communicates with your ODK-X Android applications to synchronize
 your data and application files.
 
-There is an important library called :dfn:`Sync Client` which implements the sync protocol by interacting with Sync Endpoint and other tools. The source of this library can be found here: `https://github.com/odk-x/sync-client <https://github.com/odk-x/sync-client/>`_. This is a library that can be used to execute the ODK-X sync protocol in Java applications.
+There is an important library called :dfn:`Sync Client` which implements the sync protocol by interacting with Sync Endpoint and other tools. The source of this library can be found in the `ODK-X Sync Client GitHub repository <https://github.com/odk-x/sync-client/>`_. This is a library that can be used to execute the ODK-X sync protocol in Java applications.
 
 Depending on your needs, ODK-X Sync Endpoint can either be installed
 in a cloud-based virtual machine, or on your own infrastructure.
@@ -44,7 +44,7 @@ Overview
 ODK-X Sync Endpoint Server Technologies
 """"""""""""""""""""""""""""""""""""""""
 
-:dfn:`ODK-X Sync Endpoint` server is a combination of micro-services that run inside a Docker swarm. The image below shows the six main micro-services that compose the functionality included in Sync-Endpoint.
+:dfn:`ODK-X Sync Endpoint` server is a combination of micro-services that run inside a `Docker swarm <https://docs.docker.com/engine/swarm/>`_ The image below shows the six main micro-services that compose the functionality included in Sync-Endpoint.
 
 To direct the incoming web request, the Sync-Endpoint uses nginx to route the web request to the proper microservice able to properly respond to the request. The central microservice of the Sync-Endpoint is a Java web application that provides the ODK-X REST synchronization protocol.
 

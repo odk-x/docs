@@ -9,7 +9,7 @@ Now that we have seen how a device can join an already-configured application, a
 
 Prerequisites
 ------------------
-This guide continues the tour where :doc:`survey-sample-app` left off. If you haven't yet completed that tour, do it first. When you have concluded the tour of the *`ODK-X Survey <https://docs.odk-x.org/survey-using/>`_* example application's screens, return to this guide and we will turn to setting up our own application.
+This guide continues the tour where :doc:`survey-sample-app` left off. If you haven't yet completed that tour, do it first. When you have concluded the tour of the :doc:`survey-using` example application's screens, return to this guide and we will turn to setting up our own application.
 
 .. _architect-odk-2-config-setup-app-designer:
 
