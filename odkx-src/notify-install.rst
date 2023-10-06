@@ -53,7 +53,7 @@ Setting up ODK-X Notify
 
     .. image:: /img/notify-setup/notify-setup.*
 
-  4. To use the Skunkworks-Parrot App, the user needs to create a firebase project and add that project's information in the configure window. `Here <https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_ you can find the step by step instructions for the same.
+  4. To use the Skunkworks-Parrot App, the user needs to create a firebase project and add that project's information in the configure window. The step-by-step instructions can be found in this `guide <https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_.
 
   5. After adding all the required information in configure window, Click :menuselection:`Save`.
 

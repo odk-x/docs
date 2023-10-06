@@ -746,8 +746,7 @@ After that, you can deploy your app to your device. Open Survey and fill in a fe
 Debugging Tables Web Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device and debug from there. For this, you will need to set up remote debugging with instructions found here 
-`Remote debug Android devices <https://developers.google.com/web/tools/chrome-devtools/remote-debugging/>`_ and perform the following steps.
+You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device and debug from there. For this, you will need to set up remote debugging with the instructions found in the guide on `Remote debugging Android devices using Chrome DevTools <https://developer.chrome.com/docs/devtools/remote-debugging/>`_ and perform the following steps.
   
   #. Open up the ODK-X Tables app on your phone. 
   #. Select the table (census table created above for example) you want to debug.

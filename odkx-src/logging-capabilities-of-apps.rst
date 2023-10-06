@@ -17,7 +17,7 @@ The command in a shell environment is:
 
   $ adb logcat
 
-For detailed information please see `here <https://www.brainbell.com/android/logcat.html>`_ .
+For detailed information please refer to this guide on `Working with Logcat <https://www.brainbell.com/android/logcat.html>`_.
 
 Sync-Endpoint Docker
 ----------------------

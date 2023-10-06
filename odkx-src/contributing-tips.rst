@@ -158,7 +158,7 @@ Actually install and use ODK-X or other tools
 
 You cannot write effectively about tools you have not used. If you're going to write or edit documentation about any of the apps in the ODK ecosystem, you need to spend some time actually using it.
 
-Before diving into writing documentation, try out the core tools `here <https://odk-x.org/software>`_ and become familiar with them.
+Before diving into writing documentation, try out the `core tools <https://odk-x.org/software>`_ and become familiar with them.
 
 This is also true of writing about Sphinx or any of our documentation build tools. Reading existing documentation is not enough to write about something.
 
