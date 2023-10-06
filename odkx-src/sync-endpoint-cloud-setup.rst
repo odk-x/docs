@@ -186,7 +186,7 @@ Connecting to your Droplet
   .. image:: /img/setup-digital-ocean/do8.png
    :width: 600
 
-8. Read our section on *Creating a Sample User* to learn how to create a user from within the admin interface. This section can be found :ref:`here <sync-endpoint-setup-create-user>`.
+8. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
 
 .. _sync-endpoint-setup-digital-ocean-firewall:
 
@@ -390,7 +390,7 @@ Connecting to your virtual machine
   .. image:: /img/setup-azure/azure11.png
    :width: 600
 
-7. Read our section on *Creating a Sample User* to learn how to create a user from within the admin interface. This section can be found :ref:`here <sync-endpoint-setup-create-user>`.
+7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
 
 |
 
@@ -561,7 +561,7 @@ Connecting to your virtual machine
   .. image:: /img/setup-aws/aws11.png
    :width: 600
 
-8. Read our section on *Creating a Sample User* to learn how to create a user from within the admin interface. This section can be found :ref:`here <sync-endpoint-setup-create-user>`.
+8. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
 
 |
 

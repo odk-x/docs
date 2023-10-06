@@ -249,7 +249,7 @@ for style checks is :file:`style-checks.py`.
 If the test is too large
 to be defined in the file :file:`docs-style-guide.rst`,
 you can use a snippet from the test
-(as :ref:`here <american-spelling>`).
+(as in this :ref:`Docs Style Guide example <american-spelling>`).
 The code-blocks for such snippets
 should specify the class **proselint-extra-checks**.
 Define the complete test
