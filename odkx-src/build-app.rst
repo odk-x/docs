@@ -395,7 +395,7 @@ If the form is not being rendered correctly but your survey generates a :file:`f
 
 If that does not resolve the issue, try stopping the :program:`grunt` command (on Windows, :kbd:`Control-C` should produce a prompt asking to confirm whether to stop or not. On Mac, :kbd:`Control-C` kills the process with no prompt.), and re-running it. :program:`Grunt` can sometimes get overwhelmed with changes and stop working. After restarting, test your form.
 
-If there are other problems, the contents of the JavaScript Console will be helpful to the ODK-X core team for debugging. Open the JavaScript Console by clicking the icon with the three bars in the top right, select :guilabel:`More Tools`, select :guilabel:`Developer Tools`, and then select the :guilabel:`Console` tab. Select all of the debugging output, then copy it, save it to a file, and post it to the |forum|_ or create a ticket on the `Github Issue Tracker <https://github.com/odk-x/odk-x/issues>`_.
+If there are other problems, the contents of the JavaScript Console will be helpful to the ODK-X core team for debugging. Open the JavaScript Console by clicking the icon with the three bars in the top right, select :guilabel:`More Tools`, select :guilabel:`Developer Tools`, and then select the :guilabel:`Console` tab. Select all of the debugging output, then copy it, save it to a file, and post it to the |forum|_ or create a ticket on the `Github Issue Tracker <https://github.com/odk-x/tool-suite-X/issues>`_.
 
 .. _build-app-move-to-device:
 
@@ -746,8 +746,7 @@ After that, you can deploy your app to your device. Open Survey and fill in a fe
 Debugging Tables Web Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device and debug from there. For this, you will need to set up remote debugging with instructions found here 
-`Remote debug Android devices <https://developers.google.com/web/tools/chrome-devtools/remote-debugging/>`_ and perform the following steps.
+You can use the :program:`Chrome` browser on your computer to inspect for devices and connect to this custom screen on your Android device and debug from there. For this, you will need to set up remote debugging with the instructions found in the guide on `Remote debugging Android devices using Chrome DevTools <https://developer.chrome.com/docs/devtools/remote-debugging/>`_ and perform the following steps.
   
   #. Open up the ODK-X Tables app on your phone. 
   #. Select the table (census table created above for example) you want to debug.

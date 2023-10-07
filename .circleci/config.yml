@@ -88,6 +88,7 @@ jobs:
                 sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
                 sudo apt-get update --allow-releaseinfo-change --fix-missing
                 sudo apt-get install -y adoptopenjdk-8-hotspot
+                sudo apt-get install --reinstall dbus
                 gem install s3_website && s3_website install
               fi
       - run:

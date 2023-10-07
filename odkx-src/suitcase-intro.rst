@@ -119,7 +119,7 @@ Uploading to the server
 
   Your upload directory should look similar to the *config* directory and contain
   subdirectories *assets* and/or *tables* as shown in the :doc:`config-file-structure`.
-  An example for the same can be found `here <https://github.com/odk-x/app-designer/tree/master/app/config>`_. 
+  You can find an example of this in the `ODK-X App Designer GitHub repository <https://github.com/odk-x/app-designer/tree/master/app/config>`_. 
 
   Then modify the :guilabel:`Upload` field to that file path by clicking on the :guilabel:`...` button, and then press :guilabel:`Upload`.
 

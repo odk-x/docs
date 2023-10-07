@@ -35,7 +35,7 @@ ODK Docs uses:
 .. _restructuredtext: http://docutils.sourceforge.net/rst.html
 .. _jinja: http://jinja.pocoo.org/
 .. _sphinx_rtd_theme: https://github.com/rtfd/sphinx_rtd_theme
-.. _proselint: http://proselint.com/
+.. _proselint: https://github.com/amperser/proselint/
 .. _git: https://git-scm.com/
 .. _github: https://github.com/odk-x/docs
 .. _circleci: https://circleci.com/
@@ -249,7 +249,7 @@ for style checks is :file:`style-checks.py`.
 If the test is too large
 to be defined in the file :file:`docs-style-guide.rst`,
 you can use a snippet from the test
-(as :ref:`here <american-spelling>`).
+(as in this :ref:`Docs Style Guide example <american-spelling>`).
 The code-blocks for such snippets
 should specify the class **proselint-extra-checks**.
 Define the complete test

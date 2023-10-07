@@ -16,7 +16,7 @@ Syncing has two phases. In the first phase, data tables are created on the devic
 
 In the second phase, it synchronizes the contents of the local data tables with the contents on the server, including any row-level file attachments associated with individual records in the data table. Row-level file attachments are bundled and synced one row at a time.
 
-Unlike ODK Collect, where individual forms can be added and removed at will, ODK-X Services and the ODK-X tools are organized Data Management Applications consisting of a set of interrelated data tables and forms. All the forms and tables on the server collectively define the Data Management Application* and ODK-X Services ensures that the device conforms to that Data Management Application definition. You can operate multiple independent Data Management Applications on a single device by placing their files and forms under different application folders within the :file:`/sdcard/opendatakit/` folder. Each such application will publish to a different ODK-X Cloud Endpoint. This is a significant and powerful change from the ODK mindset.
+Unlike `ODK Collect <https://docs.getodk.org/collect-intro/>`_, where individual forms can be added and removed at will, :doc:`services` and the ODK-X tools are organized Data Management Applications consisting of a set of interrelated data tables and forms. All the forms and tables on the server collectively define the Data Management Application* and ODK-X Services ensures that the device conforms to that Data Management Application definition. You can operate multiple independent Data Management Applications on a single device by placing their files and forms under different application folders within the :file:`/sdcard/opendatakit/` folder. Each such application will publish to a different ODK-X Cloud Endpoint. This is a significant and powerful change from the ODK mindset.
 
 .. _services-managing-app-files:
 
@@ -33,4 +33,4 @@ At any point you can copy the local database on the Android device onto your des
 
   :file:`/sdcard/opendatakit/default/data/webDb`
 
-To inspect the database, use the :code:`adb pull` command (Google documentation is available `here <https://developer.android.com/studio/command-line/adb.html#copyfiles>`_). Then use a program such as `DB Browser for SQLite <http://sqlitebrowser.org/>`_ to view the database. Further instructions are available in the :ref:`build-app-pushing` guide.
+To inspect the database, use the :code:`adb pull` command (`refer to Google's documentation <https://developer.android.com/studio/command-line/adb.html#copyfiles>`_ on this command). Then use a program such as `DB Browser for SQLite <http://sqlitebrowser.org/>`_ to view the database. Further instructions are available in the :ref:`build-app-pushing` guide.

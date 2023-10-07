@@ -199,7 +199,7 @@ The interaction to get the active user's roles would be:
 
 If the request failed, the `errorMsg` is the message returned from within the Java layer. As noted, this is typically the :code:`getMessage()` of an exception.
 
-Otherwise, the :code:`resultObj` returned contains information about the outcome. This object is a wrapper object with accessor methods defined `here <https://github.com/odk-x/app-designer/blob/development/app/system/js/odkData.js#L349)>`_.
+Otherwise, the :code:`resultObj` returned contains information about the outcome. This object is a wrapper object with accessor methods defined in the `odkData.js <https://github.com/odk-x/app-designer/blob/development/app/system/js/odkData.js#L349)>`_ file.
 
 .. note::
 

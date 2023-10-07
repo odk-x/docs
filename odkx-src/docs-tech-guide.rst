@@ -9,7 +9,7 @@ Docs Contributor Technical Guide
 
 This document explains how to set up your computer
 and work locally as an ODK-X Docs contributor.
-Local set up includes installing some software,
+Local setup includes installing some software,
 and working locally involves:
 
 - writing documentation text or code in a code editor
@@ -67,7 +67,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
    .. _get-gh-account:
 
    `GitHub`_ is a popular code storage and collaboration platform.
-   You will need a GitHub account to contribute to ODK-X documentation,
+   You will need a GitHub account to contribute to ODK-X documentation
    or any other ODK-X projects.
 
    - `ODK-X on GitHub`_
@@ -83,7 +83,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
 
    The `ODK-X Forum`_ is the main place for
    support questions and conversations that affect the whole ODK-X community
-   (users and other stake holders, as well as contributors).
+   (users and other stakeholders, as well as contributors).
 
    If you have a question about how to use any ODK-X software,
    or want to get connected with the larger ODK-X community,
@@ -91,7 +91,7 @@ and the :ref:`ODK-X Forum <join-forum>`.
 
    .. tip::
 
-      The forum has a search feature, and a long history of archived support posts.
+      The forum has a search feature and a long history of archived support posts.
       When writing new documentation about an existing feature,
       old forum posts are an excellent source for figuring out what people need to know:
       If someone has asked a question about it,
@@ -180,14 +180,14 @@ on any computer.
 
          Use `Windows PowerShell`_. (Not the DOS Prompt.)
 
-         .. _Windows PowerShell: https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershel
+         .. _Windows PowerShell: https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.3#getting-started
 
          We recommend using the :program:`Windows PowerShell ISE`.
 
          During initial setup (this section of the guide)
          you will need to `Run as Administrator`_.
 
-         .. _Run as Administrator: https://docs.microsoft.com/en-us/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#with-administrative-privileges-run-as-administrator
+         .. _Run as Administrator: https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell/starting-windows-powershell?view=powershell-7.3#with-administrative-privileges-run-as-administrator
 
          Throughout the rest of the instructions in this guide,
          follow the instructions labeled **PowerShell** or **Windows**.
@@ -240,7 +240,7 @@ on any computer.
             Follow the `installation instructions`_.
 
             .. _Homebrew: https://brew.sh/
-            .. _installation instructions: Homebrew
+            .. _installation instructions: https://brew.sh/
 
       .. group-tab:: Linux
 
@@ -462,9 +462,8 @@ on any computer.
 
                If you have an older Mac,
                and are unsure if it can run a 64-bit installer,
-               `check the processor details`_ in :menuselection:` -> About This Mac`.
+               check the processor details in :menuselection:` -> About This Mac`.
 
-               .. _check the processor details: https://www.alesis.com/kb/article/1616#mac
 
          #. Open the Installer.
          #. Follow the prompts.
@@ -1483,7 +1482,7 @@ Here are a few things to keep in mind when you start your next contribution.
             (odk-xenv) /odk-x/docs/ > git push origin master
 
 #. Find a `new issue to work on`_.
-#. `Start a new branch for your work <git-branch-the-docs>`_ with :command:`git checkout -b branch-name`.
+#. Start a new branch for your work with :command:`git checkout -b branch-name`.
 
 .. _new issue to work on: https://github.com/odk-x/tool-suite-X/issues/
 

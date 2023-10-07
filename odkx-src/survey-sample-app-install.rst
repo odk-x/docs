@@ -8,7 +8,7 @@ Install `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ and its prerequis
 
 .. _survey-sample-app-install:
 
-Unlike ODK Collect, the ODK-X tools are application-focused. An application is identified by the name of the directory under the :file:`/sdcard/opendatakit/` folder. The sample application is named *default*, as are the sample applications provided for :doc:`tables-using`. This means that you can only deploy one of these sample applications onto a device at a time. We also provide :ref:`instructions <survey-launching-appname>` to rename one of these so that two or more applications can co-exist on the same device without interfering with each other.
+Unlike `ODK Collect <https://docs.getodk.org/collect-intro/>`_, the ODK-X tools are application-focused. An application is identified by the name of the directory under the :file:`/sdcard/opendatakit/` folder. The sample application is named *default*, as are the sample applications provided for :doc:`tables-using`. This means that you can only deploy one of these sample applications onto a device at a time. We also provide :ref:`instructions <survey-launching-appname>` to rename one of these so that two or more applications can co-exist on the same device without interfering with each other.
 
 To access the sample application and its six sample forms, authentication and syncing are required.
 
