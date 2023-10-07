@@ -22,19 +22,19 @@ jobs:
             pip3 install --user -r requirements.txt
             pip3 install --user -r style-test-requirements.txt
       - run:
-          name: Style Guide Check
+          name: Style check of changed files
           command: |
             paths=$(git diff origin/main --name-only)
             python3 style-test.py $paths -r odkx-src
       - run:
           name: Build ODK-X Documentation
-          command: make odkx-deploy
+          command: make build
       - run:
           name: Check spelling of ODK-X Documentation
-          command: make odkx-spell-check
+          command: make spell-check
       - run:
           name: Build LaTex of ODK-X Documentation
-          command: make odkx-latex
+          command: make latex
       - run:
           name: Compress images
           command: pngquant odkx-build/_images/*.png --force --ext .png --verbose

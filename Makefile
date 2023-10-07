@@ -9,57 +9,38 @@ ODKX_SRCDIR   = odkx-src
 COMPILE_X_SRCDIR = tmpx-src
 ODKX_BUILDDIR = odkx-build
 
-
 .PHONY: help Makefile
 
-odkx-autobuild:
+serve:
 	sphinx-autobuild --port 8080 --host 0.0.0.0 odkx-src odkx-build
 
-odkx-clean:
+clean:
 	rm -rf $(COMPILE_X_SRCDIR)
 	rm -rf $(ODKX_BUILDDIR)
 
-odkx-clean-files:
-	rm -rf $(COMPILE_X_SRCDIR)
-	rm -rf $(ODKX_BUILDDIR)/*
-
-clean: odkx-clean
-
-odkx-copy: odkx-clean-files
+copy: clean
 	mkdir $(COMPILE_X_SRCDIR)
 	cp -rf $(ODKX_SRCDIR)/* $(COMPILE_X_SRCDIR)
 
-odkx: odkx-copy
-	@$(SPHINXBUILD) -b dirhtml "$(COMPILE_X_SRCDIR)" "$(ODKX_BUILDDIR)" $(SPHINXOPTS)
-
-odkx-deploy: odkx-copy
+build: copy
 	@$(SPHINXBUILD) -W -b dirhtml "$(COMPILE_X_SRCDIR)" "$(ODKX_BUILDDIR)" $(SPHINXOPTS)
 
-build-all: odkx
-
-odkx-build: odkx
-
-odkx-latex: odkx
+latex: copy
 	@$(SPHINXBUILD) -b latex "$(COMPILE_X_SRCDIR)" "$(ODKX_BUILDDIR)"/latex $(SPHINXOPTS)
 	$(PYTHON) util/resize.py "$(ODKX_BUILDDIR)"
 
-odkx-pdf: odkx-latex
+pdf: latex
 	cd "$(ODKX_BUILDDIR)"/latex && \
 	xelatex ODK-X.tex && \
 	xelatex ODK-X.tex && \
 	mkdir -p ../_downloads && \
 	mv ODK-X.pdf ../_downloads/ODK-X-Documentation.pdf
 
-odkx-style-check: odkx
+style-check: build
 	$(PYTHON) style-test.py -r $(COMPILE_X_SRCDIR)
 
-odkx-spell-check: odkx
+spell-check: copy
 	sphinx-build -b spelling $(COMPILE_X_SRCDIR) $(ODKX_BUILDDIR)/spelling
 	$(PYTHON) util/check-spelling-output.py $(ODKX_BUILDDIR)
 
-odkx-check: odkx-style-check odkx-spell-check
-
-check-all: odkx-check
-
-test:
-	pytest
+check-all: style-check spell-check

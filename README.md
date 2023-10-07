@@ -91,8 +91,8 @@ Take note of the full-stop `.` at the end of the build command. The `.` specifie
 ### Building and serving the docs locally
 
 Build and serve the docs locally with:
- * Windows: `.\run-task.bat odkx-autobuild`
- * Linux/macOS: `./run-task.sh odkx-autobuild`
+ * Windows: `.\run-task.bat serve`
+ * Linux/macOS: `./run-task.sh serve`
 
 Once your terminal shows a "Serving on http://0.0.0.0:8080" message, you can then view the docs in your browser at http://localhost:8080.
 
@@ -231,9 +231,9 @@ You can also use `make` to run just a portion of the build process. See availabl
 
 ## <a name="tasks"></a>Build tasks
 
-|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   Style Check    |   Spell Check    | Check All  |
-| ----------- | :------------: | :--------: | :-------: | :--------: | :--------------: | :--------------: | :--------: |
-| **Options** | odkx-autobuild | odkx-build | odkx-copy | odkx-latex | odkx-style-check | odkx-spell-check | odkx-check |
+|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   PDF      |   Style Check    | Spell Check      | Check All  |
+| ----------- | :------------: | :--------: | :-------: | :--------: | :--------: | :--------------: | :--------------: | :--------: |
+| **Options** | serve          | build      | copy      | latex      | pdf        | style-check      | spell-check      | check-all  |
 
 
 ## How to contribute?
