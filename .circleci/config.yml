@@ -25,7 +25,7 @@ jobs:
           name: Style check of changed files
           command: |
             paths=$(git diff origin/main --name-only)
-            python3 style-test.py $paths -r odkx-src
+            python3 style-test.py $paths -r src
       - run:
           name: Build ODK-X Documentation
           command: make build
@@ -37,14 +37,14 @@ jobs:
           command: make latex
       - run:
           name: Compress images
-          command: pngquant odkx-build/_images/*.png --force --ext .png --verbose
+          command: pngquant build/_images/*.png --force --ext .png --verbose
       - store_artifacts:
-          path: odkx-build
-          destination: odkx-build
+          path: build
+          destination: build
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*
+            - build/*
             - s3_website.yml
   build-pdf:
     working_directory: ~/work
@@ -56,18 +56,18 @@ jobs:
       - run:
           name: Build PDF
           command: |
-              cd odkx-build/latex
+              cd build/latex
               xelatex ODK-X.tex
               xelatex ODK-X.tex
               mkdir -p ../_downloads
               mv ODK-X.pdf ../_downloads/ODK-X-Documentation.pdf
       - store_artifacts:
-          path: odkx-build/_downloads/ODK-X-Documentation.pdf
+          path: build/_downloads/ODK-X-Documentation.pdf
           destination: ODK-X-Documentation.pdf
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*            
+            - build/*
   deploy:
     working_directory: ~/work
     docker:

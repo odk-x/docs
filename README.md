@@ -220,12 +220,16 @@ It can take a long time (>10 minutes) to clone the repo due to the large number 
 Once your environment is set up, build and serve the docs locally with:
 
 ```bash
+$ make serve
+```
+
+```bash
 $ make odkx
-$ cd odkx-build
+$ cd build
 $ python -m http.server 8000
 ```
 
-You can then view the docs in your browser at [http://localhost:8000/odkx-build/](http://localhost:8000/odkx-build/).
+You can then view the docs in your browser at [http://localhost:8000/build/](http://localhost:8000/build/).
 
 You can also use `make` to run just a portion of the build process. See available [build tasks](#tasks) below.
 

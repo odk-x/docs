@@ -5,42 +5,42 @@
 PYTHON = python3
 SPHINXOPTS    = 
 SPHINXBUILD   = sphinx-build
-ODKX_SRCDIR   = odkx-src
-COMPILE_X_SRCDIR = tmpx-src
-ODKX_BUILDDIR = odkx-build
+SOURCE_DIR   = src
+TMP_SOURCE = tmp_src
+BUILD_DIR = build
 
 .PHONY: help Makefile
 
 serve:
-	sphinx-autobuild --port 8080 --host 0.0.0.0 odkx-src odkx-build
+	sphinx-autobuild --port 8080 --host 0.0.0.0 src build
 
 clean:
-	rm -rf $(COMPILE_X_SRCDIR)
-	rm -rf $(ODKX_BUILDDIR)
+	rm -rf $(TMP_SOURCE)
+	rm -rf $(BUILD_DIR)
 
 copy: clean
-	mkdir $(COMPILE_X_SRCDIR)
-	cp -rf $(ODKX_SRCDIR)/* $(COMPILE_X_SRCDIR)
+	mkdir $(TMP_SOURCE)
+	cp -rf $(SOURCE_DIR)/* $(TMP_SOURCE)
 
 build: copy
-	@$(SPHINXBUILD) -W -b dirhtml "$(COMPILE_X_SRCDIR)" "$(ODKX_BUILDDIR)" $(SPHINXOPTS)
+	@$(SPHINXBUILD) -W -b dirhtml "$(TMP_SOURCE)" "$(BUILD_DIR)" $(SPHINXOPTS)
 
 latex: copy
-	@$(SPHINXBUILD) -b latex "$(COMPILE_X_SRCDIR)" "$(ODKX_BUILDDIR)"/latex $(SPHINXOPTS)
-	$(PYTHON) util/resize.py "$(ODKX_BUILDDIR)"
+	@$(SPHINXBUILD) -b latex "$(TMP_SOURCE)" "$(BUILD_DIR)"/latex $(SPHINXOPTS)
+	$(PYTHON) util/resize.py "$(BUILD_DIR)"
 
 pdf: latex
-	cd "$(ODKX_BUILDDIR)"/latex && \
+	cd "$(BUILD_DIR)/latex" && \
 	xelatex ODK-X.tex && \
 	xelatex ODK-X.tex && \
 	mkdir -p ../_downloads && \
 	mv ODK-X.pdf ../_downloads/ODK-X-Documentation.pdf
 
 style-check: build
-	$(PYTHON) style-test.py -r $(COMPILE_X_SRCDIR)
+	$(PYTHON) style-test.py -r $(TMP_SOURCE)
 
 spell-check: copy
-	sphinx-build -b spelling $(COMPILE_X_SRCDIR) $(ODKX_BUILDDIR)/spelling
-	$(PYTHON) util/check-spelling-output.py $(ODKX_BUILDDIR)
+	sphinx-build -b spelling $(TMP_SOURCE) $(BUILD_DIR)/spelling
+	$(PYTHON) util/check-spelling-output.py $(BUILD_DIR)
 
 check-all: style-check spell-check

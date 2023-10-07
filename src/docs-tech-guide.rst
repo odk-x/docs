@@ -1056,7 +1056,7 @@ Working on the docs
 
    The source files for documentation text are in this directory:
 
-   :file:`odkx-src`
+   :file:`src`
       Files for the pages at https://docs.odk-x.org/
 
    If you're going to write or edit documentation text, please read:
@@ -1097,20 +1097,20 @@ Working on the docs
 
           .. code:: console
 
-             (odk-xenv) /odk-x/docs/ $ make odkx-check
+             (odk-xenv) /odk-x/docs/ $ make check-all
 
        .. group-tab:: PowerShell
 
           .. code:: ps1con
 
-             (odk-xenv) /odk-x/docs/ > rm -r -fo tmpx-src
-             (odk-xenv) /odk-x/docs/ > rm -r -fo odkx-build
-             (odk-xenv) /odk-x/docs/ > Copy-Item odkx-src -Destination tmpx-src -Recurse
-             (odk-xenv) /odk-x/docs/ > sphinx-build -b spelling tmpx-src odkx-build/spelling
-             (odk-xenv) /odk-x/docs/ > python util/check-spelling-output.py odkx-build
+             (odk-xenv) /odk-x/docs/ > rm -r -fo tmp_src
+             (odk-xenv) /odk-x/docs/ > rm -r -fo build
+             (odk-xenv) /odk-x/docs/ > Copy-Item src -Destination tmp_src -Recurse
+             (odk-xenv) /odk-x/docs/ > sphinx-build -b spelling tmp_src build/spelling
+             (odk-xenv) /odk-x/docs/ > python util/check-spelling-output.py build
 
 
-    This will send some output to the terminal,
+    This will send some build to the terminal,
     which will include mentions of any words not in the dictionary.
 
     -  If the flagged words are really misspellings, correct them.
@@ -1159,10 +1159,10 @@ Working on the docs
 
          .. code:: ps1con
 
-            (odk-xenv) /odk-x/docs/ > rm -r -fo tmpx-src
-            (odk-xenv) /odk-x/docs/ > rm -r -fo odkx-build
-            (odk-xenv) /odk-x/docs/ > Copy-Item odkx-src -Destination tmpx-src -Recurse
-            (odk-xenv) /odk-x/docs/ > sphinx-build -b dirhtml tmpx-src odkx-build
+            (odk-xenv) /odk-x/docs/ > rm -r -fo tmp_src
+            (odk-xenv) /odk-x/docs/ > rm -r -fo build
+            (odk-xenv) /odk-x/docs/ > Copy-Item src -Destination tmp_src -Recurse
+            (odk-xenv) /odk-x/docs/ > sphinx-build -b dirhtml tmp_src build
 
    This generates a lot of output.
    Near the end of the output you may see a statement like:
@@ -1193,22 +1193,10 @@ Working on the docs
 
    .. note::
 
-      Because of a `bug in Sphinx`_
-      the line numbers in error and warning messages
-      will be off by about 15 lines
-      (the length of ``rst_prolog`` in :file:`conf.py`).
-
-      .. _bug in Sphinx: https://github.com/sphinx-doc/sphinx/issues/2617
-
-   As you fix each warning,
-   run the build again to see if it disappears from the output.
-
-   .. note::
-
       The warning messages will refer to the file name
-      using the temporary directory path :file:`tmp1-src` or :file:`tmpx-src`.
+      using the temporary directory path :file:`tmp1-src` or :file:`tmp_src`.
       You need to correct the problems in the real source directory
-      (:file:`odkx-src`).
+      (:file:`src`).
 
    .. admonition:: When you just can't fix the error...
 
@@ -1231,14 +1219,14 @@ Working on the docs
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ $ python -m http.server -d odkx-build 8000
+            (odk-xenv) /odk-x/docs/ $ python -m http.server -d build 8000
             Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)
 
       .. group-tab:: PowerShell
 
          .. code:: ps1con
 
-            (odk-xenv) /odk-x/docs/ > python -m http.server -d odkx-build 8000
+            (odk-xenv) /odk-x/docs/ > python -m http.server -d build 8000
             Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)
 
    #. Open your browser and go to http://localhost:8000.
