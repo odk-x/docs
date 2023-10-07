@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
   src
   github
   Homebrew
@@ -1125,7 +1125,7 @@ Working on the docs
 
        .. code:: rst
 
-          .. spelling::
+          .. spelling:word-list::
 
              abc
              def
