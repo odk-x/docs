@@ -902,9 +902,9 @@ ODK and ODK Docs
 
   @memoize
   def check_odkspell(text):
-      """ODK spelling usage."""
-      err = "style-guide.spelling-odk"
-      msg = "ODK spell check. '{}' is the preferred usage."
+      """ODK-X spelling usage."""
+      err = "style-guide.spelling-odkx"
+      msg = "ODK-X spell check. '{}' is the preferred usage."
 
       preferences = [
 
@@ -942,8 +942,8 @@ A few projects should *always* use the **ODK-X** prefix:
   @memoize
   def check_appspell(text):
       """ODK spelling usage."""
-      err = "style-guide.spelling-odk"
-      msg = "ODK spell check. '{}' is the preferred usage."
+      err = "style-guide.spelling-odkx"
+      msg = "ODK-X spell check. '{}' is the preferred usage."
 
       preferences = [
           ["Aggregate",             ["{0} aggregate"]],
