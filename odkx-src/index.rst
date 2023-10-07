@@ -11,12 +11,14 @@ The ODK-X Tool Suite is free and open-source software for collecting, managing, 
 
 In ODK-X developers and data managers can create data management applications that consist of survey forms as well as Javascript-based apps. These allow you to render a fully customizable user interface to gather, manage, and visualize data on an Android device.
 
-A major goal of these ODK-X tools was to eliminate the need for any software engineering skills (for example: Java programming, Android software development environment, source code version control systems) when designing data management applications. The skills required to build a data management application range from scripting a form definition in XLSX (similar to constructing ODK Collect forms using XLSX files processed by the XLSForm tool), to simple web programming -- modifying boilerplate HTML and JavaScript for custom presentations of the collected data. Advanced web programmers can also easily implement entirely custom web pages.
+A major goal of these ODK-X tools was to eliminate the need for any software engineering skills (for example: Java programming, Android software development environment, source code version control systems) when designing data management applications. The skills required to build a data management application range from scripting a form definition in XLSX (similar to constructing ODK Collect forms using XLSX files processed by the XLSForm tool), to simple web programming -- modifying boilerplate HTML and JavaScript for custom presentations of the collected data. Advanced web programmers can implement entirely custom web pages.
 
 .. _odk-2-intro-key-features:
 
 Key features
 ------------
+
+.. _odk-x-two-way-data:
 
 Two-way data sync
 """""""""""""""""
@@ -28,21 +30,31 @@ A two-way synchronization protocol allows you to create data management applicat
 
  - Data can be synced to all devices from the server through manual trigger by the user, by clicking the sync button.
 
+.. _odk-x-offline-data:
+
 Offline data collection
 """""""""""""""""""""""
 Allows users to collect data without an internet connection. Form data can be synced to the server when the user has internet access.
+
+.. _odk-x-linked-surveys:
 
 Linked and embedded surveys
 """""""""""""""""""""""""""
 ODK-X tools enable you to open and edit other surveys with links back to the originating survey. Create a sub-form (nested) relationship among surveys (for example: household and household-member) or relational links across your data (for example: tea-houses and tea-types).
 
+.. _odk-x-view-on-device:
+
 View data on device
 """""""""""""""""""
 Investigate and visualize entire datasets directly on the device through graphical, map, tabular displays, and filtered views.
 
+.. _odk-x-uac:
+
 User access control
 """"""""""""""""""""
-Control data viewing, editing and deleting privileges for different users and groups.
+Control data viewing, editing, and deleting privileges for different users and groups.
+
+.. _customize-flows-and-appearance:
 
 Customizable survey flows and appearance
 """"""""""""""""""""""""""""""""""""""""
@@ -71,6 +83,8 @@ Selecting the Right Tools to Use
 
 The ODK-X tools can operate independently – you are not required to use all the tools, or even install them on your device. Some example tool combinations are:
 
+.. _odk-x-data-collection:
+
 Field data collection
 """""""""""""""""""""
 
@@ -78,6 +92,8 @@ Field data collection
  - `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_: data collection
  - ODK-X Services: data sync and database access
  - ODK-X Cloud Endpoints: data and application files cloud server
+
+.. _data-sharing-and-visualization:
 
 Data sharing and visualization
 """"""""""""""""""""""""""""""
