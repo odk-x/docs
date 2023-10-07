@@ -192,7 +192,7 @@ There's no hard rule about which to use in any situation. Use your judgement: tr
 
 Direct Address
 ------------------
-.. startignore
+
 Direct address 
 --- speaking directly to the reader using the second person "you" --- 
 is preferred over
@@ -203,7 +203,7 @@ or other constructions.
 First person plural ("we") should only be used 
 when speaking of the ODK project team
 ("We recommend...").
-.. endtignore
+
 .. _ordered-vs-unordered:
 
 Ordered and unordered lists
@@ -428,9 +428,9 @@ This list is not exhaustive. These "canned phrases" are pervasive in technical w
 
 Semicolons
 -------------
-.. startignore
+
 Semicolons are used to separate two independent clauses which could stand as individual sentences but which the writer feels would benefit by close proximity.
-.. endignore
+
 Semicolons can almost always be replaced with periods (full stops). This rarely diminishes correctness and often improves readability.
 
 .. rubric:: Correct
