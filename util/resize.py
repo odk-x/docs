@@ -7,7 +7,7 @@ build_path = sys.argv[1]
 def single_resize(imagedir, filename):
     """Resize a single image."""
     filepath = os.path.join(imagedir, filename)
-    print("Resizin (overwriting) %s ..." %filepath)
+    print("Resizing (overwriting) %s ..." %filepath)
     image = Image.open(filepath)
     old_w, old_h  = image.size
     h = min(old_h, 300)
