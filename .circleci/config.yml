@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Style Guide Check
           command: |
-            paths=$(git diff origin/main... --name-only)
+            paths=$(git diff origin/main --name-only)
             echo $paths
             python3 style-test.py $paths -r odkx-src
             python3 style-test.py $paths -r shared-src
