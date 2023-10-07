@@ -87,7 +87,7 @@ jobs:
       - run:
           name: Push to S3
           command: |
-                s3_website cfg apply && s3_website push
+                s3_website push
 
 workflows:
   version: 2
