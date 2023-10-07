@@ -106,4 +106,3 @@ workflows:
             branches:
               only: 
                 - master
-                - build-pipe-fix
