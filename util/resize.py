@@ -6,13 +6,13 @@ build_path = sys.argv[1]
 
 def single_resize(imagedir, filename):
     """Resize a single image."""
-    print("Resizing %s ..." %filename)
     filepath = os.path.join(imagedir, filename)
+    print("Resizin (overwriting) %s ..." %filepath)
     image = Image.open(filepath)
     old_w, old_h  = image.size
     h = min(old_h, 300)
     w = (int)(old_w * h / old_h)
-    image = image.resize((w,h), Image.ANTIALIAS)
+    image = image.resize((w,h), Image.Resampling.LANCZOS)
     image.save(filepath, quality=95)
 
 def bulk_resize(imagedir):
@@ -24,7 +24,6 @@ def bulk_resize(imagedir):
             ext_j = filename[-4:].lower()
             if ext not in imgexts and ext_j not in imgexts:
                 continue
-
             single_resize(path, filename)
 
 file_path = os.path.realpath(__file__)
