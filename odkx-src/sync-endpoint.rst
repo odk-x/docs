@@ -137,12 +137,20 @@ If you'd prefer to use the :program:`OpenLDAP` command line utilities, they're i
 
 .. note::
 
-  The phpLDAPadmin server listens on port 40000, it is important that you do not expose this port to the internet.
+  The phpLDAPadmin server listens on port 40000, it is important that you do not expose this port to the internet or that you take steps to secure the web administration interface.
 
-The following guides assume that you're using :program:`phpLDAPadmin`. In order to perform the following operation, please go to `https://127.0.0.1:40000` in your browser.
+The following guides assume that you're using :program:`phpLDAPadmin`. In order to perform the following operation, please go to `https://127.0.0.1:40000` in your browser. 
+
+If you do not have access to the localhost (e.g. if you are installing the sync endpoint as a docker stack at a cloud provider) may want to enable web access by following the instructions in the :doc:`sync-endpoint-pla-webaccess` documentation.
 
 Recommended :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` tutorial with images.
 
+.. toctree::
+  :maxdepth: 2
+  :hidden:
+  :caption: Enable web access to phpLDAPAdmin
+
+  sync-endpoint-pla-webaccess
 
 .. _sync-endpoint-advanced:
 

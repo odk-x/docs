@@ -4,6 +4,7 @@
   dns
   letsencrypt
   subdomain
+  ps
 
 .. _sync-endpoint-cloud-setup:
 
@@ -378,7 +379,7 @@ Connecting to your virtual machine
   If there are 9 (or 7 without https) services running under the name
   `syncldap`, everything is running properly.
 
-  There should be 9 services (or 7 without https) as shown by docker stack ls while 7 services (or 6 without https) actively running as shown by the command docker ps.
+  There should be 9 services (or 7 without https) as shown by docker stack ls while 7 services (or 6 without https) actively running as shown by the command ``docker ps``.
 
 5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
 
