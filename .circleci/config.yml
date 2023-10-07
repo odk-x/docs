@@ -1,9 +1,9 @@
 version: 2
 jobs:
-  build-odkx:
+  build:
     working_directory: ~/work
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.11
     steps:
       - checkout
       - run:
@@ -11,7 +11,6 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install git-lfs
-            git lfs install
       - run:
           name: Checkout binaries
           command: git lfs pull
@@ -20,14 +19,14 @@ jobs:
           command: |
             sudo apt-get install pngquant
             sudo apt-get install python3-enchant
-            sudo pip install -r requirements.txt
+            pip3 install --user -r requirements.txt
       - run:
           name: Style Guide Check
           command: |
             paths=$(git diff origin/master... --name-only)
             echo $paths
-            sudo python style-test.py $paths -r odkx-src
-            sudo python style-test.py $paths -r shared-src
+            python3 style-test.py $paths -r odkx-src
+            python3 style-test.py $paths -r shared-src
       - run:
           name: Build ODK-X Documentation
           command: make odkx-deploy
@@ -48,7 +47,7 @@ jobs:
           paths:
             - odkx-build/*
             - s3_website.yml
-  build-pdf-odkx:
+  build-pdf:
     working_directory: ~/work
     docker:
       - image: schickling/latex
@@ -69,47 +68,40 @@ jobs:
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*
-
-  deploy-odkx:
+            - odkx-build/*            
+  deploy:
     working_directory: ~/work
     docker:
-      - image: circleci/ruby:2.7.2
+      - image: cimg/ruby:3.2
     steps:
       - attach_workspace:
           at: ~/work
       - run:
           name: Install deploy requirements
           command: |
-              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
-                sudo apt-get update --allow-releaseinfo-change --fix-missing
-                sudo apt-get install -y software-properties-common
-                wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-                sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-                sudo apt-get update --allow-releaseinfo-change --fix-missing
-                sudo apt-get install -y adoptopenjdk-8-hotspot
-                sudo apt-get install --reinstall dbus
-                gem install s3_website && s3_website install
-              fi
+                sudo apt-get update
+                sudo apt-get install -y pngquant openjdk-11-jre-headless
+                gem install s3_website_revived && s3_website install
       - run:
           name: Push to S3
           command: |
-              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
-                s3_website cfg apply && s3_website push
-              fi
+                s3_website push
+
 workflows:
   version: 2
   build_deploy:
     jobs:
-      - build-odkx
-      - build-pdf-odkx:
+      - build
+      - build-pdf:
           requires:
-            - build-odkx
-      - deploy-odkx:
+            - build
+      - deploy:
           context: AWS
           requires:
-            - build-odkx
-            - build-pdf-odkx
+            - build
+            - build-pdf
           filters:
             branches:
-              only: master
+              only: 
+                - master
+                - build-pipe-fix-attempt_2
