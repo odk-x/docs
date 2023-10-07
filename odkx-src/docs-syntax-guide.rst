@@ -152,7 +152,7 @@ How ODK Docs uses main and secondary tables of content
 
   Major topics include things like:
 
-  - Each major product (Collect, Aggregate, Briefcase)
+  - Each major product (Survey, Tables, Services, Sync-Endpoint)
   - Large, general categories like Contributing
 
   Major topic tables of content include both sub-collection intro pages and also individual pages that don't fit into a sub-collection.
@@ -1078,7 +1078,7 @@ Bad sequentially numbered image file names:
 .. _screenshots:
 
 
-Screenshots from ODK Collect
+Screenshots from ODK Survey
 """""""""""""""""""""""""""""""
 
 If you have set up Android Debug Bridge, you can connect your Android device to your computer and take screenshots from the command line.

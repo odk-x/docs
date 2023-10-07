@@ -510,13 +510,13 @@ Therefore, avoid the use of personal pronouns whenever possible. They are often 
 
 .. code-block:: rst
 
-  When using Collect, first the enumerator opens the app on their device. Then they complete the survey.
+  When using Survey, first the enumerator opens the app on their device. Then they complete the survey.
   
 .. rubric:: Better
 
 .. code-block:: rst
 
-  To use Collect:
+  To use Survey:
   
   - open the app
   - complete the survey
@@ -553,19 +553,19 @@ Therefore, avoid the use of personal pronouns whenever possible. They are often 
 
 .. code-block:: rst
 
-  ODK Collect is an Android app. The same can be used for...
+  ODK-X Survey is an Android app. The same can be used for...
   
 .. rubric:: Right
 
 .. code-block:: rst
 
-  ODK Collect is an Android app. It can be used for...
+  ODK-X Survey is an Android app. It can be used for...
 
 .. rubric:: Right
 
 .. code-block:: rst
   
-  ODK Collect is an Android app that is used to...
+  ODK-X Survey is an Android app that is used to...
 
 .. code-block:: python
   :class: style-checks
@@ -605,15 +605,15 @@ If a document or section describes a procedure that someone might do, use a verb
 
 .. code-block:: rst
 
-  How to install ODK Collect
-  --------------------------
+  How to install ODK-X Survey
+  ---------------------------
     
 .. rubric:: Right
 
 .. code-block:: rst
 
-  Installing ODK Collect
-  ----------------------
+  Installing ODK-X Survey
+  -----------------------
     
 If section title is a directive to do something (for example, as a step in a procedure), use an imperative. 
 
