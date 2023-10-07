@@ -103,4 +103,4 @@ workflows:
             branches:
               only: 
                 - main
-                - build-pipe-fix-attempt_2
+                - master                
