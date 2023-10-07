@@ -418,7 +418,7 @@ def disp_checks(errors, filename, shortname):
         line4 = "%s | %s" %(e[0], severity)
         print(t.blue(line1))
         print(line2)
-        if severity is "warning":
+        if severity == "warning":
             print(t.yellow(line3))
             warn_cnt += 1
         else:
