@@ -70,34 +70,25 @@ jobs:
           root: ~/work
           paths:
             - odkx-build/*
-
+            
   deploy-odkx:
     working_directory: ~/work
     docker:
-      - image: circleci/ruby:2.7.2
+      - image: cimg/ruby:3.2
     steps:
       - attach_workspace:
           at: ~/work
       - run:
           name: Install deploy requirements
           command: |
-              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
-                sudo apt-get update --allow-releaseinfo-change --fix-missing
-                sudo apt-get install -y software-properties-common
-                wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-                sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-                sudo apt-get update --allow-releaseinfo-change --fix-missing
-                sudo apt-get install -y adoptopenjdk-8-hotspot
-                sudo apt-get install --reinstall dbus
-                sudo apt-get install ca-certificates
-                gem install s3_website && s3_website install
-              fi
+                sudo apt-get update
+                sudo apt-get install -y pngquant openjdk-11-jre-headless
+                gem install s3_website_revived && s3_website install
       - run:
           name: Push to S3
           command: |
-              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
                 s3_website cfg apply && s3_website push
-              fi
+
 workflows:
   version: 2
   build_deploy:
