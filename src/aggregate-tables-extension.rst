@@ -7,7 +7,7 @@ ODK Aggregate Tables Extension
 
 :dfn:`ODK Aggregate Tables Extensions` enable the ODK-X tools to share data via bi-directional synchronization with a central ODK Aggregate server. However, this approach is no longer supported, please migrate to :doc:`sync-endpoint`.
 
-The `ODK-X REST Protocol <https://docs.odk-x.org/odk-x-sync-protocol/>`_ is compatible with ODK Aggregate v1.4.15. The sync protocol has been augmented to cache the user's permissions on the device and, for super-users or administrators, to cache the full set of users and all of their permissions (so that the super-user and/or administrator can assign rows to particular individuals).
+The `ODK-X REST Protocol <https://docs.odk-x.org/odk-x-sync-protocol>`_ is compatible with ODK Aggregate v1.4.15. The sync protocol has been augmented to cache the user's permissions on the device and, for super-users or administrators, to cache the full set of users and all of their permissions (so that the super-user and/or administrator can assign rows to particular individuals).
 
 .. _aggregate-tables-extension-intro-server-setup:
 
