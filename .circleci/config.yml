@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Style Guide Check
           command: |
-            paths=$(git diff origin/master... --name-only)
+            paths=$(git diff origin/main... --name-only)
             echo $paths
             python3 style-test.py $paths -r odkx-src
             python3 style-test.py $paths -r shared-src
@@ -103,5 +103,5 @@ workflows:
           filters:
             branches:
               only: 
-                - master
+                - main
                 - build-pipe-fix-attempt_2
