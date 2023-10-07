@@ -1,7 +1,7 @@
 s3_bucket: docs.odk-x.org
 s3_endpoint: us-west-2
 
-site: ./build
+site: ./build/dirhtml
 
 error_document: index.html
 
