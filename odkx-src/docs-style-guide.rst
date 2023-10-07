@@ -948,9 +948,9 @@ A few projects should *always* use the **ODK-X** prefix:
       msg = "ODK-X spell check. '{}' is the preferred usage."
 
       preferences = [
-          ["Survey",             ["{0} survey"]],
-          ["Services",             ["{0} services"]],
-          ["Tables",             ["{0} tables"]]
+          ["ODK-X Survey",             ["{0}-x survey"]],
+          ["ODK-X Services",             ["{0}-x services"]],
+          ["ODK-X Tables",             ["{0}-x tables"]]
       ]
 
       return preferred_forms_check(text, preferences, err, msg, ignore_case=False)
