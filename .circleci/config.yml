@@ -1,9 +1,9 @@
 version: 2
 jobs:
-  build-odkx:
+  build:
     working_directory: ~/work
     docker:
-      - image: circleci/python:3.9
+      - image: circleci/python:3.11
     steps:
       - checkout
       - run:
@@ -11,7 +11,6 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install git-lfs
-            git lfs install
       - run:
           name: Checkout binaries
           command: git lfs pull
@@ -20,14 +19,14 @@ jobs:
           command: |
             sudo apt-get install pngquant
             sudo apt-get install python3-enchant
-            sudo pip install -r requirements.txt
+            pip3 install --user -r requirements.txt
       - run:
           name: Style Guide Check
           command: |
             paths=$(git diff origin/master... --name-only)
             echo $paths
-            sudo python style-test.py $paths -r odkx-src
-            sudo python style-test.py $paths -r shared-src
+            python3 style-test.py $paths -r odkx-src
+            python3 style-test.py $paths -r shared-src
       - run:
           name: Build ODK-X Documentation
           command: make odkx-deploy
@@ -48,7 +47,7 @@ jobs:
           paths:
             - odkx-build/*
             - s3_website.yml
-  build-pdf-odkx:
+  build-pdf:
     working_directory: ~/work
     docker:
       - image: schickling/latex
@@ -69,9 +68,8 @@ jobs:
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*
-            
-  deploy-odkx:
+            - odkx-build/*            
+  deploy:
     working_directory: ~/work
     docker:
       - image: cimg/ruby:3.2
@@ -93,14 +91,14 @@ workflows:
   version: 2
   build_deploy:
     jobs:
-      - build-odkx
-      - build-pdf-odkx:
+      - build
+      - build-pdf:
           requires:
-            - build-odkx
-      - deploy-odkx:
+            - build
+      - deploy:
           context: AWS
           requires:
-            - build-odkx
+            - build
             - build-pdf-odkx
           filters:
             branches:
