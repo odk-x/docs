@@ -33,7 +33,7 @@ Read about the project and the community at `ODK-X's website`_.
 Get started with the docs by going to the `ODK-X Docs GitHub README`_.
 
 .. _ODK-X's website: https://odk-x.org
-.. _ODK-X Docs GitHub README: https://github.com/odk-x/docs/blob/master/README.md
+.. _ODK-X Docs GitHub README: https://github.com/odk-x/docs/blob/main/README.md
 
 .. _odk-accounts:
 
@@ -160,7 +160,7 @@ Initial Setup
   have a lot of options and alternatives.
   You should feel free to use your preferred tools.
 
-  .. _starting with the Docker platform: https://github.com/odk-x/docs/blob/master/README.md#using-docker
+  .. _starting with the Docker platform: https://github.com/odk-x/docs/blob/main/README.md#using-docker
 
 Before you begin working the first time
 you will need to install a few tools
@@ -904,22 +904,22 @@ Working on the docs
 
       .. _Issue 207 --- Line Edits: https://github.com/odk-x/tool-suite-X/issues/207
 
-#. Make sure you are on the master branch
+#. Make sure you are on the main branch
 
-   .. _check-at-master:
+   .. _check-at-main:
 
    A branch is a named sequence of changes representing work on the repo.
    For example, if you were going to work on `Issue 207 --- Line Edits`_,
    you would create a new branch called ``line-edits`` to hold that work.
    When you were done,
    you would merge those changes back to the main branch,
-   which we call ``master``.
+   which we call ``main``.
 
    The first time you clone the docs repo and start working,
-   you will be on the `master` branch.
+   you will be on the `main` branch.
 
    Each time you come back to starting work on a new issue,
-   make sure you are on the ``master`` branch before continuing.
+   make sure you are on the ``main`` branch before continuing.
 
    #. Check the current branch with :command:`git branch`.
       This will output a list of branches, with a star next to the current one.
@@ -934,7 +934,7 @@ Working on the docs
                   branch-name
                   branch-name
                   branch-name
-                * master
+                * main
                   branch-name
 
          .. group-tab:: PowerShell
@@ -945,10 +945,10 @@ Working on the docs
                   branch-name
                   branch-name
                   branch-name
-                * master
+                * main
                   branch-name
 
-   #. If you are not on master, switch to master with :command:`git checkout`.
+   #. If you are not on main, switch to main with :command:`git checkout`.
 
       .. tabs::
 
@@ -956,17 +956,17 @@ Working on the docs
 
             .. code:: console
 
-               (odk-xenv) /odk-x/docs/ $  git checkout master
-               Switched to branch 'master'
-               Your branch is up to date with 'origin/master'.
+               (odk-xenv) /odk-x/docs/ $  git checkout main
+               Switched to branch 'main'
+               Your branch is up to date with 'origin/main'.
 
          .. group-tab:: PowerShell
 
             .. code:: ps1con
 
-               (odk-xenv) /odk-x/docs/ >  git checkout master
-               Switched to branch 'master'
-               Your branch is up to date with 'origin/master'.
+               (odk-xenv) /odk-x/docs/ >  git checkout main
+               Switched to branch 'main'
+               Your branch is up to date with 'origin/main'.
 
 #. Pull in changes from upstream
 
@@ -976,7 +976,7 @@ Working on the docs
    so you need to keep your local copy up to date.
 
    Before you start working, use :command:`git pull`
-   to pull in the changes from the upstream repository's master branch.
+   to pull in the changes from the upstream repository's main branch.
    Then, just to be sure, you can use :command:`git status`
    to make sure everything is up to date.
 
@@ -986,10 +986,10 @@ Working on the docs
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ $ git pull upstream master
+            (odk-xenv) /odk-x/docs/ $ git pull upstream main
             (odk-xenv) /odk-x/docs/ $ git status
-            On branch master
-            Your branch is up to date with 'origin/master'.
+            On branch main
+            Your branch is up to date with 'origin/main'.
 
             nothing to commit, working tree clean
 
@@ -997,10 +997,10 @@ Working on the docs
 
          .. code:: ps1con
 
-            (odk-xenv) /odk-x/docs/ > git pull upstream master
+            (odk-xenv) /odk-x/docs/ > git pull upstream main
             (odk-xenv) /odk-x/docs/ > git status
-            On branch master
-            Your branch is up to date with 'origin/master'.
+            On branch main
+            Your branch is up to date with 'origin/main'.
 
             nothing to commit, working tree clean
 
@@ -1352,7 +1352,7 @@ Working on the docs
       but be sure to double-check them:
 
       - :guilabel:`Base fork` should be the main repo (``odk-x/docs``).
-      - :guilabel:`base` should be ``master``.
+      - :guilabel:`base` should be ``main``.
       - Your repo and working branch name should be listed beside them.
 
       You will see either a green **Able to be merged** message
@@ -1415,10 +1415,10 @@ the process is the same as outlined above.
 
 Here are a few things to keep in mind when you start your next contribution.
 
-#. Return to ``master`` with :command:`git checkout master`.
+#. Return to ``main`` with :command:`git switch main`.
 
-   New work is done on new branches which are started from master.
-   So, before you start a new branch, return to the master branch.
+   New work is done on new branches which are started from main.
+   So, before you start a new branch, return to the main branch.
 
    .. tabs::
 
@@ -1426,15 +1426,15 @@ Here are a few things to keep in mind when you start your next contribution.
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ $ git checkout master
+            (odk-xenv) /odk-x/docs/ $ git checkout main
 
       .. group-tab:: PowerShell
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ > git checkout master
+            (odk-xenv) /odk-x/docs/ > git checkout main
 
-#. Pull in changes with :command:`git pull upstream master`.
+#. Pull in changes with :command:`git pull upstream main`.
 
    You need to start your new work from
    the latest version of everyone else's work.
@@ -1445,15 +1445,15 @@ Here are a few things to keep in mind when you start your next contribution.
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ $ git pull upstream master
+            (odk-xenv) /odk-x/docs/ $ git pull upstream main
 
       .. group-tab:: PowerShell
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ > git pull upstream master
+            (odk-xenv) /odk-x/docs/ > git pull upstream main
 
-#. Update the master branch of your online GitHub repository.
+#. Update the main branch of your online GitHub repository.
 
    .. tabs::
 
@@ -1461,13 +1461,13 @@ Here are a few things to keep in mind when you start your next contribution.
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ $ git push origin master
+            (odk-xenv) /odk-x/docs/ $ git push origin main
 
       .. group-tab:: PowerShell
 
          .. code:: console
 
-            (odk-xenv) /odk-x/docs/ > git push origin master
+            (odk-xenv) /odk-x/docs/ > git push origin main
 
 #. Find a `new issue to work on`_.
 #. Start a new branch for your work with :command:`git checkout -b branch-name`.
