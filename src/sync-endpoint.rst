@@ -6,6 +6,7 @@
   Certbot
   OpenLDAP
   ldif
+  microservices
   utils
   ldap
   env
