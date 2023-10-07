@@ -5,13 +5,13 @@ Now that we have seen how a device can join an already-configured application, a
 
 .. contents:: :local:
 
-.. _architect-odk-2-prereqs:
+.. _architect-odk-x-prereqs:
 
 Prerequisites
 ------------------
 This guide continues the tour where :doc:`survey-sample-app` left off. If you haven't yet completed that tour, do it first. When you have concluded the tour of the :doc:`survey-using` example application's screens, return to this guide and we will turn to setting up our own application.
 
-.. _architect-odk-2-config-setup-app-designer:
+.. _architect-odk-x-config-setup-app-designer:
 
 Setting up ODK-X Application Designer
 -----------------------------------------
@@ -36,7 +36,7 @@ You can further verify that the Application Designer works by clicking on the :g
 
 You can also try other things, like choosing different device dimensions to see how the form renders on different screen geometries.
 
-.. _architect-odk-2-config-modify-app:
+.. _architect-odk-x-config-modify-app:
 
 Modifying an ODK-X application
 -------------------------------------
@@ -92,14 +92,14 @@ Create a new instance of the *Example Form* and advance through it (this will cr
 
 You have successfully modified the form. We will now walk through how to deploy your updated application to your device.
 
-.. _architect-odk-2-config-deploy:
+.. _architect-odk-x-config-deploy:
 
 Deploying to the Device
 -----------------------------------------------
 
 Now that we have the design environment installed and have successfully modified the Example Form application, we can work through the steps of deploying that application to your device.
 
-.. _architect-odk-2-deploy-prepare:
+.. _architect-odk-x-deploy-prepare:
 
 Preparing the Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +126,7 @@ Navigate to the three ODK-X Apps and :guilabel:`Force Stop` each of them (ending
 
 Finally, confirm that your device has :guilabel:`USB debugging` enabled inside your device's :guilabel:`Settings`. This checkbox is in different places on different devices and may be hidden by default on some. See this guide to `USB debugging on Android <https://www.phonearena.com/news/How-to-enable-USB-debugging-on-Android_id53909>`_ for instructions.
 
-.. _architect-odk-2-deploy-push:
+.. _architect-odk-x-deploy-push:
 
 Pushing the Application to the Device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -21,7 +21,7 @@ ODK-X Sync Endpoint
 
 .. _sync-endpoint-intro:
 
-:dfn:`ODK-X Sync Endpoint` is an implementation of :doc:`cloud-endpoints-intro`. It runs a server inside a :program:`Docker` container that implements the `ODK-X REST Protocol <https://docs.odk-x.org/odk-2-sync-protocol/>`_.
+:dfn:`ODK-X Sync Endpoint` is an implementation of :doc:`cloud-endpoints-intro`. It runs a server inside a :program:`Docker` container that implements the `ODK-X REST Protocol <https://docs.odk-x.org/odk-x-sync-protocol/>`_.
 
 It communicates with your ODK-X Android applications to synchronize
 your data and application files.
@@ -72,7 +72,7 @@ By keeping conflict detection at the row-level, multiple users can make updates 
 A conflict is defined as two users with different updates to the same row. ODK-X uses table locks on the server to ensure only a single change to a data row can occur at any time. When the :dfn:`runner-up` client finally obtains the lock and attempts to alter the same row, the update will be rejected as a conflict. Once a conflict is detected, the user manually determines which version of data is correct between their pending changes on the local client and the updated data row on the server.
 The rationale for having the user who caused the conflict also resolve the conflict is that the user was recently working with data and is likely to have the necessary information and context on how best to resolve the conflict.
 
-You can learn more here: :doc:`odk-2-sync-protocol`
+You can learn more here: :doc:`odk-x-sync-protocol`
 
 .. _sync-endpoint-auth:
 

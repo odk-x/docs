@@ -5,7 +5,7 @@
 ODK-X Documentation
 ================================================
 
-.. _odk-2-introduction:
+.. _odk-x-introduction:
 
 The ODK-X Tool Suite is free and open-source software for collecting, managing, and using data in resource-constrained environments.
 
@@ -13,7 +13,7 @@ In ODK-X developers and data managers can create data management applications th
 
 A major goal of these ODK-X tools was to eliminate the need for any software engineering skills (for example: Java programming, Android software development environment, source code version control systems) when designing data management applications. The skills required to build a data management application range from scripting a form definition in XLSX (similar to constructing ODK Collect forms using XLSX files processed by the XLSForm tool), to simple web programming -- modifying boilerplate HTML and JavaScript for custom presentations of the collected data. Advanced web programmers can implement entirely custom web pages.
 
-.. _odk-2-intro-key-features:
+.. _odk-x-intro-key-features:
 
 Key features
 ------------
@@ -60,7 +60,7 @@ Customizable survey flows and appearance
 """"""""""""""""""""""""""""""""""""""""
 Use basic web development (HTML, JavaScript, and CSS) to specify the layout of nearly all the screens viewed by the data collectors.
 
-.. _odk-2-intro-list-of-tools:
+.. _odk-x-intro-list-of-tools:
 
 List of Tools
 --------------
@@ -76,7 +76,7 @@ The ODK-X Tool Suite consists of:
 .. note::
   ODK-X mobile applications are available for Android devices only.
 
-.. _odk-2-intro-selecting-the-right-tools:
+.. _odk-x-intro-selecting-the-right-tools:
 
 Selecting the Right Tools to Use
 --------------------------------
@@ -104,7 +104,7 @@ Data sharing and visualization
 
 See :doc:`reference-apps` for examples of ODK-X tools in use.
 
-.. _odk-2-intro-trying-it-out:
+.. _odk-x-intro-trying-it-out:
 
 Trying It Out
 -------------

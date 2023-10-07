@@ -11,5 +11,5 @@ This section covers advanced topics useful to Platform Developers. A Platform De
 
   survey-form-processing
   formdef-structure
-  odk-2-sync-protocol
+  odk-x-sync-protocol
   build-scripts

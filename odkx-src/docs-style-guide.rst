@@ -925,6 +925,7 @@ ODK-X includes a number of components, including:
 
 - Survey
 - Tables
+- Services
 
 These should always be capitalized.
 
@@ -933,7 +934,8 @@ The **ODK-X** prefix (as in, *`ODK-X Survey <https://docs.odk-x.org/survey-using
 A few projects should *always* use the **ODK-X** prefix:
 
 - `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_
-- ODK-X Sync
+- ODK-X Tables
+- ODK-X Survey
 - ODK-X Docs
 
 .. code-block:: python
@@ -941,13 +943,14 @@ A few projects should *always* use the **ODK-X** prefix:
 
   @memoize
   def check_appspell(text):
-      """ODK spelling usage."""
+      """ODK-X spelling usage."""
       err = "style-guide.spelling-odkx"
       msg = "ODK-X spell check. '{}' is the preferred usage."
 
       preferences = [
-          ["Aggregate",             ["{0} aggregate"]],
-          ["Briefcase",             ["{0} briefcase"]]
+          ["Survey",             ["{0} survey"]],
+          ["Services",             ["{0} services"]],
+          ["Tables",             ["{0} tables"]]
       ]
 
       return preferred_forms_check(text, preferences, err, msg, ignore_case=False)
