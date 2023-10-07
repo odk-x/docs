@@ -2,7 +2,7 @@
 
   geotagging
 
-ODK-X documentation
+ODK-X Documentation
 ================================================
 
 .. _odk-2-introduction:
