@@ -99,7 +99,7 @@ workflows:
           context: AWS
           requires:
             - build
-            - build-pdf-odkx
+            - build-pdf
           filters:
             branches:
               only: 
