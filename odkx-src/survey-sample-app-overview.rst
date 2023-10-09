@@ -27,7 +27,7 @@ We have provided a sample application to help you acquaint yourself with the var
     - | To operate correctly, this requires the *Household Member Survey* sub-form and the *Education* sub-form 
       | (you should not open those sub-forms directly, they are launched from within Household Survey).
   * - | **Select Examples** 
-    - | a form with several examples of selected widgets, including widgets 
+    - | a form with several examples of select prompts, including prompts 
       | that access data on Yahoo servers, and others that access CSV files for their choice lists.
     - No
     - It also demonstrates the use of custom CSS styles to change the look of the form.
