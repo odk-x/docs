@@ -58,9 +58,8 @@ Clone the docs repo into a directory you want the ODK-X docs files to be located
 cd <DIRECTORY>
 ```
 
-4. Copy the forked ODK-X docs repository URL by clicking on the green "Code" button on Github and navigate to the command-line interface
-Clone the forked repository using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repository  
- 
+4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo: 
+
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
 ```
