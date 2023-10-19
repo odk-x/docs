@@ -1,4 +1,4 @@
-# ODK-X Docs
+![image](https://github.com/Chioma-data-analytics/docs/assets/113908370/041ed2a7-5a88-4afe-8dd0-0d3a20bcb357)# ODK-X Docs
 
 ![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/odk-x/docs/)  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3788b3e-1abc-431d-a9a3-e5c71b20e053/deploy-status)](https://app.netlify.com/sites/blissful-bohr-7f32fb/deploys)
 
@@ -59,6 +59,9 @@ cd <DIRECTORY>
 ```
 
 4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo: You need to click on the green "Code" button to get the "LINK-TO-YOUR-FORKED-REPO"
+
+Alternatively:
+Copy the forked ODK-X docs repository URL by clicking on the green "Code" button on Github and navigate to the command-line interface on your local machine.
 
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
