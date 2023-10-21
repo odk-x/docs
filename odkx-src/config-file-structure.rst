@@ -56,17 +56,3 @@ A complementary description is provided in the user-level documentation. The too
             /survey/templates/... -- `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ handlebars templates
         /output     - holds logging files, exported data
         /permanent  - available for device-only content (e.g., map tiles)
-
-# Add spelling exceptions
-        spelling_word_list = [
-            "isArray", "varToTest", "getHashString", "getFormsProviderUri", "platInfo",
-            "convertHashStringToSurveyUri", "hashString", "getFormPath", "openInstance",
-            "initialValuesElementKeyToValueMap", "addInstance", "initialValuesElementKeyToValueMap",
-            "openLink", "relativeOrFullUrl", "fileAttachmentAction", "intentAction",
-            "existingFileAttachmentFieldContent", "captureImage", "existingFileAttachmentFieldContent",
-            "captureSignature", "existingFileAttachmentFieldContent", "captureAudio",
-            "existingFileAttachmentFieldContent", "captureVideo", "existingFileAttachmentFieldContent",
-            "chooseImage", "existingFileAttachmentFieldContent", "chooseAudio", "existingFileAttachmentFieldContent",
-            "chooseVideo", "existingFileAttachmentFieldContent", "scanBarcode", "captureGeopoint",
-            "captureGeopointUsingMap"
-        ]

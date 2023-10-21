@@ -400,3 +400,17 @@ html_context = {'download_pdf' : download_pdf,
                 'github_version' : "master", # Version
                 'conf_py_path' : "/odkx-src/" # Path in the checkout to the docs root
             }
+
+# Add spelling exceptions
+spelling_word_list = [
+    "isArray", "varToTest", "getHashString", "getFormsProviderUri", "platInfo",
+    "convertHashStringToSurveyUri", "hashString", "getFormPath", "openInstance",
+    "initialValuesElementKeyToValueMap", "addInstance", "initialValuesElementKeyToValueMap",
+    "openLink", "relativeOrFullUrl", "fileAttachmentAction", "intentAction",
+    "existingFileAttachmentFieldContent", "captureImage", "existingFileAttachmentFieldContent",
+    "captureSignature", "existingFileAttachmentFieldContent", "captureAudio",
+    "existingFileAttachmentFieldContent", "captureVideo", "existingFileAttachmentFieldContent",
+    "chooseImage", "existingFileAttachmentFieldContent", "chooseAudio", "existingFileAttachmentFieldContent",
+    "chooseVideo", "existingFileAttachmentFieldContent", "scanBarcode", "captureGeopoint",
+    "captureGeopointUsingMap"
+]
