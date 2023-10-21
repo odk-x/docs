@@ -58,15 +58,15 @@ A complementary description is provided in the user-level documentation. The too
         /permanent  - available for device-only content (e.g., map tiles)
 
 # Add spelling exceptions
-spelling_word_list = [
-    "isArray", "varToTest", "getHashString", "getFormsProviderUri", "platInfo",
-    "convertHashStringToSurveyUri", "hashString", "getFormPath", "openInstance",
-    "initialValuesElementKeyToValueMap", "addInstance", "initialValuesElementKeyToValueMap",
-    "openLink", "relativeOrFullUrl", "fileAttachmentAction", "intentAction",
-    "existingFileAttachmentFieldContent", "captureImage", "existingFileAttachmentFieldContent",
-    "captureSignature", "existingFileAttachmentFieldContent", "captureAudio",
-    "existingFileAttachmentFieldContent", "captureVideo", "existingFileAttachmentFieldContent",
-    "chooseImage", "existingFileAttachmentFieldContent", "chooseAudio", "existingFileAttachmentFieldContent",
-    "chooseVideo", "existingFileAttachmentFieldContent", "scanBarcode", "captureGeopoint",
-    "captureGeopointUsingMap"
-]
+        spelling_word_list = [
+            "isArray", "varToTest", "getHashString", "getFormsProviderUri", "platInfo",
+            "convertHashStringToSurveyUri", "hashString", "getFormPath", "openInstance",
+            "initialValuesElementKeyToValueMap", "addInstance", "initialValuesElementKeyToValueMap",
+            "openLink", "relativeOrFullUrl", "fileAttachmentAction", "intentAction",
+            "existingFileAttachmentFieldContent", "captureImage", "existingFileAttachmentFieldContent",
+            "captureSignature", "existingFileAttachmentFieldContent", "captureAudio",
+            "existingFileAttachmentFieldContent", "captureVideo", "existingFileAttachmentFieldContent",
+            "chooseImage", "existingFileAttachmentFieldContent", "chooseAudio", "existingFileAttachmentFieldContent",
+            "chooseVideo", "existingFileAttachmentFieldContent", "scanBarcode", "captureGeopoint",
+            "captureGeopointUsingMap"
+        ]
