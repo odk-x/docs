@@ -150,6 +150,7 @@
   scanBarcode
   captureGeopoint
   captureGeopointUsingMap
+  captureImage
 
 
 ODK-X WebKit
