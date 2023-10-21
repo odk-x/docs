@@ -117,6 +117,39 @@
   Timestamp
   org
   reconstructive
+  isArray
+  varToTest
+  getHashString
+  getFormsProviderUri
+  platInfo
+  convertHashStringToSurveyUri
+  hashString
+  getFormPath
+  openInstance
+  initialValuesElementKeyToValueMap
+  addInstance
+  initialValuesElementKeyToValueMap
+  openLink
+  relativeOrFullUrl
+  fileAttachmentAction
+  intentAction
+  existingFileAttachmentFieldContent
+  captureImageexistingFileAttachmentFieldContent
+  captureSignature
+  existingFileAttachmentFieldContent
+  captureAudio
+  existingFileAttachmentFieldContent
+  captureVideo
+  existingFileAttachmentFieldContent
+  chooseImage
+  existingFileAttachmentFieldContent
+  chooseAudio
+  existingFileAttachmentFieldContent
+  chooseVideo
+  existingFileAttachmentFieldContent
+  scanBarcode
+  captureGeopoint
+  captureGeopointUsingMap
 
 
 ODK-X WebKit
