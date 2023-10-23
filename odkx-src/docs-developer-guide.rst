@@ -341,6 +341,18 @@ specify the check name in the check list
 in the function :py:func:`exclude_checks`
 in the file :file:`style-test.py`.
 
+Excluding Spelling checks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To exclude a word from spelling check,specify the word under the title spelling on the top of the document.
+Example:
+
+  .. code-block:: console
+
+    .. spelling::
+      phpLDAPadmin
+      readonly
+      letsencrypt
 
 
 
