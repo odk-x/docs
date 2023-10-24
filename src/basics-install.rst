@@ -77,11 +77,11 @@ Installing the `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ App
 
 .. note::
 
-  You can also `download the `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ APK <https://github.com/odk-x/survey/releases/latest>`_ to your computer and load it on your device via `adb <https://developer.android.com/studio/command-line/adb.html>`_ or another tool like `AirDroid <https://www.howtogeek.com/105813/control-your-android-from-a-browser-with-airdroid/>`_.
+  You can also `download the ODK-X Survey APK <https://github.com/odk-x/survey/releases/latest>`_ to your computer and load it on your device via `adb <https://developer.android.com/studio/command-line/adb.html>`_ or another tool like `AirDroid <https://www.howtogeek.com/105813/control-your-android-from-a-browser-with-airdroid/>`_.
 
 .. tip::
 
-  You can also `install `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ on an Android emulator <https://github.com/odk-x/tool-suite-X/wiki/Developer-Environment-Setup>`_. However, this can be slow and is only recommended for developers actively working on Survey.
+  You can also `install ODK-X Survey on an Android emulator <https://github.com/odk-x/tool-suite-X/wiki/Developer-Environment-Setup>`_. However, this can be slow and is only recommended for developers actively working on Survey.
 
 
 .. _tables-install:

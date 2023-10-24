@@ -289,7 +289,7 @@ on any computer.
       Not all commands have output,
       and we don't always include the output in our documentation
       unless it is relevant.
-      It it is a good idea to glance at your own terminals output
+      It is a good idea to glance at your own terminals output
       for unexpected errors.
 
       To make things more clear,

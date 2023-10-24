@@ -25,9 +25,9 @@ We have provided a sample application to help you acquaint yourself with the var
     - a form used to gather information about a household. 
     - No
     - | To operate correctly, this requires the *Household Member Survey* sub-form and the *Education* sub-form 
-      | (you should not open those sub-forms directly they are launched from within Household Survey).
+      | (you should not open those sub-forms directly, they are launched from within Household Survey).
   * - | **Select Examples** 
-    - | a form with several examples of select widgets, including widgets 
+    - | a form with several examples of select prompts, including prompts 
       | that access data on Yahoo servers, and others that access CSV files for their choice lists.
     - No
     - It also demonstrates the use of custom CSS styles to change the look of the form.
@@ -39,7 +39,7 @@ We have provided a sample application to help you acquaint yourself with the var
       | From within the Household Survey, you navigate into this sub-form by entering information about individuals in a household.
 
   * - | **Education**
-    - a form used to gather education information about household members. 
+    - a form used to gather educational information about household members. 
     - | Yes, a sub-form of the Household Survey form 
       | (you should not open it directly -- it is launched from within Household Survey). 
     - | This sub-form saves information to the same underlying data table (household_members) as the Household Member Survey form,

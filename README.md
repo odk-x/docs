@@ -53,19 +53,21 @@ Clone the docs repo into a directory you want the ODK-X docs files to be located
 1. Visit this link https://github.com/odk-x/docs on your browser to locate the docs repo
 2. Find and click the "fork" button to create a personal fork of the project on Github
 3. Navigate to the directory you want the files to be located using the "cd" (Change Directory) command on a command-line interface on your local machine:
+
 ```
 cd <DIRECTORY>
 ```
-4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo:  
- 
+
+4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo: You need to click on the green "Code" button to get the "LINK-TO-YOUR-FORKED-REPO"
+
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
 ```
 
-
 It can take a long time (>10 minutes) to clone the repo due to the large number of images in the docs. If you get an error such as `Smudge error` or `GitHub's rate limit reached`, run `git checkout -f HEAD` until you get the message `Checking out files: 100% done`.
 
 After the git clone finishes, use the below command to change the directory to the ODK-X docs directory
+
 ```
 cd docs
 ```
