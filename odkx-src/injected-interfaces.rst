@@ -825,7 +825,7 @@ openTableToListView
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlWhereClause: A string representing an SQL WHERE clause (optional, can be null or undefined).
+  - sqlWhereClause: A string representing a SQL WHERE clause (optional, can be null or undefined).
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -841,7 +841,7 @@ openTableToListViewArbitraryQuery
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -870,7 +870,7 @@ openTableToMapViewArbitraryQuery
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -886,7 +886,7 @@ openTableToNavigateView
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlWhereClause: A string representing an SQL WHERE clause (optional, can be null or undefined).
+  - sqlWhereClause: A string representing a SQL WHERE clause (optional, can be null or undefined).
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - defaultRowId: A value representing the default row ID.
 
@@ -903,7 +903,7 @@ openTableToNavigateViewArbitraryQuery
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - defaultRowId: A value representing the default row ID.
 
@@ -920,7 +920,7 @@ openTableToSpreadsheetView
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlWhereClause: A string representing an SQL WHERE clause (optional, can be null or undefined).
+  - sqlWhereClause: A string representing a SQL WHERE clause (optional, can be null or undefined).
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
 
   **Returns**: The function returns the result of calling another function ``odkCommon.doAction``.
@@ -952,7 +952,7 @@ openDetailViewArbitraryQuery
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -984,7 +984,7 @@ openDetailWithListViewArbitraryQuery
 
   - dispatchStruct: An object representing the dispatch structure.
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -999,7 +999,7 @@ setSubListView
   **Parameters**:
 
   - tableId: A string representing the table ID.
-  - sqlWhereClause: A string representing an SQL WHERE clause.
+  - sqlWhereClause: A string representing a SQL WHERE clause.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
@@ -1014,7 +1014,7 @@ setSubListViewArbitraryQuery
   **Parameters**:
 
   - tableId: A string representing the table ID.
-  - sqlCommand: A string representing an SQL command.
+  - sqlCommand: A string representing a SQL command.
   - sqlSelectionArgs: An array representing SQL selection arguments (optional, can be null or undefined).
   - relativePath: A string representing a relative path (optional, can be null or undefined).
 
