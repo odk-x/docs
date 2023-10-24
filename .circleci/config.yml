@@ -79,9 +79,11 @@ jobs:
       - run:
           name: Install deploy requirements
           command: |
+              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
                 sudo apt-get update
                 sudo apt-get install -y pngquant openjdk-11-jre-headless
                 gem install s3_website_revived && s3_website install
+              fi
       - run:
           name: Push to S3
           command: |
