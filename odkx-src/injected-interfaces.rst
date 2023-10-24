@@ -141,6 +141,18 @@
   addRowWithSurvey
   jsonMap
   SplashScreenActivity
+  openTableToListViewArbitraryQuery
+  openTableToMapViewArbitraryQuery
+  openTableToNavigateView
+  defaultRowId
+  defaultRowId
+  openTableToNavigateViewArbitraryQuery
+  defaultRowId
+  openTableToSpreadsheetView
+  openDetailView
+  openDetailViewArbitraryQuery
+  openDetailWithListView
+  openDetailWithListViewArbitraryQuery
 
 ODK-X WebKit
 ===================================
