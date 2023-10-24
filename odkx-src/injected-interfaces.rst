@@ -117,7 +117,30 @@
   Timestamp
   org
   reconstructive
-
+  isArray
+  varToTest
+  typeof
+  assertOpenTypes
+  args
+  fnName
+  openTable
+  sqlSelectionArgs
+  TableDisplayActivity
+  openTableToListView
+  openTableToMapView
+  sqlWhereClause
+  odkTablesIf
+  setSubListView
+  setSubListViewArbitraryQuery
+  sqlCommand
+  launchHTML
+  MainActivity
+  editRowWithSurveyDefault
+  editRowWithSurvey
+  addRowWithSurveyDefault
+  addRowWithSurvey
+  jsonMap
+  SplashScreenActivity
 
 ODK-X WebKit
 ===================================
