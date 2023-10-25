@@ -822,7 +822,7 @@ getFormsProviderUri
 
   **Returns**: The forms provider URI.
 
-Constructs a forms provider URI for accessing specific forms within the ODK Survey app.
+Constructs a forms provider URI for accessing specific forms within the ODK-X Survey app.
 
 convertHashStringToSurveyUri
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -831,9 +831,9 @@ convertHashStringToSurveyUri
 
   - hashString: The hash string to be converted.
 
-  **Returns**: A complete survey URI for use in ODK Survey.
+  **Returns**: A complete survey URI for use in ODK-X Survey.
 
-Converts a hash string into a complete survey URI suitable for invoking ODK Survey.
+Converts a hash string into a complete survey URI suitable for invoking ODK-X Survey.
 This function is used to reformat hash strings for proper survey navigation.
 
 getFormPath
@@ -861,7 +861,7 @@ openInstance
 
   **Returns**: The result of the action, typically indicating whether the action was successful.
 
-Opens a new survey instance within the ODK Survey app, allowing users to start collecting data for a specific form.
+Opens a new survey instance within the ODK-X Survey app, allowing users to start collecting data for a specific form.
 
 addInstance
 ~~~~~~~~~~~~
@@ -875,7 +875,7 @@ addInstance
 
   **Returns**: The result of the action, typically indicating whether the action was successful.
 
-Adds a new survey instance within the ODK Survey app, generating a new instance ID and allowing users to start data collection for a specific form.
+Adds a new survey instance within the ODK-X Survey app, generating a new instance ID and allowing users to start data collection for a specific form.
 
 openLink
 ~~~~~~~~~
@@ -887,7 +887,7 @@ openLink
 
   **Returns**: The result of the action, typically indicating whether the action was successful.
 
-Opens a link within the ODK Survey app, either using a relative or full URL, allowing for navigation to external web content or internal survey screens.
+Opens a link within the ODK-X Survey app, either using a relative or full URL, allowing for navigation to external web content or internal survey screens.
 
 fileAttachmentAction
 ~~~~~~~~~~~~~~~~~~~~
@@ -1011,7 +1011,7 @@ scanBarcode
 
   **Returns:** The result of the barcode scanning action.
 
-Initiates a barcode scanning action within the ODK Survey app, allowing users to scan barcodes for data collection.
+Initiates a barcode scanning action within the ODK-X Survey app, allowing users to scan barcodes for data collection.
 
 captureGeopoint
 ~~~~~~~~~~~~~~~~
@@ -1022,7 +1022,7 @@ captureGeopoint
 
   **Returns**: The result of the geopoint capture action.
 
-Initiates a geopoint capture action within the ODK Survey app, enabling users to capture geographic coordinates (latitude and longitude).
+Initiates a geopoint capture action within the ODK-X Survey app, enabling users to capture geographic coordinates (latitude and longitude).
 
 captureGeopointUsingMap
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1033,4 +1033,4 @@ captureGeopointUsingMap
 
   **Returns**: The result of the geopoint capture action using a map.
 
-Initiates a geopoint capture action using a map within the ODK Survey app, allowing users to select geographic coordinates interactively.
+Initiates a geopoint capture action using a map within the ODK-X Survey app, allowing users to select geographic coordinates interactively.
