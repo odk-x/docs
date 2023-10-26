@@ -117,6 +117,42 @@
   Timestamp
   org
   reconstructive
+  getTableMetadata
+  tableMetadataCache
+  getTableMetadataRevision
+  putTableMetadata
+  getOdkDataIf
+  getViewData
+  getRoles
+  getDefaultGroup
+  getUsers
+  getAllTableIds
+  whereClause
+  sqlBindParams
+  groupBy
+  orderByElementKey
+  orderByDirection
+  includeKVS
+  arbitraryQuery
+  sqlCommand
+  sqlBindParams
+  getRows
+  getMostRecentRow
+  changeAccessFilterOfRow
+  defaultAccess
+  rowOwner
+  groupReadOnly
+  groupModify
+  groupPrivileged
+  updateRow
+  deleteRow
+  addRow
+  failureCallbackFn
+  addCheckpoint
+  successCallbackFn
+  failureCallbackFn
+  saveCheckpointAsIncomplete
+  columnNameValueMap
 
 
 ODK-X WebKit
