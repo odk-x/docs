@@ -153,6 +153,23 @@
   failureCallbackFn
   saveCheckpointAsIncomplete
   columnNameValueMap
+  saveCheckpointAsComplete
+  deleteAllCheckpoints
+  deleteLastCheckpoint
+  createLocalOnlyTableWithColumns
+  columnNameTypeMap
+  deleteLocalOnlyTable
+  insertLocalOnlyRow
+  updateLocalOnlyRows
+  deleteLocalOnlyRows
+  simpleQueryLocalOnlyTables
+  arbitrarySqlQueryLocalOnlyTables
+  queueRequest
+  invokeCallbackFn
+  jsonResult
+  cbId
+  requestMap
+  responseAvailable
 
 
 ODK-X WebKit
