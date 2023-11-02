@@ -802,7 +802,7 @@ getHashString
 
   - tableId: The table ID that the survey is associated with.
   - formId: The form ID for the survey.
-  - instanceId: The unique instance ID (optional).
+  - instanceId: This parameter represents a unique instance ID. It is expected to be either a string or null.
   - screenPath: The path to the specific screen or prompt.
   - elementKeyToValueMap: A mapping of element keys to corresponding values (optional).
 
@@ -856,7 +856,7 @@ openInstance
   - dispatchStruct: An optional parameter for dispatching actions or results.
   - tableId: The table ID for the form.
   - formId: The form ID.
-  - instanceId: The unique instance ID.
+  - instanceId: This parameter represents a unique instance ID. It is expected to be either a string or null.
   - initialValuesElementKeyToValueMap: A mapping of element keys to initial values for pre-filling form fields (optional).
 
   **Returns**: The result of the action, typically indicating whether the action was successful.
@@ -897,7 +897,7 @@ fileAttachmentAction
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - intentAction (String): The intent action for the specific file attachment action.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the file attachment action, typically indicating whether the action was successful.
@@ -911,7 +911,7 @@ captureImage
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the image capture action, typically indicating whether the action was successful.
@@ -925,7 +925,7 @@ captureSignature
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the signature capture action, typically indicating whether the action was successful.
@@ -939,7 +939,7 @@ captureAudio
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the audio capture action, typically indicating whether the action was successful.
@@ -953,7 +953,7 @@ captureVideo
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the video capture action, typically indicating whether the action was successful.
@@ -967,7 +967,7 @@ chooseImage
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the image selection action, typically indicating whether the action was successful.
@@ -981,7 +981,7 @@ chooseAudio
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the audio file selection action, typically indicating whether the action was successful.
@@ -995,7 +995,7 @@ chooseVideo
 
   - dispatchStruct (Any): An optional parameter for dispatching actions or results.
   - tableId (String): The table ID for the form.
-  - instanceId (String): The instance ID.
+  - instanceId (String): This parameter represents a unique instance ID. It is expected to be either a string or null.
   - existingFileAttachmentFieldContent (Object): Existing file attachment field content, including content type and URI (optional).
 
   **Returns**: The result of the video file selection action, typically indicating whether the action was successful.
