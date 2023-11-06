@@ -46,7 +46,7 @@ Below are the steps to create a new form from the *exampleForm*:
   3. Rename the XLSX file to :file:`your_table_id.xlsx`
   4. Edit the XLSX file and on the **settings** worksheet, change the value for *table_id* to *your_table_id*. Then update the display title for the survey and the form version. Save the changes.
   5. If you have not already, run :program:`grunt` to launch the :program:`Chrome` browser and open the Application Designer home page.
-  6. Navigate to the :guilabel:`XLSX Converter` tab, choose this file to convert it. Once converted, choose :guilabel:`Save to File System` and click :guilabel:`OK` on the 3 pop-ups that alert you to the saving of 3 files to the file system. The three files that are saved are:
+  6. Navigate to the :guilabel:`XLSX Converter` tab and choose this file to convert it. Once converted, choose :guilabel:`Save to File System` and click :guilabel:`OK` on the 3 pop-ups that alert you to the saving of 3 files to the file system. The three files that are saved are:
 
     - :file:`app/config/tables/your_table_id/definition.csv` -- defines the user-defined columns in your table
     - :file:`app/config/tables/your_table_id/properties.csv` -- defines the appearance and available detail and list view HTML files for the table
@@ -88,7 +88,7 @@ Typing the following in the **survey** worksheet of a workbook with an appropria
 
 The first row contains an empty clause and an empty condition column. Therefore, the :th:`display.prompt.text` will be shown on the screen, and the resulting :tc:`integer` answer will be stored in the variable :tc:`person_age`.
 
-On the next line there is an :tc:`if` in the :th:`clause` column and :tc:`data('person_age') >= 18` in the condition column. If the answer stored in the variable :tc:`person_age` is greater than or equal to 18, the following commands should be done until either an :tc:`else` or an :tc:`end if` tag is reached. Notice the other three columns are left blank.
+On the next line, there is an :tc:`if` in the :th:`clause` column and :tc:`data('person_age') >= 18` in the condition column. If the answer stored in the variable :tc:`person_age` is greater than or equal to 18, the following commands should be done until either an :tc:`else` or an :tc:`end if` tag is reached. Notice the other three columns are left blank.
 
 In the next row, there is a :tc:`begin screen` tag in the :th:`clause` column. The remaining four columns are left blank. Until an :tc:`end screen` tag is reached in the :th:`clause` column, all the following questions will be displayed on one screen. In this case, the user will be asked to input their favorite type of pizza and how many slices they would like on the same page, assuming they are 18 or older.
 
@@ -182,7 +182,7 @@ Below is the survey worksheet of an example survey that implements skip logic. O
   "end if",
   ,,"note", "<h3>Order Summary for <u>{{data.name}}</u></h3>"
 
-In the example worksheet above, the respondent can pick through a number of pastries available and select one option. The next set of questions that follow are fully dependent on the choice the user makes. For example, if the user picked Cakes; they are asked for a flavor and size they would like whereas if the user picked Doughnuts; they are asked what size of box they would like.
+In the example worksheet above, the respondent can pick through a number of pastries available and select one option. The next set of questions that follow is fully dependent on the choice the user makes. For example, if the user picked Cakes; they are asked for a flavor and size they would like whereas if the user picked Doughnuts; they are asked what size of box they would like.
 
 .. note::
   An important thing to remember when using the clause column is the opening **if** tag and the closing **end if** tags. The general rule is that all **if** tags must have a corresponding closing **end if** tag.
@@ -367,13 +367,13 @@ The **queries** worksheet would look like this:
     - [ opendatakit.getCurrentInstanceId() ]
     - { house_id: opendatakit.getCurrentInstanceId() }
 
-First the user enters a :tc:`house id` for the house and answers an arbitrary question about its residents. This information is stored in the data table for general household information (specified on the **settings** worksheet under :th:`table_id`). Then the user reaches a :tc:`linked_table` prompt that uses the :th:`values_list` members. This is connected to the members query on the **queries** worksheet. It links to a different survey called :tc:`members_info` that edits a different data table. The selection criteria is that the :tc:`house_id` in the :tc:`house_members` data table matches the :tc:`instanceID` of this current household.
+First, the user enters a :tc:`house id` for the house and answers an arbitrary question about its residents. This information is stored in the data table for general household information (specified on the **settings** worksheet under :th:`table_id`). Then the user reaches a :tc:`linked_table` prompt that uses the :th:`values_list` members. This is connected to the members query on the **queries** worksheet. It links to a different survey called :tc:`members_info` that edits a different data table. The selection criteria is that the :tc:`house_id` in the :tc:`house_members` data table matches the :tc:`instanceID` of this current household.
 
-Initially this list will be empty since no members have been added. The user can click on the :guilabel:`Create Instance` button to add new people for this household. The :tc:`house_id` will be set automatically for this new member via the :th:`newRowInitialElementKeyToValueMap` content, which specifies that the :tc:`house_id` field in the linked table should be initialized with the :tc:`instanceID` of the current household.
+Initially, this list will be empty since no members have been added. The user can click on the :guilabel:`Create Instance` button to add new people for this household. The :tc:`house_id` will be set automatically for this new member via the :th:`newRowInitialElementKeyToValueMap` content, which specifies that the :tc:`house_id` field in the linked table should be initialized with the :tc:`instanceID` of the current household.
 
 .. note::
 
-  The selection criteria and its type (in this case, :tc:`house_id` and :tc:`text`) must be added to the model subset of the subform (members_info) in order for selection criteria to be persisted to the database and for the subform to be found by its parent form; the selection criteria cannot filter on session variables since those values are never persisted.
+  The selection criteria and its type (in this case, :tc:`house_id` and :tc:`text`) must be added to the model subset of the subform (members_info) in order for selection criteria to be persisted in the database and for the subform to be found by its parent form; the selection criteria cannot filter on session variables since those values are never persisted.
 
 When the user finishes the subform, the screen will return to the same linked_table prompt. At this point, the user can continue adding more users, edit an existing member's info, or go to a different screen.
 
@@ -384,7 +384,7 @@ The :th:`values_list` for the :tc:`select_one` question prompt in the example ab
 Internationalization
 --------------------------
 
-Survey offers the ability to display text in different languages. This requires usage of the **settings** worksheet to determine which language to use. However, for any language other than the default language, extra display columns need to be added. For example, if one of the non-default language options was Spanish (2-letter language code "es"), every worksheet with a :th:`display.prompt.text` column would also need a :th:`display.prompt.text.es` column. This is true for all columns that need an alternate language option.
+Survey offers the ability to display text in different languages. This requires the usage of the **settings** worksheet to determine which language to use. However, for any language other than the default language, extra display columns need to be added. For example, if one of the non-default language options was Spanish (2-letter language code "es"), every worksheet with a :th:`display.prompt.text` column would also need a :th:`display.prompt.text.es` column. This is true for all columns that need an alternate language option.
 
 .. csv-table:: Internationalization framework_translations Worksheet Example
   :header: "type", "name", "display.prompt.text", "display.prompt.text.es"
@@ -400,7 +400,7 @@ The labels used in the buttons and prompts supplied by `ODK-X Survey <https://do
 More Advanced Branching
 ----------------------------
 
-`ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ supports situations where the user needs to be in control of which survey or section of a survey they are working on. To do this, the :th:`branch_label` column is used, as well as the **choices** worksheet. It also utilizes a new question type: :tc:`user_branch`. The following example combines aforementioned surveys and allows the user to decide whether they want to fill out the survey about pizza, or the survey about birthdays.
+`ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ supports situations where the user needs to be in control of which survey or section of a survey they are working on. To do this, the :th:`branch_label` column is used, as well as the **choices** worksheet. It also utilizes a new question type: :tc:`user_branch`. The following example combines the aforementioned surveys and allows the user to decide whether they want to fill out the survey about pizza, or the survey about birthdays.
 
 A choice set needs to be added to the **choices** worksheet with the applicable branching options. The resulting **choices** worksheet would look like this:
 
@@ -573,7 +573,7 @@ A custom prompt type available in the Application Designer repository is :th:`as
 Thus, a user should not use :th:`async_assign` to assign a value to a prompt and then attempt to use the prompt within that same screen as the value may not have been assigned yet. Once the value is assigned to the prompt, it can be used in subsequent screens.
 
 The reason for not being able to use the value of a prompt from an :th:`async_assign` within the same screen has to do with the design of Survey. Every instance of a Survey form that a user fills out creates a row in a database table. Although the database interactions in Survey are asynchronous, you are able to see your data changes on the screen immediately because the data for the row is cached in a model data structure. When :th:`async_assign` is used, the :file:`formDef.json` file for the other form is read to create a model.
-After that, the database table used to store the instances for the other form is queried to return the value(s) that are relevant for the assignment. These value(s) can then be manipulated for the assignment.
+After that, the database table used to store the instances for the other form is queried to return the value(s) that are relevant to the assignment. These value(s) can then be manipulated for the assignment.
 
 .. list-table:: async_assign Types Table
   :header-rows: 1
