@@ -6,9 +6,9 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=python -msphinx
 )
 
-set ODKX_SRCDIR=odkx-src
-set COMPILE_X_SRCDIR=tmpx-src
-set ODKX_BUILDDIR=odkx-build
+set ODKX_SRCDIR=src
+set COMPILE_X_SRCDIR=tmp_src
+set ODKX_BUILDDIR=build
 
 if "%1" == "clean" goto cleancmd
 if "%1" == "copy" goto copy

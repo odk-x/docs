@@ -1,17 +1,16 @@
 version: 2
 jobs:
-  build-odkx:
+  build:
     working_directory: ~/work
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.11
     steps:
       - checkout
       - run:
-          name: Install checkout requirements
+          name: Install checkout requirements (large-file-support)
           command: |
             sudo apt-get update
             sudo apt-get install git-lfs
-            git lfs install
       - run:
           name: Checkout binaries
           command: git lfs pull
@@ -20,35 +19,35 @@ jobs:
           command: |
             sudo apt-get install pngquant
             sudo apt-get install python3-enchant
-            sudo pip install -r requirements.txt
+            pip3 install --user -r requirements.txt
+            pip3 install --user -r style-test-requirements.txt
       - run:
-          name: Style Guide Check
+          name: Generate html output
+          command: make dirhtml
+      - run:
+          name: Check spelling
           command: |
-            paths=$(git diff origin/master... --name-only)
-            echo $paths
-            sudo python style-test.py $paths -r odkx-src
-            sudo python style-test.py $paths -r shared-src
-      - run:
-          name: Build ODK-X Documentation
-          command: make odkx-deploy
-      - run:
-          name: Check spelling of ODK-X Documentation
-          command: make odkx-spell-check
-      - run:
-          name: Build LaTex of ODK-X Documentation
-          command: make odkx-latex
+            make spelling
+            python3 util/check-spelling-output.py build/spelling
       - run:
           name: Compress images
-          command: pngquant odkx-build/_images/*.png --force --ext .png --verbose
+          command: pngquant build/dirhtml/_images/*.png --force --ext .png --verbose
+      - run:
+          name: Style check of changed files
+          command: |
+            paths=$(git diff origin/main --name-only)
+            python3 style-test.py $paths -r src
+      - run:
+          name: Build LaTex of ODK-X Documentation
+          command: make latex
       - store_artifacts:
-          path: odkx-build
-          destination: odkx-build
+          path: build
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*
+            - build/*
             - s3_website.yml
-  build-pdf-odkx:
+  build-pdf:
     working_directory: ~/work
     docker:
       - image: schickling/latex
@@ -58,20 +57,19 @@ jobs:
       - run:
           name: Build PDF
           command: |
-              cd odkx-build/latex
+              cd build/latex
               xelatex ODK-X.tex
               xelatex ODK-X.tex
-              mkdir -p ../_downloads
-              mv ODK-X.pdf ../_downloads/ODK-X-Documentation.pdf
+              mkdir -p ../dirhtml/_downloads
+              mv ODK-X.pdf ../dirhtml/_downloads/ODK-X-Documentation.pdf
       - store_artifacts:
-          path: odkx-build/_downloads/ODK-X-Documentation.pdf
+          path: build/dirhtml/_downloads/ODK-X-Documentation.pdf
           destination: ODK-X-Documentation.pdf
       - persist_to_workspace:
           root: ~/work
           paths:
-            - odkx-build/*
-            
-  deploy-odkx:
+            - build/dirhtml/*
+  deploy:
     working_directory: ~/work
     docker:
       - image: cimg/ruby:3.2
@@ -81,9 +79,11 @@ jobs:
       - run:
           name: Install deploy requirements
           command: |
+              if [[ "$CIRCLE_PROJECT_USERNAME" == "odk-x" ]]; then \
                 sudo apt-get update
                 sudo apt-get install -y pngquant openjdk-11-jre-headless
                 gem install s3_website_revived && s3_website install
+              fi
       - run:
           name: Push to S3
           command: |
@@ -93,16 +93,17 @@ workflows:
   version: 2
   build_deploy:
     jobs:
-      - build-odkx
-      - build-pdf-odkx:
+      - build
+      - build-pdf:
           requires:
-            - build-odkx
-      - deploy-odkx:
+            - build
+      - deploy:
           context: AWS
           requires:
-            - build-odkx
-            - build-pdf-odkx
+            - build
+            - build-pdf
           filters:
             branches:
               only: 
-                - master
+                - main
+                - master                

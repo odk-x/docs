@@ -1,6 +1,6 @@
 # ODK-X Docs
 
-![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/odk-x/docs/)  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3788b3e-1abc-431d-a9a3-e5c71b20e053/deploy-status)](https://app.netlify.com/sites/blissful-bohr-7f32fb/deploys)
+![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=svg)](https://circleci.com/gh/odk-x/docs/)  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3788b3e-1abc-431d-a9a3-e5c71b20e053/deploy-status)](https://app.netlify.com/sites/blissful-bohr-7f32fb/deploys)
 
 This repo is the source for ODK-X documentation.
 
@@ -93,8 +93,8 @@ Take note of the full-stop `.` at the end of the build command. The `.` specifie
 ### Building and serving the docs locally
 
 Build and serve the docs locally with:
- * Windows: `.\run-task.bat odkx-autobuild`
- * Linux/macOS: `./run-task.sh odkx-autobuild`
+ * Windows: `.\run-task.bat serve`
+ * Linux/macOS: `./run-task.sh serve`
 
 Once your terminal shows a "Serving on http://0.0.0.0:8080" message, you can then view the docs in your browser at http://localhost:8080.
 
@@ -222,20 +222,24 @@ It can take a long time (>10 minutes) to clone the repo due to the large number 
 Once your environment is set up, build and serve the docs locally with:
 
 ```bash
+$ make serve
+```
+
+```bash
 $ make odkx
-$ cd odkx-build
+$ cd build
 $ python -m http.server 8000
 ```
 
-You can then view the docs in your browser at [http://localhost:8000/odkx-build/](http://localhost:8000/odkx-build/).
+You can then view the docs in your browser at [http://localhost:8000/build/](http://localhost:8000/build/).
 
 You can also use `make` to run just a portion of the build process. See available [build tasks](#tasks) below.
 
 ## <a name="tasks"></a>Build tasks
 
-|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   Style Check    |   Spell Check    | Check All  |
-| ----------- | :------------: | :--------: | :-------: | :--------: | :--------------: | :--------------: | :--------: |
-| **Options** | odkx-autobuild | odkx-build | odkx-copy | odkx-latex | odkx-style-check | odkx-spell-check | odkx-check |
+|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   PDF      |   Style Check    | Spell Check      | Check All  |
+| ----------- | :------------: | :--------: | :-------: | :--------: | :--------: | :--------------: | :--------------: | :--------: |
+| **Options** | serve          | build      | copy      | latex      | pdf        | style-check      | spell-check      | check-all  |
 
 
 ## How to contribute?
