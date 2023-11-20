@@ -409,5 +409,5 @@ html_context = {'download_pdf' : download_pdf,
                 'github_user' : "odk-x", # Username
                 'github_repo' : "docs", # Repo name
                 'github_version' : "main", # Version
-                'conf_py_path' : "/odkx-src/" # Path in the checkout to the docs root
+                'conf_py_path' : "/src/" # Path in the checkout to the docs root
             }
