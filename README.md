@@ -231,7 +231,7 @@ $ cd build
 $ python -m http.server 8000
 ```
 
-You can then view the docs in your browser at [http://localhost:8000/build/](http://localhost:8000/build/).
+You can then view the docs in your browser at [http://localhost:8000/](http://localhost:8000/).
 
 You can also use `make` to run just a portion of the build process. See available [build tasks](#tasks) below.
 
