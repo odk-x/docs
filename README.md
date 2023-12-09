@@ -1,6 +1,6 @@
 # ODK-X Docs
 
-![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=svg)](https://circleci.com/gh/odk-x/docs/)  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3788b3e-1abc-431d-a9a3-e5c71b20e053/deploy-status)](https://app.netlify.com/sites/blissful-bohr-7f32fb/deploys)
+![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=svg)](https://circleci.com/gh/odk-x/docs/)
 
 This repo is the source for ODK-X documentation.
 
@@ -93,14 +93,17 @@ Take note of the full-stop `.` at the end of the build command. The `.` specifie
 ### Building and serving the docs locally
 
 Build and serve the docs locally with:
- * Windows: `.\run-task.bat serve`
- * Linux/macOS: `./run-task.sh serve`
+ * Windows: `.\run-task.ps1`
+ * Linux/macOS: `./run-task.sh`
 
 Once your terminal shows a "Serving on http://0.0.0.0:8080" message, you can then view the docs in your browser at http://localhost:8080.
 
-Changes you make in the source files will automatically be built and shown in your browser.
+Changes you make in the source files (located in the `./src` folder) will automatically be re-built and shown in your browser.
 
-Press `Ctrl-C` on your keyboard to stop the build server. It could take a while to effectively stop, and you can always close the terminal window.
+* Linux/macOs: Press `Ctrl-C` on your keyboard to stop the build server. It could take a while to effectively stop, and you can always close the terminal window.
+
+* Windows: To stop the build server open up a new terminal and type the command ```docker stop odkx-docs```
+
 
 If you get a `The name "odkx-docs" is already in use by container` error message, run the following command:
 
