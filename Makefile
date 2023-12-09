@@ -14,6 +14,9 @@ help:
 
 .PHONY: help Makefile
 
+dockerserve:
+	sphinx-autobuild --host 0.0.0.0 --port 8080 -b dirhtml "$(SOURCE_DIR)" "$(BUILD_DIR)/html"
+
 serve:
 	sphinx-autobuild -b dirhtml "$(SOURCE_DIR)" "$(BUILD_DIR)/html"
 
