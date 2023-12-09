@@ -1,0 +1,1 @@
+docker run --rm -v "${PWD}:/mnt" -p 8000:8000 --name odkx-docs odkx-docs

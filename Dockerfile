@@ -1,4 +1,4 @@
-FROM python:3.9.16-buster
+FROM python:3.12.1
 
 WORKDIR /mnt
 
@@ -13,6 +13,6 @@ RUN apt-get update -y && \
 	python -m pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT ["make"]
+ENTRYPOINT ["make", "dockerserve"]
 
 EXPOSE 8080
