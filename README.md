@@ -100,9 +100,17 @@ Once your terminal shows a "Serving on http://0.0.0.0:8080" message, you can the
 
 Changes you make in the source files (located in the `./src` folder) will automatically be re-built and shown in your browser.
 
-* Linux/macOs: Press `Ctrl-C` on your keyboard to stop the build server. It could take a while to effectively stop, and you can always close the terminal window.
+* Windows: The docker container with the docs website will occupy the terminal window and output log messages when changes are detected and rebuilds are made. Open a new terminal window/tab to be able to stop the container using the command below.
+* Linux/macOs: Open a new terminal to interact with the container or press `Ctrl-Z` on your keyboard to suspend the job. The job will still be running in the background and changes will automatically be rebuilt and served.
 
-* Windows: To stop the build server open up a new terminal and type the command ```docker stop odkx-docs```
+
+To stop the container, type the following command
+
+```
+docker stop odkx-docs
+```
+ 
+
 
 
 If you get a `The name "odkx-docs" is already in use by container` error message, run the following command:
