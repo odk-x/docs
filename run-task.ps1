@@ -1,1 +1,1 @@
-docker run --rm -v "${PWD}:/mnt" -p 8000:8000 --name odkx-docs odkx-docs
+docker run --rm -v "${PWD}:/mnt" -p 8080:8080 --name odkx-docs odkx-docs
