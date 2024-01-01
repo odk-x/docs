@@ -170,6 +170,7 @@
   cbId
   requestMap
   responseAvailable
+  getter
 
 
 ODK-X WebKit
