@@ -1,25 +1,15 @@
-# sphinx-spellcheck raises a warning because it conflicts with sphinx-tabs
-# so we have to suppress warnings in circleci
-# but that suppresses warnings related to misspellings.
-# So this script checks the spellcheck output
-# and raises an exception if there are any.
+#!/env/python3
 import os
 import sys
-
-
-class SpellingError(ValueError):
-    pass
-
+import glob
 
 if len(sys.argv) < 2:
-    raise ValueError("The parent directory of the spelling directory is a required argument")
+    exit(0)
 
-build_dir = sys.argv[1]
-spelling_dir = "spelling"
-
-output_path = os.path.join(build_dir, spelling_dir)
-
-for each in os.listdir(output_path):
-    if each.endswith('.spelling'):
-        raise SpellingError("You have spelling errors.")
-        break
+path = str(sys.argv[1])
+spellings = glob.glob(path + '/**/*.spelling', recursive=True)
+if spellings:
+    print("Spell check failed")
+    for spelling in spellings:
+        os.system("cat " + spelling)
+    exit(1)

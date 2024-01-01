@@ -1,6 +1,6 @@
 # ODK-X Docs
 
-![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/odk-x/docs/)  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3788b3e-1abc-431d-a9a3-e5c71b20e053/deploy-status)](https://app.netlify.com/sites/blissful-bohr-7f32fb/deploys)
+![Platform](https://img.shields.io/badge/platform-Sphinx-blue.svg) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/odk-x/docs.svg?style=svg)](https://circleci.com/gh/odk-x/docs/)
 
 This repo is the source for ODK-X documentation.
 
@@ -53,19 +53,21 @@ Clone the docs repo into a directory you want the ODK-X docs files to be located
 1. Visit this link https://github.com/odk-x/docs on your browser to locate the docs repo
 2. Find and click the "fork" button to create a personal fork of the project on Github
 3. Navigate to the directory you want the files to be located using the "cd" (Change Directory) command on a command-line interface on your local machine:
+
 ```
 cd <DIRECTORY>
 ```
-4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo:  
- 
+
+4. Get a copy of the ODK-X docs repository on your local machine by cloning the forked repo to your local machine from your github account using the clone command below. Replace "LINK-TO-YOUR-FORKED-REPO" below with the actual link to your forked repo: You need to click on the green "Code" button to get the "LINK-TO-YOUR-FORKED-REPO"
+
 ```
 git clone <LINK-TO-YOUR-FORKED-REPO>
 ```
 
-
 It can take a long time (>10 minutes) to clone the repo due to the large number of images in the docs. If you get an error such as `Smudge error` or `GitHub's rate limit reached`, run `git checkout -f HEAD` until you get the message `Checking out files: 100% done`.
 
 After the git clone finishes, use the below command to change the directory to the ODK-X docs directory
+
 ```
 cd docs
 ```
@@ -91,14 +93,25 @@ Take note of the full-stop `.` at the end of the build command. The `.` specifie
 ### Building and serving the docs locally
 
 Build and serve the docs locally with:
- * Windows: `.\run-task.bat odkx-autobuild`
- * Linux/macOS: `./run-task.sh odkx-autobuild`
+ * Windows: `.\run-task.ps1`
+ * Linux/macOS: `./run-task.sh`
 
 Once your terminal shows a "Serving on http://0.0.0.0:8080" message, you can then view the docs in your browser at http://localhost:8080.
 
-Changes you make in the source files will automatically be built and shown in your browser.
+Changes you make in the source files (located in the `./src` folder) will automatically be re-built and shown in your browser.
 
-Press `Ctrl-C` on your keyboard to stop the build server. It could take a while to effectively stop, and you can always close the terminal window.
+* Windows: The docker container with the docs website will occupy the terminal window and output log messages when changes are detected and rebuilds are made. Open a new terminal window/tab to be able to stop the container using the command below.
+* Linux/macOs: Open a new terminal to interact with the container or press `Ctrl-Z` on your keyboard to suspend the job. The job will still be running in the background and changes will automatically be rebuilt and served.
+
+
+To stop the container, type the following command
+
+```
+docker stop odkx-docs
+```
+ 
+
+
 
 If you get a `The name "odkx-docs" is already in use by container` error message, run the following command:
 
@@ -220,20 +233,24 @@ It can take a long time (>10 minutes) to clone the repo due to the large number 
 Once your environment is set up, build and serve the docs locally with:
 
 ```bash
+$ make serve
+```
+
+```bash
 $ make odkx
-$ cd odkx-build
+$ cd build
 $ python -m http.server 8000
 ```
 
-You can then view the docs in your browser at [http://localhost:8000/odkx-build/](http://localhost:8000/odkx-build/).
+You can then view the docs in your browser at [http://localhost:8000/build/](http://localhost:8000/build/).
 
 You can also use `make` to run just a portion of the build process. See available [build tasks](#tasks) below.
 
 ## <a name="tasks"></a>Build tasks
 
-|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   Style Check    |   Spell Check    | Check All  |
-| ----------- | :------------: | :--------: | :-------: | :--------: | :--------------: | :--------------: | :--------: |
-| **Options** | odkx-autobuild | odkx-build | odkx-copy | odkx-latex | odkx-style-check | odkx-spell-check | odkx-check |
+|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   PDF      |   Style Check    | Spell Check      | Check All  |
+| ----------- | :------------: | :--------: | :-------: | :--------: | :--------: | :--------------: | :--------------: | :--------: |
+| **Options** | serve          | build      | copy      | latex      | pdf        | style-check      | spell-check      | check-all  |
 
 
 ## How to contribute?

@@ -32,12 +32,12 @@ def visit_video_html(self, node):
     spth = srcPath % vsrc
 
 
-    if os.path.exists("./odkx-build/_videos"):
+    if os.path.exists("./build/_videos"):
         pass
     else:
-        os.makedirs("./odkx-build/_videos/")
+        os.makedirs("./build/_videos/")
 
-    dpth = "./odkx-build/_videos/%s" %vsrc[vsrc.rfind('/')+1:]
+    dpth = "./build/_videos/%s" %vsrc[vsrc.rfind('/')+1:]
 
     shutil.copyfile(spth, dpth)
 
