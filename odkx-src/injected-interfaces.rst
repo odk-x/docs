@@ -856,7 +856,7 @@ getViewData
   - successCallbackFn: A success callback function that is called when the view data is successfully retrieved.
   - failureCallbackFn: A failure callback function that is called when there is an error in retrieving the view data.
   - limit: An optional parameter that specifies the maximum number of rows to retrieve. It has a default value of ``null``.
-  - offset: An optional parameter that specifies the offset for the retrieved data. It has a default value of ``null``.
+  - offset: The number of rows to skip before starting to return rows. It has a default value of ``null``.
 
 This function is used to retrieve view data. It takes in success and failure callback functions to handle the result of the data retrieval.
 The ``limit`` and ``offset`` parameters allow you to specify how many rows to retrieve and from which position in the result set.
@@ -923,7 +923,7 @@ query
   - orderByElementKey: The key for ordering the data.
   - orderByDirection: The direction (ASC or DESC) for ordering the data.
   - limit: The maximum number of rows to return.
-  - offset: The starting offset of rows to return.
+  - offset: The number of rows to skip before starting to return rows.
   - includeKVS: A boolean value indicating whether to include key value stores in the query results.
   - successCallbackFn: A success callback function that is called when the query is successful.
   - failureCallbackFn: A failure callback function that is called when there is an error in the query.
@@ -943,7 +943,7 @@ arbitraryQuery
   - sqlCommand: The SQL command for the arbitrary query.
   - sqlBindParams: An array of SQL bind parameters to be used in the query.
   - limit: The maximum number of rows to return.
-  - offset: The starting offset of rows to return.
+  - offset: The number of rows to skip before starting to return rows.
   - successCallbackFn: A success callback function that is called when the arbitrary query is successful.
   - failureCallbackFn: A failure callback function that is called when there is an error in the arbitrary query.
 
@@ -1001,7 +1001,7 @@ changeAccessFilterOfRow
 This function is used to change the access control filter settings of a specific row in a table.
 It allows you to set access control settings for various user categories (e.g., the row owner, different groups) for a specific row.
 The function uses the ``getOdkDataIf().changeAccessFilterOfRow`` method to update the access control settings for the row.
-Callback functions are registered to handle the success or failure of the access control change operation.
+Callback functions are registered to handle the success or failure of the access control change operation. For more infromation about Row-level Access Filters, checkout `here <https://docs.odk-x.org/data-permission-filters/#row-level-access-filters>`
 
 updateRow
 ~~~~~~~~~~~
@@ -1068,7 +1068,7 @@ A checkpoint is a saved state or record of the data at a specific point in time.
 It takes a JSON object ``columnNameValueMap`` that maps column names to their values for the checkpoint.
 The ``rowId`` is used to specify the ID of the checkpoint.
 The function uses the ``getOdkDataIf().addCheckpoint`` method to add the checkpoint to the specified table.
-Callback functions are registered to handle the success or failure of the addition operation.
+Callback functions are registered to handle the success or failure of the addition operation. For more information about check points see `here <https://docs.odk-x.org/services-using/#resolving-checkpoint-issues>`
 
 saveCheckpointAsIncomplete
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1086,7 +1086,7 @@ An incomplete checkpoint is typically used to represent an ongoing or partially 
 It takes a JSON object ``columnNameValueMap`` that maps column names to their values for the incomplete checkpoint.
 The ``rowId`` is used to specify the ID of the incomplete checkpoint.
 The function uses the ``getOdkDataIf().saveCheckpointAsIncomplete`` method to save the checkpoint as incomplete in the specified table.
-Callback functions are registered to handle the success or failure of the operation.
+Callback functions are registered to handle the success or failure of the operation. For more information about check points see `here <https://docs.odk-x.org/services-using/#resolving-checkpoint-issues>`
 
 saveCheckpointAsComplete
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1103,7 +1103,7 @@ This function is used to save a checkpoint as complete in a table. A complete ch
 It takes a JSON object ``columnNameValueMap`` that maps column names to their values for the complete checkpoint.
 The ``rowId`` is used to specify the ID of the complete checkpoint.
 The function uses the ``getOdkDataIf().saveCheckpointAsComplete`` method to save the checkpoint as complete in the specified table.
-Callback functions are registered to handle the success or failure of the operation.
+Callback functions are registered to handle the success or failure of the operation. For more information about check points see `here <https://docs.odk-x.org/services-using/#resolving-checkpoint-issues>`
 
 deleteAllCheckpoints
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1118,7 +1118,7 @@ deleteAllCheckpoints
 This function is used to delete all checkpoints associated with a specific row in a table.
 It takes the ``tableId`` and ``rowId`` as parameters to identify the target row and its associated checkpoints.
 The function uses the ``getOdkDataIf().deleteAllCheckpoints`` method to perform the deletion.
-Callback functions are registered to handle the success or failure of the operation.
+Callback functions are registered to handle the success or failure of the operation. For more information about check points see `here <https://docs.odk-x.org/services-using/#resolving-checkpoint-issues>`
 
 deleteLastCheckpoint
 ~~~~~~~~~~~~~~~~~~~~
@@ -1133,7 +1133,7 @@ deleteLastCheckpoint
 This function is used to delete the last checkpoint associated with a specific row in a table.
 It takes the ``tableId`` and ``rowId`` as parameters to identify the target row and its last checkpoint.
 The function uses the ``getOdkDataIf().deleteLastCheckpoint`` method to perform the deletion.
-Callback functions are registered to handle the success or failure of the operation.
+Callback functions are registered to handle the success or failure of the operation. For more information about check points see `here <https://docs.odk-x.org/services-using/#resolving-checkpoint-issues>`
 
 createLocalOnlyTableWithColumns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
