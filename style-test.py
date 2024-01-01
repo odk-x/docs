@@ -49,7 +49,7 @@ def parse_code():
             and 'python' in node.attributes['classes']
             and 'extra-checks' in node.attributes['classes'])
 
-    style_guide = open(dir_path + "/odkx-src/docs-style-guide.rst", "r")
+    style_guide = open(dir_path + "/src/docs-style-guide.rst", "r")
     
     # publish doctree, report only severe errors 
     doctree = publish_doctree(style_guide.read(),
@@ -138,7 +138,7 @@ def remove_lines(text):
     """Remove ignored lines  and directive blocks from text."""
     directive_list = [".. image::", ".. figure::", ".. video::", ".. code::",
                       ".. code-block::", ".. csv-table::", ".. toctree::",
-                      ".. py:", ".. math::", ".. spelling::"]
+                      ".. py:", ".. math::", ".. spelling:word-list::"]
 
     index = 0
     length = len(text)
@@ -418,7 +418,7 @@ def disp_checks(errors, filename, shortname):
         line4 = "%s | %s" %(e[0], severity)
         print(t.blue(line1))
         print(line2)
-        if severity is "warning":
+        if severity == "warning":
             print(t.yellow(line3))
             warn_cnt += 1
         else:
