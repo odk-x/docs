@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
   odkCommon
   odkData
