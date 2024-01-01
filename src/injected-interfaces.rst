@@ -1001,7 +1001,7 @@ changeAccessFilterOfRow
 This function is used to change the access control filter settings of a specific row in a table.
 It allows you to set access control settings for various user categories (e.g., the row owner, different groups) for a specific row.
 The function uses the ``getOdkDataIf().changeAccessFilterOfRow`` method to update the access control settings for the row.
-Callback functions are registered to handle the success or failure of the access control change operation. For more infromation about Row-level Access Filters, checkout `here <https://docs.odk-x.org/data-permission-filters/#row-level-access-filters>`
+Callback functions are registered to handle the success or failure of the access control change operation. For more information about Row-level Access Filters, checkout `here <https://docs.odk-x.org/data-permission-filters/#row-level-access-filters>`
 
 updateRow
 ~~~~~~~~~~~
