@@ -34,24 +34,24 @@ To access the sample application and its six sample forms, authentication and sy
 
         The server URL starts with :file:`https://` not :file:`http://`. Don't forget to include the *s*.
 
-    - Tap Server Sign-on Credential and change your authentication from  :guilabel:`None (anonymous access)` to :guilabel:`Username`. 
-    
+    - Tap Server Sign-on Credential and change your authentication from  :guilabel:`None (anonymous access)` to :guilabel:`Username`.
+
       .. image:: /img/survey-sample-app/survey-signon-credential.*
         :alt: Server Sign-on Credential
         :class: device-screen-verticalsurvey
-    
-    - Next, tap Username and enter :menuselection:`demo_user1` in the space. 
-    
+
+    - Next, tap Username and enter :menuselection:`demo_user1` in the space.
+
       .. image:: /img/survey-sample-app/survey-username-settings.*
         :alt: Username settings
         :class: device-screen-verticalsurvey
-    
-    - Change your server password to :menuselection:`password`. 
+
+    - Change your server password to :menuselection:`password`.
 
       .. image:: /img/survey-sample-app/survey-password-settings.*
         :alt: Password settings
         :class: device-screen-verticalsurvey
-   
+
     - When you are done, your screen should look like this:
 
       .. image:: /img/survey-sample-app/survey-demo-server-credential.*
@@ -61,8 +61,8 @@ To access the sample application and its six sample forms, authentication and sy
       .. tip::
 
         You can also :ref:`login by scanning a QR code.<services-login-with-qr>`
-          
-  3. Tap your device's back button and choose the :guilabel:`Authenticate New User` option in the popup window. On the resulting page, tap the :guilabel:`Verify User Permissions` button. If successfully authenticated, you should see a popup window with a message stating that the verification was successful. 
+
+  3. Tap your device's back button and click on :guilabel:`Permissions` from the General Settings page. On the resulting page, click on the :guilabel:`Verify User` button. If successfully authenticated, you should see a popup window with a message stating that the verification was successful.
 
     .. image:: /img/survey-sample-app/survey-successful-authentication.*
       :alt: Successful authentication
@@ -76,7 +76,7 @@ To access the sample application and its six sample forms, authentication and sy
     :alt: Launching Sync from Survey
     :class: device-screen-vertical
 
-5. Once this launches ODK-X Services, click the :guilabel:`Sync Now` button.
+5. Once this launches ODK-X Services, click the :guilabel:`Sync` button.
     - Again, leave your user as :menuselection:`demo_user1`.
     - Leave the file attachment setting as the default :menuselection:`Fully Sync Attachments`
 
@@ -85,7 +85,7 @@ To access the sample application and its six sample forms, authentication and sy
     :class: device-screen-vertical
 
    Synchronization might take a while.
-  
+
 After synchronization is complete, your device's configuration will exactly match that of the server. This includes both collected data and application level files (such as form definitions and HTML files). If you had nothing on your device before, your device will be populated with this data and these application files. If you already had files on this device in this application namespace they will be updated to match the server version. Any local configuration files for data tables or forms that are not present on the server will be removed from your device. Everything under the :file:`/sdcard/opendatakit/default/config` directory will be revised to exactly match the content on the server.
 
 Once the configuration and data on the device is an exact match to that of the server, the file attachments associated with those data are synchronized. If you have a slow connection, it may take two or three tries before the sync is successful. It will not overwrite or hurt anything to do multiple synchronizations in a row.
