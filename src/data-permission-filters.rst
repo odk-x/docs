@@ -48,7 +48,7 @@ Enforcing restrictions on who can see or modify data requires that the identity 
 
 When configuring the :guilabel:`Server Settings`, any changes to any of the settings (such as the server URL, type of credential (or anonymous access), username, password or Gmail account) will clear any prior user identity and capability information and flag the user identity as unverified.
 
-When leaving the :guilabel:`Server Settings` screen, a user-verification screen will then be presented (unless no server sign-on credential is specified, in which case anonymous access to the server will be attempted):
+The user's permissions can be verified from the :guilabel:`Permissions` page (if no server sign-on credential was specified, anonymous access to the server will be attempted):
 
 .. image:: /img/data-permission-filters/verify-user.*
   :alt: Verify User Screen
