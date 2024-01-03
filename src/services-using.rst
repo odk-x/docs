@@ -46,7 +46,7 @@ To log in or change the authenticated user, launch Services and open the user ve
       :alt: Services Authenticate Credentials Verification
       :class: device-screen-vertical
 
-  3. Next, input the appropriate credentials in the :guilabel:`Username` and :guilabel:`Password` fields and click the :guilabel:`SIGN-IN` button. This will contact the Cloud Endpoint and log in as the new user.
+  3. Next, input the appropriate credentials in the :guilabel:`Username` and :guilabel:`Password` fields and click the :guilabel:`SIGN-IN` button. This will contact the Cloud Endpoint and log in as the user.
 
     .. image:: /img/services-using/services-authenticated-user-sign-in-form.*
       :alt: Services Authenticated User Sign In
@@ -92,7 +92,7 @@ Users can alternatively log in using the QR code scanner, with QR codes generate
 
    .. note::
 
-     Use the web tab in the ODK-X Application Designer to generate QR codes.
+     Use the :ref:`QR Code Generator <app-designer-overview-qr>` tab in the ODK-X Application Designer to generate QR codes.
 
 .. _services-using-sync:
 

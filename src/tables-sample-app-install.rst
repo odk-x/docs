@@ -30,7 +30,7 @@ We will use the ODK-X synchronization mechanism to install this app. It is about
 
       .. tip::
 
-        You can also :ref:`login by scanning a QR code.<services-login-with-qr>`
+        You can also :ref:`login by scanning a QR code.<services-using-qr-scanner>`
 
   3. Back out until you return to Tables.
   4. Follow the :ref:`services-using-sync` instructions (see :ref:`launching from Tables <services-using-sync-launch-other>`).

@@ -68,11 +68,15 @@ Before you are able to synchronize data or application files to a device, you wi
       If your server is configured to allow anonymous access this step is optional.
 
     a. Change the :guilabel:`Server Sign-on Credential` to :menuselection:`Username` and enter the appropriate credentials in the :guilabel:`Username` and :guilabel:`Server Password` fields.
-    b. Exit out of the :menuselection:`Server Settings` page, and then the :menuselection:`Settings` page, by using the back button and you should see that you have been logged in as an :guilabel:`Authenticated User`.
+    b. Exit out of the :menuselection:`Server Settings` page, and then the :menuselection:`Settings` page, by using the back button. You should see that you are now logged in as an :guilabel:`Authenticated User`.
 
       .. image:: /img/services-managing/services-authenticated-user-logged-in.*
         :alt: Services Authenticated User logged In
         :class: device-screen-vertical
+
+    .. _services-login-with-qr:
+
+    ODK-X Services also provides a quick and easy option to :ref:`login with a QR code <services-using-qr-scanner>`.
 
 .. _services-using-reset-app-server:
 
@@ -250,7 +254,7 @@ Managing Device Settings
   - :menuselection:`Default Locale` - specifies your preferred localization. By default this is set to US English. If you provide translations for your Data Management Application, this is where to enable them.
   - :menuselection:`Text Font Size` - if checked the text font size will be locked.
   - :menuselection:`Show Splash Screen` - if checked the splash screen image and enable/disable flag will be locked.
-  - :menuselection:`Selected Splash Image` - holds the image that will be displayed in the splash screen. By default this is an ODK logo, but can be set to your organization's own logo or another image.
+  - :menuselection:`Selected Splash Image` - holds the image that will be displayed in the splash screen. By default this is an ODK-X logo, but can be set to your organization's own logo or another image.
 
 .. _services-locking-admin-settings:
 
