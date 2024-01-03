@@ -1,3 +1,60 @@
+.. spelling:word-list::
+
+  getTableMetadata
+  tableMetadataCache
+  getTableMetadataRevision
+  putTableMetadata
+  getOdkDataIf
+  getViewData
+  getRoles
+  getDefaultGroup
+  getUsers
+  getAllTableIds
+  whereClause
+  sqlBindParams
+  groupBy
+  orderByElementKey
+  orderByDirection
+  includeKVS
+  arbitraryQuery
+  sqlCommand
+  sqlBindParams
+  getRows
+  getMostRecentRow
+  changeAccessFilterOfRow
+  defaultAccess
+  rowOwner
+  groupReadOnly
+  groupModify
+  groupPrivileged
+  updateRow
+  deleteRow
+  addRow
+  failureCallbackFn
+  addCheckpoint
+  successCallbackFn
+  failureCallbackFn
+  saveCheckpointAsIncomplete
+  columnNameValueMap
+  saveCheckpointAsComplete
+  deleteAllCheckpoints
+  deleteLastCheckpoint
+  createLocalOnlyTableWithColumns
+  columnNameTypeMap
+  deleteLocalOnlyTable
+  insertLocalOnlyRow
+  updateLocalOnlyRows
+  deleteLocalOnlyRows
+  simpleQueryLocalOnlyTables
+  arbitrarySqlQueryLocalOnlyTables
+  queueRequest
+  invokeCallbackFn
+  jsonResult
+  cbId
+  requestMap
+  responseAvailable
+  getter
+
 List of Available Methods in odkData.js
 ----------------------------------------------------------
 
