@@ -105,4 +105,5 @@ workflows:
           filters:
             branches:
               only: 
-                - main             
+                - main
+                - outreachy2024

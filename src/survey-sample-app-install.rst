@@ -62,7 +62,7 @@ To access the sample application and its six sample forms, authentication and sy
 
         You can also :ref:`login by scanning a QR code.<services-using-qr-scanner>`
 
-  3. Tap your device's back button and choose the :guilabel:`Authenticate New User` option in the popup window. On the resulting page, tap the :guilabel:`Verify User Permissions` button. If successfully authenticated, you should see a popup window with a message stating that the verification was successful.
+  3. Tap your device's back button and click on :guilabel:`Permissions` from the General Settings page. On the resulting page, click on the :guilabel:`Verify User` button. If successfully authenticated, you should see a popup window with a message stating that the verification was successful.
 
     .. image:: /img/survey-sample-app/survey-successful-authentication.*
       :alt: Successful authentication
@@ -76,33 +76,33 @@ To access the sample application and its six sample forms, authentication and sy
     :alt: Launching Sync from Survey
     :class: device-screen-vertical
 
-5. Once this launches ODK-X Services, click the :guilabel:`Sync Now` button.
-    - Again, leave your user as :menuselection:`demo_user1`.
-    - Leave the file attachment setting as the default :menuselection:`Fully Sync Attachments`
+  5. Once this launches ODK-X Services, click the :guilabel:`Sync` button.
+      - Again, leave your user as :menuselection:`demo_user1`.
+      - Leave the file attachment setting as the default :menuselection:`Fully Sync Attachments`
 
-   .. image:: /img/survey-sample-app/survey-demo-services-sync.*
-    :alt: Syncing from the demo server
-    :class: device-screen-vertical
+     .. image:: /img/survey-sample-app/survey-demo-services-sync.*
+      :alt: Syncing from the demo server
+      :class: device-screen-vertical
 
-   Synchronization might take a while.
+     Synchronization might take a while.
 
-After synchronization is complete, your device's configuration will exactly match that of the server. This includes both collected data and application level files (such as form definitions and HTML files). If you had nothing on your device before, your device will be populated with this data and these application files. If you already had files on this device in this application namespace they will be updated to match the server version. Any local configuration files for data tables or forms that are not present on the server will be removed from your device. Everything under the :file:`/sdcard/opendatakit/default/config` directory will be revised to exactly match the content on the server.
+  After synchronization is complete, your device's configuration will exactly match that of the server. This includes both collected data and application level files (such as form definitions and HTML files). If you had nothing on your device before, your device will be populated with this data and these application files. If you already had files on this device in this application namespace they will be updated to match the server version. Any local configuration files for data tables or forms that are not present on the server will be removed from your device. Everything under the :file:`/sdcard/opendatakit/default/config` directory will be revised to exactly match the content on the server.
 
-Once the configuration and data on the device is an exact match to that of the server, the file attachments associated with those data are synchronized. If you have a slow connection, it may take two or three tries before the sync is successful. It will not overwrite or hurt anything to do multiple synchronizations in a row.
+  Once the configuration and data on the device is an exact match to that of the server, the file attachments associated with those data are synchronized. If you have a slow connection, it may take two or three tries before the sync is successful. It will not overwrite or hurt anything to do multiple synchronizations in a row.
 
-When complete, click :guilabel:`OK` on the :guilabel:`Sync Outcome` dialog and back out of the Services, returning to Survey.
+  When complete, click :guilabel:`OK` on the :guilabel:`Sync Outcome` dialog and back out of the Services, returning to Survey.
 
- .. image:: /img/survey-sample-app/survey-sync-success.*
-   :alt: Sync success
-   :class: device-screen-vertical
+   .. image:: /img/survey-sample-app/survey-sync-success.*
+     :alt: Sync success
+     :class: device-screen-vertical
 
-If the sync was successful, `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ will scan through the downloaded configuration, updating its list of available forms.
+  If the sync was successful, `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ will scan through the downloaded configuration, updating its list of available forms.
 
-  .. image:: /img/survey-sample-app/survey-scanning.*
-    :alt: Survey Scanning Form Definitions
-    :class: device-screen-vertical
+    .. image:: /img/survey-sample-app/survey-scanning.*
+      :alt: Survey Scanning Form Definitions
+      :class: device-screen-vertical
 
-When that is completed you should now be presented with the list of those six sample forms.
+  When that is completed you should now be presented with the list of those six sample forms.
 
 .. _survey-sample-app-installing-learn-more:
 

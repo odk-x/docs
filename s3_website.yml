@@ -1,4 +1,4 @@
-s3_bucket: docs.odk-x.org
+s3_bucket: docs-staging.odk-x.org
 s3_endpoint: us-west-2
 
 site: ./build/dirhtml
@@ -16,7 +16,7 @@ exclude_from_upload:
   - latex
   - s3_website.yml
 
-cloudfront_distribution_id: EZKLUGDLNKXCZ
+cloudfront_distribution_id: EM0JROA3OI15L
 
 cloudfront_distribution_config:
   default_cache_behavior:
@@ -24,6 +24,6 @@ cloudfront_distribution_config:
   aliases:
     quantity: 1
     items:
-      - docs.odk-x.org
+      - docs-staging.odk-x.org
 
 cloudfront_wildcard_invalidation: true
