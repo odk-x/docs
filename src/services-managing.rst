@@ -218,7 +218,7 @@ After the administrator password is set, you can enter it to access the administ
 
 Managing Server Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:menuselection:`Settings --> Server`
+:menuselection:`Settings --> Manage ability to change Server Settings`
 
   .. image:: /img/services-managing/services-admin-server.*
     :alt: Services Admin Server Settings
@@ -226,14 +226,14 @@ Managing Server Settings
 
   - :menuselection:`Server URL` - if checked the Server URL will be locked.
   - :menuselection:`Server Sign-on Credential` - if checked the means of authenticating will be locked.
-  - :menuselection:`Username` - if checked the username field will be locked.
-  - :menuselection:`Server Password` - if checked the password field will be locked.
+  - :menuselection:`Username and/or Password` - if checked the username and password fields will be locked.
+  - :menuselection:`Allow unsafe/unsecured Authentication` - if checked Services will allow synchronization with servers not using SSL encryption.
 
 .. _services-admin-tables-settings:
 
 Managing Tables Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:menuselection:`Settings --> ODK-X Tables`
+:menuselection:`Settings --> Manage ability to change Tables-specific Settings`
 
   .. image:: /img/services-managing/services-admin-tables.*
     :alt: Services Admin Tables Settings
@@ -245,23 +245,21 @@ Managing Tables Settings
 
 Managing Device Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:menuselection:`Settings --> Prefrences`
+:menuselection:`Settings --> Manage ability to change Device Settings`
 
   .. image:: /img/services-managing/services-admin-device.*
     :alt: Services Admin Device Settings
     :class: device-screen-vertical
 
-  - :menuselection:`Default Locale` - specifies your preferred localization. By default this is set to US English. If you provide translations for your Data Management Application, this is where to enable them.
   - :menuselection:`Text Font Size` - if checked the text font size will be locked.
-  - :menuselection:`Show Splash Screen` - if checked the splash screen image and enable/disable flag will be locked.
-  - :menuselection:`Selected Splash Image` - holds the image that will be displayed in the splash screen. By default this is an ODK-X logo, but can be set to your organization's own logo or another image.
+  - :menuselection:`Change Splash Screen settings` - if checked the splash screen image and enable/disable flag will be locked.
 
 .. _services-locking-admin-settings:
 
 Locking Administrator Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you have finished configuring the administrator settings, back out of the menu. You will then see the normal settings menu, but with all appropriate settings locked. To modify these locked settings, follow the instructions for :ref:`services-access-admin-settings` and repeat the process.
+When you have finished configuring the administrator settings, click on :menuselection:`Exit admin mode`. You will then see the normal settings menu, but with all appropriate settings locked. To modify these locked settings, follow the instructions for :ref:`services-access-admin-settings` and repeat the process.
 
 .. _services-managing-reset-config:
 
