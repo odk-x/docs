@@ -1,6 +1,10 @@
 {% extends "!layout.html" %}
 {% block extrahead %}
 
+<div class="custom-banner">
+  <p>If you're encountering the "You must use a Chrome or Safari browser" error when running grunt -adb, it's likely due to the removal of the built-in DB on Chrome. Until mid-2024 (M123), you can resolve this by re-enabling it using chrome://flags/#web-sql-access.</p>
+</div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
