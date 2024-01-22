@@ -4,7 +4,7 @@
 
 .document {
     font-family: Georgia, "Times New Roman", serif;
-} 
+}
 
 /* styling for the side bar (search and menu) */
 .wy-side-nav-search {
@@ -17,7 +17,7 @@
 
 /* Styling for rst roles and directives starts */
 
-/* code-sample styling PR #90 */ 
+/* code-sample styling PR #90 */
 
 div.highlight pre, pre {
     font-size: 14px;
@@ -65,7 +65,7 @@ caption {
 
 
 caption .headerlink {
-    visibility: hidden;    
+    visibility: hidden;
 }
 
 caption .headerlink::after {
@@ -95,7 +95,7 @@ caption .headerlink::after {
 .figure{
    display: table;
  }
- 
+
 .figure p.caption{
    border-top: solid 10px #fcfcfc;
    padding: 10px;
@@ -110,7 +110,7 @@ caption .headerlink::after {
 /* admonition styling PR #178 */
 
 [class^="admonition-"] {
-      
+
                background-attachment: scroll;
                background-clip: border-box;
                background-color: rgb(231, 242, 250);
@@ -132,7 +132,7 @@ caption .headerlink::after {
                padding-left: 12px;
                padding-right: 12px;
                padding-top: 12px;
-          
+
 }
 
 /* menuselection styling in toctree PR #405 */
@@ -277,6 +277,21 @@ div[class^='wrap'] pre {
 
 div[class^='unwrap'] pre {
     white-space: pre;
+}
+
+.custom-banner {
+    background-color: #ffd700;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-banner {
+    margin-left: 0;
+  }
 }
 
 /* Utility classes ends */
