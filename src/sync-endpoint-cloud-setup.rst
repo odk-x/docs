@@ -148,7 +148,7 @@ Connecting to your Droplet
 
   .. code-block:: console
 
-    $ cd /root
+    $ cd /home/ubuntu
 
   Now, we can run our build scripts with the command:
 
@@ -269,7 +269,7 @@ Setting up a virtual machine
 
 3. Scroll down and select your authentication type. We highly recommend that use an SSH key for authentication. Copy and paste your SSH key username, and the key itself.
 
-  Use the `following resource <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/>`_ to learn more about creating an SSH key.
+  You can refer to a guide on `creating an SSH key <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/>`_ for detailed instructions.
 
   Alternatively, Azure now provides an option to automatically generate an SSH key pair (As highlighted in the figure below). This key .pem file can then be directly downloaded to the user's computer for future use to connect to the virtual machine.
 
@@ -286,6 +286,8 @@ Setting up a virtual machine
   .. image:: /img/setup-azure/azure8.png
     :width: 600
 
+  This startup script simplifies ODK-X Sync Endpoint installation by automating package updates, Docker setup, and initialization. You would just need to run the script that will be created (script_to_run.sh).
+
 6. Finally, click :guilabel:`Review + create` to actually create the machine. If you had generated the SSH key pair through Azure automatic generate key pair option, then it now gives you a prompt to download the key (.pem) file. It is important to download it and remember the path to this file in your computer for connecting to virtual machine later.
 
   .. image:: /img/setup-azure/azure9.png
@@ -294,7 +296,7 @@ Setting up a virtual machine
   .. image:: /img/setup-azure/azure10.png
     :width: 600
 
-7. In order to modify the firewall settings and change the type of incoming traffic we want to allow, we need to modify the **Networking** settings of our VM. Navigate to this section and then add an additional inbound security rule that matches the rule below. Leave the outbound rules as-is.
+7. In order to modify the firewall settings and change the type of incoming traffic we want to allow, we need to modify the **Networking** settings of our VM. Navigate to this section, and add an extra inbound security rule to allow traffic on port 40000. Leave the outbound rules unchanged.
 
   .. image:: /img/setup-azure/azure11.png
     :width: 600
@@ -368,7 +370,7 @@ Connecting to your virtual machine
 
   The script will ask you for the server's domain and some questions (as shown in the picture below) along with an administration email address to configure https on the server.
 
-  .. image:: /img/setup-azure/azure-connecting-to-virtual-machine1.png
+  .. image:: /img/setup-azure/installation-prompts.png
     :width: 600
 
   After gathering this data the script will begin the install and you should see a bunch of statements executing in your console. Wait approximately 5-10 minutes for the installation to complete.
@@ -388,7 +390,7 @@ Connecting to your virtual machine
 
     $ sudo docker ps
 
-  .. image:: /img/setup-azure/azure-connecting-to-virtual-machine2.png
+  .. image:: /img/setup-azure/view-docker-processes.png
     :width: 600
 
   If there are 9 (or 7 without https) services running under the name
@@ -407,8 +409,6 @@ Connecting to your virtual machine
    :width: 600
 
 7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-|
 
 8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
@@ -457,43 +457,43 @@ Setting up a virtual machine
   .. image:: /img/setup-aws/aws2.png
    :width: 600
 
-2. Enter a name for the instance in the :guilabel:`Name` field. Then select **Ubuntu Server 22.04 LTS (HVM), SSD Volume Type** as the Amazon Machine Image (AMI) and **t2.micro** as the instance type.
+2. Enter a name for the instance in the :guilabel:`Name` field. Then select **Ubuntu Server 22.04 LTS (HVM), SSD Volume Type** as the Amazon Machine Image (AMI) and select an instance type that meets the recommended storage needs.
 
   .. image:: /img/setup-aws/aws3.png
    :width: 600
 
   .. image:: /img/setup-aws/aws4.png
-  :width: 600
+   :width: 600
 
   .. image:: /img/setup-aws/aws5.png
-  :width: 600
+   :width: 600
 
 3. Now, generate a key pair for connecting to your instance. Click on :guilabel:`Create new key pair`, enter a name, choose type and format, then click :guilabel:`Create key pair`. Your key pair will be automatically downloaded to your local computer, ensure you store it in a secure location.
 
   .. image:: /img/setup-aws/aws6.png
-  :width: 600
+   :width: 600
 
   .. image:: /img/setup-aws/aws7.png
-  :width: 600
+   :width: 600
 
-4. In the **Network Settings** section, click on :guilabel:`Edit`. Select :guilabel:`Create security group` and provide a name and description for the security group. Then add inbound rules for the security group as shown in the images below.
+4. In the **Network Settings** section, click on :guilabel:`Edit`. Select :guilabel:`Create security group` and provide a name and description for the security group. Then add inbound rules for the security group, allowing traffic on ports 22, 443, 80, and 40000 as shown in the images below.
 
   .. image:: /img/setup-aws/aws8.png
-  :width: 600
+   :width: 600
 
   .. image:: /img/setup-aws/aws9.png
-  :width: 600
+   :width: 600
 
   .. image:: /img/setup-aws/aws10.png
-  :width: 600
+   :width: 600
 
   .. image:: /img/setup-aws/aws11.png
-  :width: 600
+   :width: 600
 
-5. Next, in the **Advanced details** section, scroll down to the :guilabel:`User data` section. Attach the :download:`cloud_init_AWS.yml</files/cloud_init_AWS.yml>` file, or alternatively, copy and paste the content of the file into the provided text area. Finally, review your instance settings and click on :guilabel:`Launch Instance`.
+5. Next, in the **Advanced details** section, scroll down to the :guilabel:`User data` section. Attach the :download:`cloud_init_AWS.yml</files/cloud_init_AWS.yml>` file, or alternatively, copy and paste the content of the file into the provided text area. This file will streamline the installation and setup process by automating tasks such as installing needed software, upgrading packages, and creating a script (script_to_run.sh) for ODK-X Sync Endpoint setup. Finally, review your instance settings and click on :guilabel:`Launch Instance`.
 
   .. image:: /img/setup-aws/aws12.png
-  :width: 600
+   :width: 600
 
 .. _sync-endpoint-setup-aws-dns:
 
@@ -511,7 +511,7 @@ Setting up a DNS Record
    :width: 600
 
   .. image:: /img/setup-aws/aws15.png
-  :width: 600
+   :width: 600
 
 3. Log into your account for your domain name registrar and DNS provider. See :ref:`Acquiring a domain name<sync-endpoint-setup-domain>` for more information and a list of registrars and DNS providers.
 
@@ -528,22 +528,12 @@ Connecting to your virtual machine
   .. image:: /img/setup-aws/aws16.png
    :width: 600
 
-2. Open up a terminal window and enter the following command to change key permissions.
-
-  .. code-block:: console
-
-    $ chmod 400 KEY_NAME.pem
-
-  Now, use the following command in order to SSH into your virtual machine.
+2. On the **Connect to instance** page, click on the **SSH Client** tab and following the instructions provided for connecting to the instance.
 
   .. image:: /img/setup-aws/aws17.png
    :width: 600
 
-  .. code-block:: console
-
-    $ ssh -i “KEY_NAME.pem” PUBLIC_DNS
-
-4. Before running our launch scripts, we need to check our logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The virtual machine may also reboot in this time.
+3. Before running our launch scripts, we need to check our logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The virtual machine may also reboot in this time.
 
   | Use the following command to get into the log directory.
 
@@ -559,7 +549,7 @@ Connecting to your virtual machine
 
   If you see the message **“The system is finally up, after X seconds”** you can proceed to the next step! Otherwise, continue to wait and check the log again.
 
-5. In order to run our launch scripts, we must first navigate back to the Ubuntu directory with the following command:
+4. In order to run our launch scripts, we must first navigate back to the Ubuntu directory with the following command:
 
   .. code-block:: console
 
@@ -573,6 +563,9 @@ Connecting to your virtual machine
 
   The script will ask you for the server's domain and an administration email address to configure https on the server.
 
+  .. image:: /img/setup-aws/installation-prompts.png
+    :width: 600
+
   After gathering this data the script will begin the install and you should see a bunch of statements executing in your console. Wait approximately 5-10 minutes for the installation to complete.
 
   .. image:: /img/setup-aws/aws18.png
@@ -584,22 +577,25 @@ Connecting to your virtual machine
 
     $ docker stack ls
 
-  If there are 8 (or 7 without https) services running under the name
+  If there are 9 (or 7 without https) services running under the name
   `syncldap`, everything is running properly.
 
-6. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+  .. image:: /img/setup-aws/check-services.png
+   :width: 600
+
+5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
 
   .. image:: /img/setup-aws/aws19.png
    :width: 600
 
-7. If you see the following screen after proceeding, you are good to go!
+6. If you see the following screen after proceeding, you are good to go!
 
   .. image:: /img/setup-aws/aws20.png
    :width: 600
 
-8. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
+7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
 
-9. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
+8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
 .. _sync-endpoint-setup-aws-launch:
 
@@ -628,6 +624,8 @@ In order to bring the stack/swarm up with HTTPS support, execute this command in
 .. code-block:: console
 
     $ docker stack deploy -c docker-compose.yml -c docker-compose-https.yml syncldap
+
+Alternatively, performing a server reboot using :code:`sudo reboot` can also help resolve this issue.
 
 .. _sync-anonymous-cloud:
 
