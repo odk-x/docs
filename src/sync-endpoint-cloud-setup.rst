@@ -370,7 +370,7 @@ Connecting to your virtual machine
 
   The script will ask you for the server's domain and some questions (as shown in the picture below) along with an administration email address to configure https on the server.
 
-  .. image:: /img/setup-azure/installation-prompts.png
+  .. image:: /img/setup-azure/prompts.png
     :width: 600
 
   After gathering this data the script will begin the install and you should see a bunch of statements executing in your console. Wait approximately 5-10 minutes for the installation to complete.
@@ -563,7 +563,7 @@ Connecting to your virtual machine
 
   The script will ask you for the server's domain and an administration email address to configure https on the server.
 
-  .. image:: /img/setup-aws/installation-prompts.png
+  .. image:: /img/setup-aws/prompts.png
     :width: 600
 
   After gathering this data the script will begin the install and you should see a bunch of statements executing in your console. Wait approximately 5-10 minutes for the installation to complete.
