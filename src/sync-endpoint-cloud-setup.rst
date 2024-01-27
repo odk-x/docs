@@ -375,7 +375,7 @@ Connecting to your virtual machine
 
   After gathering this data the script will begin the install and you should see a bunch of statements executing in your console. Wait approximately 5-10 minutes for the installation to complete.
 
-  .. image:: /img/setup-azure/sync-endpoint-installation-complete.png
+  .. image:: /img/setup-azure/setupcomplete.png
     :width: 600
 
   Once all the services have been created, we need to check if all the services are running properly with the command:
@@ -390,7 +390,7 @@ Connecting to your virtual machine
 
     $ sudo docker ps
 
-  .. image:: /img/setup-azure/view-docker-processes.png
+  .. image:: /img/setup-azure/dockerprocesses.png
     :width: 600
 
   If there are 9 (or 7 without https) services running under the name
@@ -580,7 +580,7 @@ Connecting to your virtual machine
   If there are 9 (or 7 without https) services running under the name
   `syncldap`, everything is running properly.
 
-  .. image:: /img/setup-aws/check-services.png
+  .. image:: /img/setup-aws/services.png
    :width: 600
 
 5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
