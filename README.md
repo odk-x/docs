@@ -248,10 +248,15 @@ You can also use `make` to run just a portion of the build process. See availabl
 
 ## <a name="tasks"></a>Build tasks
 
-|             | Build & Serve  |   Build    |   Copy    |   LaTeX    |   PDF      |   Style Check    | Spell Check      | Check All  |
-| ----------- | :------------: | :--------: | :-------: | :--------: | :--------: | :--------------: | :--------------: | :--------: |
-| **Options** | serve          | build      | copy      | latex      | pdf        | style-check      | spell-check      | check-all  |
+|             | Build & Serve  |   Build    |  LaTeX      |   PDF      |  Spell Check     |
+| ----------- | :------------: | :--------: |  :--------: | :--------: | :--------------: |
+| **Options** | serve          | dirhtml    |  latex      | latexpdf   |  spelling        |
 
+To run a style check, you can issue the following python command:
+
+```shell
+python3 style-test.py $(git diff origin/main --name-only) -r src
+```
 
 ## How to contribute?
 
