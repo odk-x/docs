@@ -140,7 +140,7 @@ Enabling a firewall to prevent unintended traffic
   .. image:: /img/setup-digital-ocean/do11.png
    :width: 600
 
-6. After going through the instructions for :ref:`Creating a Sample User <sync-endpoint-setup-create-user>`, we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. Go ahead and remove the following rule:
+6. After going through the instructions for :ref:`Creating a Sample User <sync-endpoint-setup-create-user>`, we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port (40000).
 
   .. image:: /img/setup-digital-ocean/do12.png
    :width: 600
@@ -160,7 +160,7 @@ Connecting to your Droplet
   .. image:: /img/setup-digital-ocean/do-console-terminal.png
    :width: 600
 
-3. Before running our launch scripts, we need to check our logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The droplet may also reboot in this time.
+3. Before running our launch scripts, you need to check your logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The droplet may also reboot in this time.
 
   | Use the following command to get into the log directory.
 
