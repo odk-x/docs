@@ -29,7 +29,7 @@ If you have not installed Services already, follow our guide for :doc:`basics-in
 Compatible Servers
 ~~~~~~~~~~~~~~~~~~~~~~
 
-It is important to match your version of ODK-X Services with an appropriate version of a :doc:`cloud-endpoints-intro`. To do this, find the release from the `Services Releases page <https://github.com/odk-x/services/releases>`_ and match it to a release from the `Sync Endpoint Releases page <https://github.com/odk-x/sync-endpoint/releases>`_. 
+It is important to match your version of ODK-X Services with an appropriate version of a :doc:`cloud-endpoints-intro`. To do this, find the release from the `Services Releases page <https://github.com/odk-x/services/releases>`_ and match it to a release from the `Sync Endpoint Releases page <https://github.com/odk-x/sync-endpoint/releases>`_.
 
 
 .. _services-managing-server-config:
@@ -39,7 +39,7 @@ Server Configuration
 
 Before you are able to synchronize data or application files to a device, you will need to configure your server settings within Services. This tells the device which server to contact and what user to authenticate. After these settings are configured, you can optionally lock them with an administrator password. See :ref:`services-managing-admin-settings`.
 
-  1. Open Services. Press the Action Button (:guilabel:`⋮`)
+  1. Open Services. Click on the hamburger icon (:guilabel:`☰`)
 
     .. image:: /img/services-managing/services-options-settings.*
       :alt: Services Menu Options
@@ -61,23 +61,6 @@ Before you are able to synchronize data or application files to a device, you wi
 
       If you are using SSL, be sure to specify :code:`https://...`
 
-    .. _services-login-with-qr:
-
-   ODK-X Services also provides a quick and easy option to login with a QR code.
-
-      1. Click on the QR icon in the top right corner.
-
-        .. image:: /img/services-managing/services-login-qr.* 
-          :alt: Services login with QR code
-          :class: device-screen-vertical
-          
-      2. The app will ask for camera permissions. Click :guilabel:`Allow`.
-      3. QR code scanner screen will appear. Scan a valid QR code.
-
-      .. note::
-
-        Use the web tab in the ODK-X Application Designer to generate QR codes.
-
   4. Authenticate user credentials
 
     .. note::
@@ -85,24 +68,15 @@ Before you are able to synchronize data or application files to a device, you wi
       If your server is configured to allow anonymous access this step is optional.
 
     a. Change the :guilabel:`Server Sign-on Credential` to :menuselection:`Username` and enter the appropriate credentials in the :guilabel:`Username` and :guilabel:`Server Password` fields.
-    b. Exit out of the :menuselection:`Server Settings` page, and then the :menuselection:`Settings` page, by using the back button.
-    c. You will then be asked to :guilabel:`Authenticate Credentials`. Select the :guilabel:`Authenticate New User` option.
+    b. Exit out of the :menuselection:`Server Settings` page, and then the :menuselection:`Settings` page, by using the back button. You should see that you are now logged in as an :guilabel:`Authenticated User`.
 
-      .. image:: /img/services-managing/services-prompt-credentials.*
-        :alt: Services Authenticate Credentials Prompt
+      .. image:: /img/services-managing/services-authenticated-user-logged-in.*
+        :alt: Services Authenticated User logged In
         :class: device-screen-vertical
 
-      .. warning::
+    .. _services-login-with-qr:
 
-        If you decline (by choosing to :guilabel:`Log Out`), or if your credential is rejected by the server, then your credential will be reset to the anonymous (unprivileged) user.
-
-    d. On the next screen select :guilabel:`Verify User Permissions`.
-
-      .. image:: /img/services-managing/services-verify-credentials.*
-        :alt: Services Authenticate Credentials Verification
-        :class: device-screen-vertical
-
-    e. After the verification succeeds, you will see a :guilabel:`Verification Successful` popup, select :guilabel:`OK`.
+    ODK-X Services also provides a quick and easy option to :ref:`login with a QR code <services-using-qr-scanner>`.
 
 .. _services-using-reset-app-server:
 
@@ -141,20 +115,20 @@ You will then see the Sync screen.
 
 Before resetting, you should verify all options are set correctly.
 
-  1. The username can be changed by pressing the :guilabel:`Change User` button. If you do not see the :guilabel:`Reset App Server` button then you need to change users to an administrator. Instructions are provided in the :ref:`services-using-change-user` section.
+If you do not see the :guilabel:`Reset App Server` button then you need to change users to an administrator. Instructions are provided in the :ref:`services-using-change-user` section.
 
-    .. warning::
+  .. warning::
 
-      If you authenticate as a different user after modifying data in the database, you could lose changes. Each user can have their own set of permissions to read, write, and delete different portions of the database. If you switch from one set of permissions to another, changes to areas that the new user is not allowed to modify may be lost.
+    If you authenticate as a different user after modifying data in the database, you could lose changes. Each user can have their own set of permissions to read, write, and delete different portions of the database. If you switch from one set of permissions to another, changes to areas that the new user is not allowed to modify may be lost.
 
-      To prevent this be sure to synchronize all changes before authenticating new users.
+    To prevent this be sure to synchronize all changes before authenticating new users.
 
-  2. The sync interaction has four options for managing file attachments. These are offered if bandwidth or storage is a concern:
+The sync interaction has four options for managing file attachments. These are offered if bandwidth or storage is a concern:
 
-    - :menuselection:`Fully Sync Attachments` - *Default* - Synchronize all file attachments with the server.
-    - :menuselection:`Upload Attachments Only` - Only upload attachments from the device to the server.
-    - :menuselection:`Download Attachments Only` - Only download attachments from the server to the device.
-    - :menuselection:`Do Not Sync Attachments` -  Do not sync any attachments.
+  - :menuselection:`Fully Sync Attachments` - *Default* - Synchronize all file attachments with the server.
+  - :menuselection:`Upload Attachments Only` - Only upload attachments from the device to the server.
+  - :menuselection:`Download Attachments Only` - Only download attachments from the server to the device.
+  - :menuselection:`Do Not Sync Attachments` -  Do not sync any attachments.
 
   .. note::
 
@@ -163,10 +137,6 @@ Before resetting, you should verify all options are set correctly.
 Click on :guilabel:`Reset App Server`. A confirmation dialog will popup asking you to confirm resetting the App Server. Again, this can delete all data on this Cloud Endpoint! If you are sure you want to continue, click :guilabel:`Reset`.
 
 Services will contact the ODK-X Cloud Endpoint and attempt to push all configuration and data currently on the tablet up to the specified Cloud Endpoint. A progress dialog will be displayed and, alternatively, the status of resetting the app server can be obtained by looking at the notifications generated by Services in the notification area.
-
-.. note::
-
-  The sync will proceed whether or not you remain on this page and you can use the back button to back out of it and return to your work.
 
 .. warning::
 
@@ -188,15 +158,15 @@ Administer settings allow you to lock in certain settings so that they cannot be
 Setting an Administrator Password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  1. Open Services. Press the Action Button (:guilabel:`⋮`)
+  1. Open Services. Click on the hamburger icon (:guilabel:`☰`).
 
     .. image:: /img/services-managing/services-options-settings.*
       :alt: Services Menu Options
       :class: device-screen-vertical
 
-  2. Select :menuselection:`Settings --> Enable user restrictions`
+  2. Select :menuselection:`Settings --> Restrictions`
 
-    .. image:: /img/services-managing/services-settings.*
+    .. image:: /img/services-managing/services-restrictions-settings.*
       :alt: Services Settings Menu
       :class: device-screen-vertical
 
@@ -248,6 +218,7 @@ After the administrator password is set, you can enter it to access the administ
 
 Managing Server Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:menuselection:`Settings --> Manage ability to change Server Settings`
 
   .. image:: /img/services-managing/services-admin-server.*
     :alt: Services Admin Server Settings
@@ -258,15 +229,11 @@ Managing Server Settings
   - :menuselection:`Username and/or Password` - if checked the username and password fields will be locked.
   - :menuselection:`Allow unsafe/unsecured Authentication` - if checked Services will allow synchronization with servers not using SSL encryption.
 
-    .. warning::
-
-      This option should only be used for testing. When deployed to the field you should always enable SSL encryption.
-
-
 .. _services-admin-tables-settings:
 
 Managing Tables Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:menuselection:`Settings --> Manage ability to change Tables-specific Settings`
 
   .. image:: /img/services-managing/services-admin-tables.*
     :alt: Services Admin Tables Settings
@@ -278,6 +245,7 @@ Managing Tables Settings
 
 Managing Device Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:menuselection:`Settings --> Manage ability to change Device Settings`
 
   .. image:: /img/services-managing/services-admin-device.*
     :alt: Services Admin Device Settings
@@ -291,7 +259,7 @@ Managing Device Settings
 Locking Administrator Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you have finished configuring the administrator settings, back out of the menu. You will then see the normal settings menu, but with all appropriate settings locked. To modify these locked settings, follow the instructions for :ref:`services-access-admin-settings` and repeat the process.
+When you have finished configuring the administrator settings, click on :menuselection:`Exit admin mode`. You will then see the normal settings menu, but with all appropriate settings locked. To modify these locked settings, follow the instructions for :ref:`services-access-admin-settings` and repeat the process.
 
 .. _services-managing-reset-config:
 
