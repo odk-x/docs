@@ -56,4 +56,3 @@ A complementary description is provided in the user-level documentation. The too
             /survey/templates/... -- `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ handlebars templates
         /output     - holds logging files, exported data
         /permanent  - available for device-only content (e.g., map tiles)
-
