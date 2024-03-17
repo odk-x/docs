@@ -53,7 +53,7 @@ Setting up ODK-X Notify
 
     .. image:: /img/notify-setup/notify-setup.*
 
-  4. To use the Skunkworks-Parrot App, the user needs to create a firebase project and add that project's information in the configure window. The step-by-step instructions can be found in this `guide <https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_.
+  4. To use the Skunkworks-Parrot App, the user needs to create a firebase project and add that project's information in the configure window. The step-by-step instructions can be found in this `guide < https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_.
 
   5. After adding all the required information in configure window, Click :menuselection:`Save`.
 
@@ -67,7 +67,7 @@ Setting up ODK-X Notify
 
 1. Download all the folders from this `link <https://drive.google.com/drive/folders/1_WOhFrUDW2yLjeOaI5gW2AKiq-akGB78?usp=sharing>`_ and move them to :file:`sdcard/opendatakit/default/config/tables/` directory in your android device.
 
-2. Place “google-services.json” file obtained from step 8 of `firebase setup <https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_ under the :file:`sdcard/opendatakit/default/config/assets/` directory.
+2. Place “google-services.json” file obtained from step 8 of `firebase setup  <https://drive.google.com/file/d/1OBs5mITcIMREp_q7qKwEwO4XRQjzNnWj/view>`_ under the :file:`sdcard/opendatakit/default/config/assets/` directory.
 
 3. Open the ODK-X Tables app. Tables app will automatically generate all the required files for server setup. After you see the message “Initialization completed successfully” you can close the ODK-X Tables app.
 
