@@ -344,7 +344,7 @@ Assuming you have created a :file:`testForm.xlsx`, the appropriate directory str
   :header: "branch_label", "url", "clause", "condition", "type", "values_list", "display.text", "display.hint"
 
   "testForm",
-  , "''?' + opendatakit.getHashString('testForm')",,, "external_link",,"Open form",
+  , "''?' + odkSurvey.getHashString('testForm')",,, "external_link",,"Open form",
   ,,"exit section",
 
 The following changes will also need to be made to the :file:`framework.xlsx` **choices worksheet**
@@ -355,6 +355,10 @@ The following changes will also need to be made to the :file:`framework.xlsx` **
   "test_forms", "testForm", "testForm"
 
 The changes to the *choices* sheet add the *testForm* form as one of the choices that is shown in the :tc:`user_branch` prompt (a user-directed branching prompt type). The changes on the *survey* sheet add a branch label, :tc:`testForm`, that matches the :th:`data_value` from the *choices* sheet (this branch label will be jumped to if the user selects the :tc:`testForm` selection on the :tc:`user_branch` screen). The new branch label then renders an :tc:`external_link` prompt type that has the necessary arguments to open the *testForm*.
+
+.. note::
+
+   You should run :file:`framework.xlsx` through the XLSX Converter to save the changes, as the :file:`framework.xlsx` should be converted again to include the latest changes.
 
 
 .. _build-app-generate-formdef:
