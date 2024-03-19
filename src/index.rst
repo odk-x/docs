@@ -162,7 +162,8 @@ The :doc:`tables-sample-app` walks you through the process of using a basic tabl
   sync-endpoint
   sync-endpoint-cloud-setup
   sync-endpoint-manual-setup
-  sync-endpoint-user-instructions.rst
+  sync-endpoint-user-instructions
+  ssh-tunneling
 
 .. toctree::
   :maxdepth: 2

@@ -132,17 +132,12 @@ Enabling a firewall to prevent unintended traffic
   .. image:: /img/setup-digital-ocean/do-firewall.png
    :width: 600
 
-5. Set a name for your firewall and modify the inbound rules to match the inbound rules specified in the picture below (SSH, HTTP, HTTPS and port (40000) for admin interface). Attach the firewall to the desired droplet. Leave the outbound rules as-is.
+5. Set a name for your firewall and modify the inbound rules to match the inbound rules specified in the picture below (SSH, HTTP, and HTTPS). Attach the firewall to the desired droplet. Leave the outbound rules as-is and click on the :guilabel:`Create Firewall` button.
 
   .. image:: /img/setup-digital-ocean/do10.png
    :width: 600
 
   .. image:: /img/setup-digital-ocean/do11.png
-   :width: 600
-
-6. After going through the instructions for :ref:`Creating a Sample User <sync-endpoint-setup-create-user>`, we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port (40000).
-
-  .. image:: /img/setup-digital-ocean/do12.png
    :width: 600
 
 .. _sync-endpoint-setup-digital-ocean-connecting:
@@ -215,18 +210,19 @@ Connecting to your Droplet
    :width: 600
 
   If there are 9 (or 7 without https) services running under the name `syncldap`, everything is running properly.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than leaving port 40000 open on the firewall. You can find detailed instructions on how you can do this on the :ref:SSH tunneling <ssh-tunneling> page.
 
-5. Now, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+6. Now, navigate to https://localhost:port within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
 
   .. image:: /img/setup-digital-ocean/do7.png
    :width: 600
 
-6. If you see the following screen after proceeding, you are good to go!
+7. If you see the following screen after proceeding, you are good to go!
 
   .. image:: /img/setup-digital-ocean/do8.png
    :width: 600
 
-7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
+8. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
 
 .. _sync-endpoint-setup-digital-ocean-launching:
 
@@ -310,11 +306,6 @@ Setting up a virtual machine
     :width: 600
 
   .. image:: /img/setup-azure/azure10.png
-    :width: 600
-
-7. In order to modify the firewall settings and change the type of incoming traffic we want to allow, we need to modify the **Networking** settings of our VM. Navigate to this section, and add an extra inbound security rule to allow traffic on port 40000. Leave the outbound rules unchanged.
-
-  .. image:: /img/setup-azure/azure11.png
     :width: 600
 
 .. _sync-endpoint-setup-azure-dns:
@@ -414,7 +405,7 @@ Connecting to your virtual machine
 
   There should be 9 services (or 7 without https) as shown by docker stack ls while 7 services (or 6 without https) actively running as shown by the command ``docker ps``.
 
-5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than leaving port 40000 (the port on which the admin portal is running) open on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
 
   .. image:: /img/setup-azure/azure14.png
    :width: 600
@@ -425,8 +416,6 @@ Connecting to your virtual machine
    :width: 600
 
 7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
 .. _sync-endpoint-setup-azure-launch:
 
@@ -599,7 +588,7 @@ Connecting to your virtual machine
   .. image:: /img/setup-aws/services.png
    :width: 600
 
-5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than adding a rule that accepts incomming traffic to the admin interface port(port 40000) on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
 
   .. image:: /img/setup-aws/aws19.png
    :width: 600
@@ -610,8 +599,6 @@ Connecting to your virtual machine
    :width: 600
 
 7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
 .. _sync-endpoint-setup-aws-launch:
 
