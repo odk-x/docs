@@ -54,7 +54,7 @@ Cleaning App Designer
 
 Your freshly installed copy of Application Designer comes with lots of example forms, tables, and configurations. This is useful for learning the tools and as reference when building our application, the files can be found in the :file:`app/config/tables` directory. 
 
-After building your own application, you may choose to delete all the examples forms and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
+After building your own application, you may choose to delete all the example forms and configurations before pushing your files to your device. The files can be very large and take up a lot of space on the device.
 
 To delete all the example forms and configurations, open the terminal and type *grunt empty*, this removes all the files and creates an empty app-designer folder to work with.  
 
