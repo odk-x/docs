@@ -16,7 +16,7 @@ Replace the placeholders with your actual values.
 .. image:: /img/ssh-tunneling/connect-to-server.png
     :width: 600
 
-Once connected, you've created an SSH tunnel, allowing you to access the admin portal locally.
+2. Once connected, you've created an SSH tunnel, allowing you to access the admin portal locally. Go to https://localhost:local_port to access the admin portal.
 
 .. image:: /img/ssh-tunneling/local-access.png
     :width: 600

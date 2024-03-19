@@ -212,7 +212,7 @@ Connecting to your Droplet
   If there are 9 (or 7 without https) services running under the name `syncldap`, everything is running properly.
 5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than leaving port 40000 open on the firewall. You can find detailed instructions on how you can do this on the :ref:SSH tunneling <ssh-tunneling> page.
 
-6. Now, navigate to https://localhost:port within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+6. Now, navigate to https://localhost:local_port within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
 
   .. image:: /img/setup-digital-ocean/do7.png
    :width: 600
