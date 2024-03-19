@@ -5,7 +5,7 @@ SSH Tunneling for ODK-X Sync Endpoint
 
 Secure Shell (SSH) tunneling provides a secure way to access services remotely. The following instructions explain how to set up an SSH tunnel to access the admin portal for the ODK-X Sync Endpoint deployed in a cloud environment.
 
-1. Open your terminal or command prompt on your local machine and run te following command:
+1. Open your terminal or command prompt on your local machine and run the following command:
 
    .. code-block:: console
 

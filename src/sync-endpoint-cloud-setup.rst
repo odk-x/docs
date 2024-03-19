@@ -588,7 +588,7 @@ Connecting to your virtual machine
   .. image:: /img/setup-aws/services.png
    :width: 600
 
-5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than adding a rule that accepts incomming traffic to the admin interface port(port 40000) on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than adding a rule that accepts incoming traffic to the admin interface port(port 40000) on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
 
   .. image:: /img/setup-aws/aws19.png
    :width: 600
