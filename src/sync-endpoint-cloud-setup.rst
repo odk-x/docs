@@ -42,8 +42,8 @@ Option 1: DigitalOcean console
 |   -	:ref:`Setting up a DigitalOcean account <sync-endpoint-setup-digital-ocean-account>`
 |   -	:ref:`Setting up a Droplet, DigitalOcean’s name for a server you can access and manage <sync-endpoint-setup-digital-ocean-droplet>`
 |   -	:ref:`Setting up a DNS record <sync-endpoint-setup-digital-ocean-dns>`
-|   -	:ref:`Connecting to your Droplet <sync-endpoint-setup-digital-ocean-connecting>`
 |   -	:ref:`Enabling a firewall to prevent unintended traffic <sync-endpoint-setup-digital-ocean-firewall>`
+|   -	:ref:`Connecting to your Droplet <sync-endpoint-setup-digital-ocean-connecting>`
 |   -	:ref:`Launching the ODK-X Server <sync-endpoint-setup-digital-ocean-launching>`
 
 .. _sync-endpoint-setup-digital-ocean-account:
@@ -63,7 +63,7 @@ Setting up a Droplet
   .. image:: /img/setup-digital-ocean/create-droplet.png
    :width: 600
 
-2. In the Distributions tab, on the :guilabel:`Create Droplet` screen; select *18.04 (LTS) x64* under the Ubuntu dropdown. Next, choose a plan and data center region based on your needs.
+2. On the :guilabel:`Create Droplets` screen, select a region. On the OS tab, select *Ubuntu* then select *22.04 (LTS) x64* as the version. Next, choose a plan based on your needs.
 
   .. note::
     Sync Endpoint requires more than *2GB* of space to run, this means that plans below *4GB* will not work.
@@ -74,7 +74,14 @@ Setting up a Droplet
   .. image:: /img/setup-digital-ocean/do-plan.png
     :width: 600
 
-3. Scroll down to the :guilabel:`Select additional options`, click on the User data checkbox, copy and paste the contents of the :download:`cloud_init_DO.yml</files/cloud_init_DO.yml>` file in the text area provided.
+3. The next step is :guilabel:`Authentication`. There are two authentication types to select from; **SSH Keys** and **Password**. We highly recommend that you use an SSH key for authentication. Copy and paste your SSH key username, and the key itself.
+
+ You can refer to this guide on `creating an SSH key <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/>`_ for detailed instructions.
+
+  .. image:: /img/setup-digital-ocean/do-authentication.png
+   :width: 600
+
+4. Scroll down to the :guilabel:`Advanced options`, click on the *Add Initialization scripts (free)* checkbox, copy and paste the contents of the :download:`cloud_init_DO.yml</files/cloud_init_DO.yml>` file in the text area provided.
 
   .. image:: /img/setup-digital-ocean/do-userdata.png
     :width: 600
@@ -82,52 +89,73 @@ Setting up a Droplet
   .. image:: /img/setup-digital-ocean/do-userdata2.png
     :width: 600
 
-4. The next step is :guilabel:`Authentication`. There are two authentication types to select from; **SSH Keys** and **Password**. We highly recommend that you use an SSH key for authentication. Copy and paste your SSH key username, and the key itself.
+5. After adding the initialization script, scroll down to :guilabel:`Finalize Details`. Enter a name for the droplet and click on the :guilabel:`Create Droplet` button. This might take a few minutes to set up.
 
- Use the `following resource <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/>`_ to learn more about creating an SSH key.
-
-  .. image:: /img/setup-digital-ocean/do-authentication.png
-   :width: 600
-
-5. After the authentication is set up, you can choose to name the droplet; then scroll down and click the :guilabel:`Create Droplet` button. This might take a few minutes to set up.
+  .. image:: /img/setup-digital-ocean/click-create-droplet.png
+    :width: 600
 
 .. _sync-endpoint-setup-digital-ocean-dns:
 
 Setting up a DNS Record
 """"""""""""""""""""""""
 
-1. On the resources tab of the main DigitalOcean page, click on the :guilabel:`Droplet` you created.
+1. On the resources tab of the main DigitalOcean page, hover over the IP address of the droplet you just created and click on the :guilabel:`Copy` text that shows up to copy the IP address of the droplet.
 
   .. image:: /img/setup-digital-ocean/do-droplets.png
    :width: 600
 
-2. Obtain the IP address of the droplet you created.
+2. Log into your account for your domain name registrar and DNS provider. See :ref:`Acquiring a domain name<sync-endpoint-setup-domain>` for more information and a list of registrars and DNS providers.
 
-3. Log into your account for your domain name registrar and DNS provider. See :ref:`Acquiring a domain name<sync-endpoint-setup-domain>` for more information and a list of registrars and DNS providers.
+3. Add a dns 'A' record for the domain or subdomain you would like to use for the Sync Endpoint with your droplet's IP address.
 
-4. Add a dns 'A' record for the domain or subdomain you would like to use for the Sync Endpoint with your droplet's IP address.
+.. _sync-endpoint-setup-digital-ocean-firewall:
+
+Enabling a firewall to prevent unintended traffic
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+1. On the resources tab of the main DigitalOcean page, click on the :guilabel:`Droplet` you created.
+
+  .. image:: /img/setup-digital-ocean/syncendpoint-droplet.png
+   :width: 600
+
+2. On the droplet page, click on :guilabel:`Networking`, this will take you to the droplet's networking page.
+  .. image:: /img/setup-digital-ocean/do-networking.png
+   :width: 600
+
+3. Next, scroll down to the :guilabel:`Firewalls` section and click on the :guilabel:`Edit` button.
+
+  .. image:: /img/setup-digital-ocean/do-edit-firewall.png
+   :width: 600
+
+4. On the :guilabel:`Firewalls` tab of the :guilabel:`Networking` page,  and click on the :guilabel:`Create Firewall` button.
+
+  .. image:: /img/setup-digital-ocean/do-firewall.png
+   :width: 600
+
+5. Set a name for your firewall and modify the inbound rules to match the inbound rules specified in the picture below (SSH, HTTP, and HTTPS). Attach the firewall to the desired droplet. Leave the outbound rules as-is and click on the :guilabel:`Create Firewall` button.
+
+  .. image:: /img/setup-digital-ocean/do10.png
+   :width: 600
+
+  .. image:: /img/setup-digital-ocean/do11.png
+   :width: 600
 
 .. _sync-endpoint-setup-digital-ocean-connecting:
 
 Connecting to your Droplet
 """""""""""""""""""""""""""""
 
-1. On the resources tab of the main DigitalOcean page, click on the :guilabel:`Droplet` you created.
-
-  .. image:: /img/setup-digital-ocean/do-droplets.png
-   :width: 600
-
-2. Now, click on the :guilabel:`Console` link in the upper-right corner of the page
+1. On the droplet page, click on the :guilabel:`Console` link in the upper-right corner of the page
 
   .. image:: /img/setup-digital-ocean/do-console.png
    :width: 600
 
-3. A console window will now open up. If you chose the **password** authentication, you will be asked to enter your username and then asked for a password.
+2. A console window will now open up. If you chose the **password** authentication, you will be asked to enter your username and then asked for a password.
 
   .. image:: /img/setup-digital-ocean/do-console-terminal.png
    :width: 600
 
-4. Before running our launch scripts, we need to check our logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The droplet may also reboot in this time.
+3. Before running our launch scripts, you need to check your logs to ensure that all the packages have been successfully installed, which should take about 2-3 minutes. The droplet may also reboot in this time.
 
   | Use the following command to get into the log directory.
 
@@ -141,14 +169,17 @@ Connecting to your Droplet
 
     $ tail cloud-init-output.log
 
+  .. image:: /img/setup-digital-ocean/do-check-logs.png
+   :width: 600
+
   If you see the message **“The system is finally up, after X seconds”** you can proceed to the next step! Otherwise, continue to wait and check the log file again.
 
-5. In order to run our launch scripts, we must first navigate back to
+4. In order to run our launch scripts, we must first navigate back to
    the root directory with the following command:
 
   .. code-block:: console
 
-    $ cd /home/ubuntu
+    $ cd /home/root
 
   Now, we can run our build scripts with the command:
 
@@ -156,15 +187,18 @@ Connecting to your Droplet
 
     $ ./script_to_run.sh
 
+  .. image:: /img/setup-digital-ocean/do-run-script.png
+   :width: 600
+
   The script will ask you for the server's domain and an
   administration email address to configure https on the server.
+
+  .. image:: /img/setup-digital-ocean/do-prompt.png
+   :width: 600
 
   After gathering this data the script will begin the install and you
   should see a bunch of statements executing in your console. Wait
   approximately 5-10 minutes for the installation to complete.
-
-  .. image:: /img/setup-digital-ocean/do5.png
-   :width: 600
 
   Once all the services have been created, we need to check if all the services are running properly with the command:
 
@@ -172,12 +206,13 @@ Connecting to your Droplet
 
     $ docker stack ls
 
-  If there are 8 (or 7 without https) services running under the name `syncldap`, everything is running properly.
-
-6. From the **Droplets** section of the console, obtain the IP address of the droplet you created. Now, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
-
-  .. image:: /img/setup-digital-ocean/do6.png
+  .. image:: /img/setup-digital-ocean/do5.png
    :width: 600
+
+  If there are 9 (or 7 without https) services running under the name `syncldap`, everything is running properly.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than leaving port 40000 open on the firewall. You can find detailed instructions on how you can do this on the :ref:SSH tunneling <ssh-tunneling> page.
+
+6. Now, navigate to https://localhost:local_port within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
 
   .. image:: /img/setup-digital-ocean/do7.png
    :width: 600
@@ -188,29 +223,6 @@ Connecting to your Droplet
    :width: 600
 
 8. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-.. _sync-endpoint-setup-digital-ocean-firewall:
-
-Enabling a firewall to prevent unintended traffic
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-1. On the DigitalOcean console, click on the arrow beside the **MANAGE** dropdown and navigate to the *Networking* section. Go to the *Firewalls* section and click :guilabel:`Create Firewall`.
-
-  .. image:: /img/setup-digital-ocean/do-networking.png
-   :width: 600
-
-2. Set a name for your firewall and modify the inbound rules to match the inbound rules specified in the picture below (SSH, HTTP, HTTPS and port for admin interface). Attach the firewall to the desired droplet. Leave the outbound rules as-is.
-
-  .. image:: /img/setup-digital-ocean/do10.png
-   :width: 600
-
-  .. image:: /img/setup-digital-ocean/do11.png
-   :width: 600
-
-3. After going through the instructions for “Creating a Sample User,” we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. Go ahead and remove the following rule:
-
-  .. image:: /img/setup-digital-ocean/do12.png
-   :width: 600
 
 .. _sync-endpoint-setup-digital-ocean-launching:
 
@@ -294,11 +306,6 @@ Setting up a virtual machine
     :width: 600
 
   .. image:: /img/setup-azure/azure10.png
-    :width: 600
-
-7. In order to modify the firewall settings and change the type of incoming traffic we want to allow, we need to modify the **Networking** settings of our VM. Navigate to this section, and add an extra inbound security rule to allow traffic on port 40000. Leave the outbound rules unchanged.
-
-  .. image:: /img/setup-azure/azure11.png
     :width: 600
 
 .. _sync-endpoint-setup-azure-dns:
@@ -398,7 +405,7 @@ Connecting to your virtual machine
 
   There should be 9 services (or 7 without https) as shown by docker stack ls while 7 services (or 6 without https) actively running as shown by the command ``docker ps``.
 
-5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than leaving port 40000 (the port on which the admin portal is running) open on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
 
   .. image:: /img/setup-azure/azure14.png
    :width: 600
@@ -409,8 +416,6 @@ Connecting to your virtual machine
    :width: 600
 
 7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
 .. _sync-endpoint-setup-azure-launch:
 
@@ -583,7 +588,7 @@ Connecting to your virtual machine
   .. image:: /img/setup-aws/services.png
    :width: 600
 
-5. After obtaining the IP address of the virtual machine you created, navigate to https://[IP_ADDRESS]:40000 within your browser in order to access the services screen. It will warn you about your connection not being private but should give you the option to proceed at the bottom.
+5. Next, set up SSH tunneling for the Sync Endpoint admin portal. This is the recommended method of accessing the admin interface rather than adding a rule that accepts incoming traffic to the admin interface port(port 40000) on the firewall. This ensures that the admin interface is not publicly accessible. Detailed instructions on how to set up SSH tunneling can be found on the :ref:`SSH tunneling <ssh-tunneling>` page.
 
   .. image:: /img/setup-aws/aws19.png
    :width: 600
@@ -594,8 +599,6 @@ Connecting to your virtual machine
    :width: 600
 
 7. Read our section on :ref:`Creating a Sample User <sync-endpoint-setup-create-user>` to learn how to create a user from within the admin interface.
-
-8. After going through the instructions for *Creating a Sample User,* we no longer need access to this admin interface anymore. This admin interface is running on port 40000, and in order to ensure that this admin interface is not publicly accessible to anyone, we want to remove the rule that accepts incoming traffic to that port. We do this the same way we added the rules above.
 
 .. _sync-endpoint-setup-aws-launch:
 
