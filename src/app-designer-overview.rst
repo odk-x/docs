@@ -12,7 +12,7 @@ The ODK-X Application Designer is accessed through a :program:`Chrome` browser. 
 
 This screen has 6 tabs:
 
-  - :ref:`Preview <app-designer-overview-preview>` (shown above) - used to preview `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ forms and ODK-X Tables list-, detail- and graph- views (future). Displays these within a user-selected device geometry.
+  - :ref:`Preview <app-designer-overview-preview>` (shown above) - used to preview `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_ forms and ODK-X Tables list-, detail- and graph- views (in future). Displays these within a user-selected device geometry.
   - :ref:`Customize <app-designer-overview-customize>` - a visual style and visual theme editor. This editor immediately shows the effects of changes to specific settings in your CSS file. This functionality is undergoing changes and not recommended.
   - :ref:`XLSX Converter <app-designer-overview-xlsx>` - converts the XLSX description of a form into a :file:`formDef.json` representation used by `ODK-X Survey <https://docs.odk-x.org/survey-using/>`_.
   - :ref:`File Browser <app-designer-overview-file>` - enables browsing of the directory structure that will exist on your Android device so that you can access or view other files (currently necessary for accessing the ODK-X Tables list- and detail- views).
