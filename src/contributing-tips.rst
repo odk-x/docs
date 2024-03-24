@@ -61,7 +61,7 @@ Discuss issues before working
 
 Take the time to clarify the needs and scope of an issue before committing to work on it. Especially for coding tasks, make sure you state your understanding and your plan before working.
 
-If you have a question, ask. Don't guess.
+If you have a question, ask. Don't make assumptions.
 
 .. note::
 
@@ -115,7 +115,7 @@ If you get stuck while working
 It is okay to abandon an issue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes you simply cannot complete work you have said you were going to complete. This could happen because you don't have all the required skills or knowledge to complete the work, or because the issue cannot actually be completed as scoped, or because you don't have the time.
+Sometimes you simply cannot complete work you have said you were going to complete. This could happen if you lack the necessary skills or knowledge to complete the work, or because the issue cannot actually be completed as scoped, or because you don't have the time.
 
 Please let the community know in the issue discussion. You can do that by leaving a comment asking to be unassigned from the issue.
 

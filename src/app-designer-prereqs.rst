@@ -37,7 +37,7 @@ You must install the following software on your computer in order to use Applica
 
 .. warning::
 
-  Android Studio is not supported on the Windows Linux subsystem, so you will not be able to run Application Designer if you are using it. 
+  Android Studio is not supported on the Windows Subsystem for Linux (WSL). so you will not be able to run Application Designer if you are using it. 
 
 .. _app-designer-prereqs-java:
 
@@ -178,8 +178,8 @@ To install the Android SDK:
   
     .. code-block:: console
 
-      $ /Android/cmdline-tools/latest/bin>
-      $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list
+      $ \Android\cmdline-tools\latest\bin
+      $ \Android\cmdline-tools\latest/bin>sdkmanager.bat --list
    
 
   9. Select the latest versions of the following packages by typing :guilabel:`sdkmanager` followed by the package path wrapped in quotes and separated by a space:
@@ -189,21 +189,21 @@ To install the Android SDK:
     
     .. code-block:: console
 
-      $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3"
+      $ \Android\cmdline-tools\latest\bin>sdkmanager "platform-tools" "build-tools;30.0.3"
     
     
     If there are extra packages you wish to install, you may add them by passing the package path wrapped in quotes, separated with a space. 
   
     .. code-block:: console
 
-      $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3" "extra-package-path"
+      $ \Android\cmdline-tools\latest\bin>sdkmanager "platform-tools" "build-tools;30.0.3" "extra-package-path"
   
   10. Accept the license agreement(s) by entering :guilabel:`y` to the :guilabel:`Accept? (y/N):` prompt.
    
 
 Among many other things, this will install the Android Debug Bridge software on your computer. This tool enables the scripted pushing of files and APKs down to your Android device. See `adb (Android Debug Bridge) <https://developer.android.com/studio/command-line/adb.html>`_ for a listing of its capabilities.
 
-Next, on Windows open a :program:`PowerShell` or :program:`cmd` window and on Mac/Unix open a :program:`terminal` window. Type:
+Next, on Windows open a :program:`PowerShell` or :program:`cmd` window and on Mac/Unix, open a :program:`terminal` window. Type:
 
 .. code-block:: console
 
