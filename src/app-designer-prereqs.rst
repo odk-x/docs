@@ -37,7 +37,7 @@ You must install the following software on your computer in order to use Applica
 
 .. warning::
 
-  Android Studio is not supported on the Windows Subsystem for Linux (WSL). so you will not be able to run Application Designer if you are using it. 
+  Android Studio is not supported on the Windows Subsystem for Linux (WSL), so you will not be able to run Application Designer if you are using it. 
 
 .. _app-designer-prereqs-java:
 
@@ -178,8 +178,8 @@ To install the Android SDK:
   
     .. code-block:: console
 
-      $ \Android\cmdline-tools\latest\bin
-      $ \Android\cmdline-tools\latest/bin>sdkmanager.bat --list
+      $ /Android/cmdline-tools/latest/bin
+      $ \Android\cmdline-tools\latest\bin>sdkmanager.bat --list
    
 
   9. Select the latest versions of the following packages by typing :guilabel:`sdkmanager` followed by the package path wrapped in quotes and separated by a space:
