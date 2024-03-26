@@ -37,7 +37,7 @@ You must install the following software on your computer in order to use Applica
 
 .. warning::
 
-  Android Studio is not supported on the Windows Linux subsystem, so you will not be able to run Application Designer if you are using it. 
+  Android Studio is not supported on the Windows Subsystem for Linux (WSL), so you will not be able to run Application Designer if you are using it. 
 
 .. _app-designer-prereqs-java:
 
@@ -178,7 +178,7 @@ To install the Android SDK:
   
     .. code-block:: console
 
-      $ /Android/cmdline-tools/latest/bin>
+      $ /Android/cmdline-tools/latest/bin
       $ /Android/cmdline-tools/latest/bin>sdkmanager.bat --list
    
 
@@ -203,7 +203,7 @@ To install the Android SDK:
 
 Among many other things, this will install the Android Debug Bridge software on your computer. This tool enables the scripted pushing of files and APKs down to your Android device. See `adb (Android Debug Bridge) <https://developer.android.com/studio/command-line/adb.html>`_ for a listing of its capabilities.
 
-Next, on Windows open a :program:`PowerShell` or :program:`cmd` window and on Mac/Unix open a :program:`terminal` window. Type:
+Next, on Windows open a :program:`PowerShell` or :program:`cmd` window and on Mac/Unix, open a :program:`terminal` window. Type:
 
 .. code-block:: console
 

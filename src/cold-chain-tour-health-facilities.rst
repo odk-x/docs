@@ -25,7 +25,7 @@ The list of health facilities is presented as a *Map View*. The list portion of 
 
   - **View All Health Facilities**: This screen is reached by pressing the :guilabel:`View All Health Facilities` button on the :ref:`cold-chain-tour-regions-menu` page. It lists every health facility located inside of the specified region. It is pictured above.
 
-  - **Filter Health Facilities By Type**: This screen is reached by pressing the :guilabel:`Filter Health Facilities by Type` button on the :ref:`cold-chain-tour-regions-menu` page. It lists each type of health facility contained in the region, and a the number of health facilities that match the type:
+  - **Filter Health Facilities By Type**: This screen is reached by pressing the :guilabel:`Filter Health Facilities by Type` button on the :ref:`cold-chain-tour-regions-menu` page. It lists each type of health facility contained in the region, and the number of health facilities that match the type:
 
       .. image:: /img/cold-chain-tour/cold-chain-health-facility-list-region-nav.*
         :alt: Health Facility Types

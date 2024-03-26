@@ -10,7 +10,7 @@ Managing ODK-X Services
 Prerequisites
 ---------------------
 
-ODK-X Services is a prerequisite to all Data Management Application. You will also need the ODK-X tools:
+ODK-X Services is a prerequisite to all Data Management Applications. You will also need the ODK-X tools:
 
   - :doc:`app-designer-intro`
   - :doc:`cloud-endpoints-intro`
