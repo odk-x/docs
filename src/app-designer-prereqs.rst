@@ -189,14 +189,14 @@ To install the Android SDK:
     
     .. code-block:: console
 
-      $ \Android\cmdline-tools\latest\bin>sdkmanager "platform-tools" "build-tools;30.0.3"
+      $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3"
     
     
     If there are extra packages you wish to install, you may add them by passing the package path wrapped in quotes, separated with a space. 
   
     .. code-block:: console
 
-      $ \Android\cmdline-tools\latest\bin>sdkmanager "platform-tools" "build-tools;30.0.3" "extra-package-path"
+      $ /Android/cmdline-tools/latest/bin>sdkmanager "platform-tools" "build-tools;30.0.3" "extra-package-path"
   
   10. Accept the license agreement(s) by entering :guilabel:`y` to the :guilabel:`Accept? (y/N):` prompt.
    
