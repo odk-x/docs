@@ -5,7 +5,7 @@ Application Designer Prerequisites
 
 You must install the following software on your computer in order to use Application Designer:
 
-  - |java_link| - Java is required by the Android SDK
+  - |java_link| - Java is required by the Android SDK. When downloading Java, ensure you download a version higher than 8, I will recommend Java 17.
   - |chrome_link| - Google's :program:`Chrome` browser.
   - |nodejs_link| - a framework for easily building fast, scalable applications. Download Version 6.2.2 or higher and install it from NodeJS
   - |grunt_link| - a task-based scripting environment (installation is described below).
@@ -13,7 +13,7 @@ You must install the following software on your computer in order to use Applica
 
 .. |java_link| raw:: html
 
-  <a href="https://java.com/en/download/" target="_blank">Java</a>
+  <a href="https://java.com/en/download/" target="_blank">Java</a> 
 
 .. |chrome_link| raw:: html
 
