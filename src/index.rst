@@ -5,8 +5,19 @@
 ODK-X Documentation
 ================================================
 
-.. _odk-x-introduction:
+TL;DR
+--------------
 
+ODK-X Tool Suite is a set of free and open-source software designed for data collection, management, and utilization in resource-constrained environments. It offers features like two-way data sync, offline data collection, linked surveys, customizable survey flows, user access control, and more. The suite includes tools like ODK-X Survey for data collection, ODK-X Tables for data curation and visualization, ODK-X Services for data synchronization, and ODK-X Application Designer for building custom applications.
+
+
+FAQ
+--------------
+Click here <https://docs.odk-x.org/faq/>`_: to navigate to Frequently Asked Questions
+--------------
+
+.. _odk-x-introduction:
+--------------
 The ODK-X Tool Suite is free and open-source software for collecting, managing, and using data in resource-constrained environments.
 
 In ODK-X developers and data managers can create data management applications that consist of survey forms as well as Javascript-based apps. These allow you to render a fully customizable user interface to gather, manage, and visualize data on an Android device.
@@ -111,6 +122,30 @@ Trying It Out
 
 The :doc:`survey-sample-app` walks you through the process of using a basic survey-focused application and submitting data to the server.
 The :doc:`tables-sample-app` walks you through the process of using a basic tables-focused application and submitting data to the server.
+
+Frequently Asked Questions
+--------------
+
+1. What is ODK-X?
+ODK-X, or Open Data Kit-X, is a suite of tools for collecting, managing, and using data in environments with limited resources. It offers customizable data collection applications and data curation tools.
+
+2. What are the key features of ODK-X?
+ODK-X features include two-way data synchronization, offline data collection, linked and embedded surveys, data visualization on the device, user access control, and customizable survey flows and appearance.
+
+3. What tools are included in the ODK-X Tool Suite?
+The suite includes ODK-X Survey for data collection, ODK-X Tables for data curation and visualization, ODK-X Services for data synchronization, ODK-X Cloud Endpoints for cloud hosting, ODK-X Suitcase for desktop data synchronization, and ODK-X Application Designer for building custom applications.
+
+4. How does ODK-X handle data synchronization?
+ODK-X allows two-way synchronization of data between devices and servers, enabling follow-up surveys, pre-filled forms, and offline data collection. Users can manually trigger data sync or sync automatically when an internet connection is available.
+
+5. Can ODK-X tools be used independently?
+Yes, ODK-X tools can operate independently, and users can choose to use only the tools they need. For example, for field data collection, one can use ODK-X Application Designer for form creation, ODK-X Survey for data collection, ODK-X Services for data sync, and ODK-X Cloud Endpoints for cloud storage.
+
+6. Is ODK-X available for all devices?
+ODK-X mobile applications are currently available for Android devices only.
+
+7. How can I get started with ODK-X?
+You can try out ODK-X Survey and ODK-X Tables by following the step-by-step guides provided for basic survey-focused and tables-focused applications. These guides walk you through the process of using the applications and submitting data to the server.
 
 
 .. toctree::
