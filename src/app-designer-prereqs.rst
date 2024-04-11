@@ -243,6 +243,16 @@ For Windows
   #. Click on :guilabel:`OK` and exit all of the windows.
   #. Verify that you have made the change by closing all :program:`PowerShell` or :program:`cmd` windows and open a new one (so it picks up the change), and type
 
+.. Outreachy 2024 Starter Contribution Guide
+.. Alternative way of adding adb in your Windows PATH 
+Alternatively, if you have installed Android Studio on your local computer, it is pre-installed with the platform tools, therefore you are required to add it to your path. You can do using the following steps:
+  #. Click on the Search bar on the task bar and type :guilabel:`Edit environmental variables for your account`.
+  #. Click on Environment Variables option.
+  #. Select the Path variable in the User Variables section, then select Edit.
+  #. In the Edit environment variables window, select New and add this path to the new field: :file:`%USERPROFILE%\AppData\Local\Android\sdk\platform-tools`.
+  #. Click on :guilabel:`OK` and exit all of the windows.
+  #. Close all of the command line windows (if any are open).
+
 .. code-block:: console
 
   $ adb version
