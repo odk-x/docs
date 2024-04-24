@@ -248,7 +248,17 @@ Alternatively, if you have installed Android Studio on your local computer, you 
   #. Click on the Search bar next to the Start Menu and type :guilabel:`Edit environmental variables for your account`.
   #. Click on Environment Variables option.
   #. Select the Path variable in the User Variables section, then select Edit.
+
+  .. image:: /img/app-designer-overview/user-variable-section*
+    :alt: User variable section in environmental variables
+    :class: device-screen-vertical
+
   #. In the Edit environment variables window, select New and add this path to the new field: :file:`%USERPROFILE%\AppData\Local\Android\sdk\platform-tools`.
+  
+  .. image:: /img/app-designer-overview/add-environment-variable*
+    :alt: Add Path in User path variable
+    :class: device-screen-vertical
+  
   #. Click on :guilabel:`OK` and exit all of the windows.
   #. Close all of the command line windows (if any are open).
 
