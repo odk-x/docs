@@ -11,3 +11,6 @@ Advanced Application Building Topics
   config-file-structure
   survey-controller-actions
   logging-capabilities-of-apps
+  odk-datajs
+  odk-surveyjs
+  odk-tablesjs
